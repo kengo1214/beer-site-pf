@@ -1,3 +1,9 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .body {
   border: 5px solid red;
   background-color: white;
@@ -5,4 +11,59 @@
   min-height: calc(100vh - 100px);
   position: absolute;
   top: 100px;
+
+  .main {
+    border: 5px solid blue;
+    width: 100%;
+    min-height: calc(100vh - 100px);
+
+    //🔥
+    .mainImageSection {
+      border: 5px solid greenyellow;
+      width: 100%;
+      height: 350px;
+      background-image: url("/image/mainImage.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    //🔥
+    .sentenceSection {
+      border: 5px solid greenyellow;
+      padding: 5rem;
+      width: 100%;
+      @include center;
+      flex-direction: column;
+
+      .sentenceBox {
+        width: 80%;
+
+        .title {
+          width: 100%;
+          @include center;
+          flex-direction: column;
+          padding-bottom: 3rem;
+
+          h1,
+          h4 {
+            margin: 0;
+          }
+        }
+
+        .sentence {
+          width: 100%;
+
+          p {
+            line-height: 1.8;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .sentenceBox:nth-child(1) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
 }
