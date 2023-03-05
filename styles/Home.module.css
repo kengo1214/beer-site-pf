@@ -12,7 +12,6 @@
   min-height: calc(100vh - 100px);
 }
 .body .main .mainImageSection {
-  border: 5px solid greenyellow;
   width: 100%;
   height: 350px;
   background-image: url("/image/mainImage.jpg");
@@ -21,7 +20,6 @@
   background-repeat: no-repeat;
 }
 .body .main .sentenceSection {
-  border: 5px solid greenyellow;
   padding: 5rem;
   width: 100%;
   display: flex;
@@ -55,7 +53,6 @@
   margin-bottom: 5rem;
 }
 .body .main .linkSection {
-  border: 5px solid greenyellow;
   background-color: rgb(187, 187, 187);
   width: 100%;
   padding: 5rem;
@@ -103,5 +100,77 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.body .main .accessSection {
+  padding: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body .main .accessSection .accessMain {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.body .main .accessSection .accessMain .accessTitle {
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body .main .accessSection .accessMain .accessBox {
+  display: flex;
+}
+.body .main .accessSection .accessMain .accessBox .map {
+  width: 40%;
+  display: flex;
+}
+.body .main .accessSection .accessMain .accessBox .map .mapSize {
+  width: 100%;
+}
+.body .main .accessSection .accessMain .accessBox .sentenceBox {
+  width: 60%;
+  padding: 2rem 0rem 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem {
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .title {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+  padding: 0.3rem;
+}
+.body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .sentence {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+}
+.body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .outLine {
+  width: 100%;
 }
 /*# sourceMappingURL=Home.module.css.map */

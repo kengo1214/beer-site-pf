@@ -19,7 +19,7 @@
 
     //🔥
     .mainImageSection {
-      border: 5px solid greenyellow;
+      // border: 5px solid greenyellow;
       width: 100%;
       height: 350px;
       background-image: url("/image/mainImage.jpg");
@@ -30,7 +30,7 @@
 
     //🔥
     .sentenceSection {
-      border: 5px solid greenyellow;
+      // border: 5px solid greenyellow;
       padding: 5rem;
       width: 100%;
       @include center;
@@ -68,7 +68,7 @@
 
     //🔥
     .linkSection {
-      border: 5px solid greenyellow;
+      // border: 5px solid greenyellow;
       background-color: rgb(187, 187, 187);
       width: 100%;
       // padding: 3rem;
@@ -118,6 +118,92 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    //🔥
+    .accessSection {
+      // border: 5px solid greenyellow;
+      // padding: 3rem;
+      padding: 5rem;
+      width: 100%;
+      @include center;
+
+      .accessMain {
+        // border: 5px solid red;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        .accessTitle {
+          // border: 5px solid blue;
+          padding-bottom: 3rem;
+          @include center;
+          flex-direction: column;
+        }
+
+        .accessBox {
+          // border: 5px solid orange;
+          display: flex;
+
+          .map {
+            // border: 5px solid greenyellow;
+            width: 40%;
+            display: flex;
+
+            .mapSize {
+              width: 100%;
+            }
+          }
+
+          .sentenceBox {
+            // border: 5px solid magenta;
+            width: 60%;
+            // padding: 2rem 0rem 2rem 2rem;
+            padding: 2rem 0rem 2rem 3rem;
+            // display: flex;
+            @include center;
+            flex-direction: column;
+
+            .sentenceItem:nth-last-child(1) {
+              margin-bottom: 0;
+            }
+
+            .sentenceItem {
+              // border: 5px solid blue;
+              border-bottom: 1px solid black;
+              width: 100%;
+              @include center;
+              margin-bottom: 1.5rem;
+
+              .title {
+                // border: 5px solid orange;
+                width: 100px;
+                height: 100%;
+                @include center;
+                justify-content: flex-start;
+                font-weight: bold;
+                padding: 0.3rem; //🔥
+              }
+
+              .sentence {
+                // border: 5px solid greenyellow;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                @include center;
+                justify-content: flex-start;
+                padding: 0.3rem; //🔥
+                font-size: 0.9rem;
+              }
+
+              .outLine {
+                // border: 3px solid magenta;
+                width: 100%;
+              }
+            }
           }
         }
       }
