@@ -131,6 +131,83 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          <section className={styles.contactSection} id="contact">
+            <div className={styles.contactMain}>
+              <div className={styles.contactTitle}>
+                <h4>お問い合わせ</h4>
+                <h1>Contact</h1>
+              </div>
+
+              <form
+                action="https://api.staticforms.xyz/submit"
+                method="post"
+                className={styles.form}
+              >
+                <input
+                  type="hidden"
+                  name="accessKey"
+                  value="7adf81ec-942f-4a70-b8d5-e01074e1b7d4"
+                />
+                {/* リダイレクトする先の指定。現在は旧本番環境に飛ぶように設定してある */}
+                <input
+                  type="hidden"
+                  name="redirectTo"
+                  value="/pages/contact-done"
+                  // value="https://beer-site-pied.vercel.app/contact-done"
+                />
+                <div className={styles.contactItem}>
+                  <label className={styles.label}>お名前</label>
+                  <input
+                    className={styles.input}
+                    type="text"
+                    name="name"
+                    placeholder="お名前"
+                    required
+                  />
+                </div>
+                <div className={styles.contactItem}>
+                  <label className={styles.label}>メールアドレス</label>
+                  <input
+                    className={styles.input}
+                    type="email"
+                    name="email"
+                    placeholder="メールアドレス"
+                    required
+                  />
+                </div>
+                <div className={styles.contactItem}>
+                  <label className={styles.label}>ご質問</label>
+                  <textarea
+                    name="message"
+                    className={`${styles.input} ${styles.textarea}`}
+                    placeholder="ご質問はこちら"
+                    required
+                    // maxLength="300"
+                  />
+                </div>
+
+                <div className={styles.buttonBox}>
+                  <button
+                    type="submit"
+                    // value="送信"
+                    id="modalOpen"
+                    className={styles.submitButton}
+                  >
+                    送信
+                  </button>
+
+                  <button
+                    type="reset"
+                    // value="リセット"
+                    className={styles.resetButton}
+                  >
+                    リセット
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
         </main>
       </div>
     </>
