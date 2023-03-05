@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: #b2b2b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer p {
+  color: white;
+}
+/*# sourceMappingURL=Footer.module.css.map */
