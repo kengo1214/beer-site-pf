@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <div className={styles.body}>
+      <div className={styles.body} id="/">
         <Header />
         <main className={styles.main}>
           <section className={styles.mainImageSection}></section>
