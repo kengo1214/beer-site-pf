@@ -4,6 +4,47 @@
   align-items: center;
 }
 
+@mixin pFontSize {
+  font-size: 1rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.85rem;
+  }
+}
+
+@mixin title {
+  width: 100%;
+  @include center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+
+  @media screen and (max-width: 768px) {
+    h4 {
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    h4 {
+      // font-size: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      // font-size: 1.3rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
 @mixin button {
   color: white;
   padding: 0.5rem 1.5rem;
@@ -16,6 +57,14 @@
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.85rem;
   }
 }
 
@@ -54,24 +103,17 @@
       .sentenceBox {
         width: 80%;
 
-        .title {
-          width: 100%;
-          @include center;
-          flex-direction: column;
-          padding-bottom: 3rem;
-
-          h1,
-          h4 {
-            margin: 0;
-          }
+        //💎💎💎
+        .sentenceTitle {
+          @include title;
         }
 
         .sentence {
           width: 100%;
 
           p {
+            @include pFontSize; //💊
             line-height: 1.8;
-            font-size: 1rem;
           }
         }
       }
@@ -108,6 +150,7 @@
           position: relative;
           border-radius: 10px;
           box-shadow: 10px 10px 10px gray;
+          // @include center;
 
           .image {
             width: 100%;
@@ -125,11 +168,13 @@
             }
           }
 
-          h1 {
+          //⭐️⭐️⭐️
+          .linkTitle {
             color: white;
+            @include center;
+            flex-direction: column;
             position: absolute;
             z-index: 1;
-            font-size: 2rem;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -152,20 +197,19 @@
         display: flex;
         flex-direction: column;
 
+        //💎💎💎
         .accessTitle {
-          // border: 5px solid blue;
-          padding-bottom: 3rem;
-          @include center;
-          flex-direction: column;
+          @include title;
         }
 
         .accessBox {
-          // border: 5px solid orange;
+          // border: 5px solid greenyellow;
           display: flex;
 
           .map {
-            // border: 5px solid greenyellow;
-            width: 40%;
+            // border: 5px solid orange;
+            // width: 40%;
+            width: 100%;
             display: flex;
 
             .mapSize {
@@ -175,7 +219,8 @@
 
           .sentenceBox {
             // border: 5px solid magenta;
-            width: 60%;
+            // width: 60%;
+            width: 100%;
             // padding: 2rem 0rem 2rem 2rem;
             padding: 2rem 0rem 2rem 3rem;
             // display: flex;
@@ -201,6 +246,7 @@
                 justify-content: flex-start;
                 font-weight: bold;
                 padding: 0.3rem; //🔥
+                @include pFontSize; //💊
               }
 
               .sentence {
@@ -211,7 +257,7 @@
                 @include center;
                 justify-content: flex-start;
                 padding: 0.3rem; //🔥
-                font-size: 0.9rem;
+                @include pFontSize; //💊
               }
 
               .outLine {
@@ -254,17 +300,10 @@
         // width: 80%;
         width: 70%;
 
+        //💎💎💎
         .contactTitle {
-          // border: 5px solid blue;
-          width: 100%;
-          @include center;
-          flex-direction: column;
-          padding-bottom: 3rem;
-
-          h1,
-          h4 {
-            color: white;
-          }
+          @include title;
+          color: white;
         }
 
         .form {
@@ -287,6 +326,7 @@
               font-weight: bold;
               @include center;
               justify-content: flex-start;
+              @include pFontSize; //💊
             }
 
             .input {
@@ -319,18 +359,131 @@
               @include button;
               background-color: gray;
             }
-
-            // button[type="submit"] {
-            //   @include button;
-            //   background-color: orangered;
-            // }
-
-            // button[type="reset"] {
-            //   @include button;
-            //   background-color: gray;
-            // }
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .body {
+    .main {
+      //🔥
+      .sentenceSection {
+        background-color: pink;
+      }
+
+      //🔥
+      .linkSection {
+        padding: 3rem; //🔥
+      }
+
+      //🔥
+      .accessSection {
+        background-color: pink;
+
+        .accessMain {
+          .accessBox {
+            flex-direction: column; //🔥
+
+            .map {
+              width: 100%; //🔥
+
+              .mapSize {
+                height: 250px; //🔥
+              }
+            }
+
+            .sentenceBox {
+              // padding: 2rem 0 2rem; //🔥
+              padding: 2rem 0 0; //🔥
+              width: 100%; //🔥
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body {
+    .main {
+      .mainImageSection {
+        height: 300px; //🔥
+      }
+
+      .sentenceSection {
+        background-color: skyblue;
+        padding: 3rem; //🔥
+        .sentenceBox {
+          width: 90%; //🔥
+        }
+      }
+
+      .linkSection {
+        // border: 5px solid red;
+        padding: 3rem; //🔥
+
+        .linkBox {
+          // border: 5px solid blue;
+          width: 90%; //🔥
+          flex-direction: column;
+
+          .linkItem:nth-child(2) {
+            margin: 2.5rem 0; //🔥
+          }
+
+          .linkItem {
+            // border: 5px solid greenyellow;
+            width: 100%; //🔥
+            height: 180px; //🔥
+
+            .linkTitle {
+              h4 {
+                font-size: 0.9rem;
+              }
+
+              h1 {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+
+      .accessSection {
+        background-color: skyblue;
+        // padding: 5rem;
+        padding: 3rem; //🔥
+
+        .accessMain {
+          width: 90%; //🔥
+        }
+      }
+
+      .contactSection {
+        // padding: 5rem;
+        padding: 3rem; //🔥
+
+        .contactMain {
+          width: 90%; //🔥
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .body {
+    .main {
+      .sentenceSection {
+        background-color: greenyellow;
+      }
+
+      .accessSection {
+        background-color: greenyellow;
       }
     }
   }

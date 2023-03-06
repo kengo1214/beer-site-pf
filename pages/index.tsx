@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
+import { Link as Scroll } from "react-scroll";
 import styles from "@/styles/Home.module.scss";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -17,7 +18,7 @@ export default function Home() {
           <section className={styles.mainImageSection}></section>
           <section className={styles.sentenceSection}>
             <div className={styles.sentenceBox}>
-              <div className={styles.title}>
+              <div className={styles.sentenceTitle}>
                 <h4>コンセプト</h4>
                 <h1>Concept</h1>
               </div>
@@ -29,7 +30,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.sentenceBox}>
-              <div className={styles.title}>
+              <div className={styles.sentenceTitle}>
                 <h4>メッセージ</h4>
                 <h1>Message</h1>
               </div>
@@ -52,7 +53,10 @@ export default function Home() {
                     objectFit="cover"
                     className={styles.image}
                   />
-                  <h1>Menu</h1>
+                  <div className={styles.linkTitle}>
+                    <h4>メニュー</h4>
+                    <h1>Menu</h1>
+                  </div>
                 </Link>
               </div>
               <div className={styles.linkItem}>
@@ -64,11 +68,22 @@ export default function Home() {
                     objectFit="cover"
                     className={styles.image}
                   />
-                  <h1>Blog</h1>
+                  <div className={styles.linkTitle}>
+                    <h4>ブログ</h4>
+                    <h1>Blog</h1>
+                  </div>
                 </Link>
               </div>
+
               <div className={styles.linkItem}>
-                <Link href="#contact">
+                <Scroll
+                  to="contact"
+                  smooth={true}
+                  duration={800}
+                  // className={styles.link}
+                  // offset={-129}
+                  offset={-100}
+                >
                   <Image
                     src="/image/contact-link.jpg"
                     alt="Menu Image"
@@ -76,8 +91,13 @@ export default function Home() {
                     objectFit="cover"
                     className={styles.image}
                   />
-                  <h1>Contact</h1>
-                </Link>
+                  <div className={styles.linkTitle}>
+                    <h4>お問い合わせ</h4>
+                    <h1>Contact</h1>
+                  </div>
+                </Scroll>
+
+                {/* </Link> */}
               </div>
             </div>
           </section>

@@ -28,7 +28,7 @@
 .body .main .sentenceSection .sentenceBox {
   width: 80%;
 }
-.body .main .sentenceSection .sentenceBox .title {
+.body .main .sentenceSection .sentenceBox .sentenceTitle {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -36,16 +36,38 @@
   flex-direction: column;
   padding-bottom: 3rem;
 }
-.body .main .sentenceSection .sentenceBox .title h1,
-.body .main .sentenceSection .sentenceBox .title h4 {
-  margin: 0;
+@media screen and (max-width: 768px) {
+  .body .main .sentenceSection .sentenceBox .sentenceTitle h4 {
+    font-size: 0.9rem;
+  }
+  .body .main .sentenceSection .sentenceBox .sentenceTitle h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .sentenceSection .sentenceBox .sentenceTitle h4 {
+    font-size: 0.8rem;
+  }
+  .body .main .sentenceSection .sentenceBox .sentenceTitle h1 {
+    font-size: 1.2rem;
+  }
 }
 .body .main .sentenceSection .sentenceBox .sentence {
   width: 100%;
 }
 .body .main .sentenceSection .sentenceBox .sentence p {
-  line-height: 1.8;
   font-size: 1rem;
+  line-height: 1.8;
+}
+@media screen and (max-width: 768px) {
+  .body .main .sentenceSection .sentenceBox .sentence p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .sentenceSection .sentenceBox .sentence p {
+    font-size: 0.85rem;
+  }
 }
 .body .main .sentenceSection .sentenceBox:nth-child(1) {
   margin-bottom: 5rem;
@@ -90,11 +112,14 @@
   opacity: 0.5;
   transition: 300ms;
 }
-.body .main .linkSection .linkBox .linkItem h1 {
+.body .main .linkSection .linkBox .linkItem .linkTitle {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   z-index: 1;
-  font-size: 2rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -112,24 +137,41 @@
   flex-direction: column;
 }
 .body .main .accessSection .accessMain .accessTitle {
-  padding-bottom: 3rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .body .main .accessSection .accessMain .accessTitle h4 {
+    font-size: 0.9rem;
+  }
+  .body .main .accessSection .accessMain .accessTitle h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .accessSection .accessMain .accessTitle h4 {
+    font-size: 0.8rem;
+  }
+  .body .main .accessSection .accessMain .accessTitle h1 {
+    font-size: 1.2rem;
+  }
 }
 .body .main .accessSection .accessMain .accessBox {
   display: flex;
 }
 .body .main .accessSection .accessMain .accessBox .map {
-  width: 40%;
+  width: 100%;
   display: flex;
 }
 .body .main .accessSection .accessMain .accessBox .map .mapSize {
   width: 100%;
 }
 .body .main .accessSection .accessMain .accessBox .sentenceBox {
-  width: 60%;
+  width: 100%;
   padding: 2rem 0rem 2rem 3rem;
   display: flex;
   justify-content: center;
@@ -156,6 +198,17 @@
   justify-content: flex-start;
   font-weight: bold;
   padding: 0.3rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .title {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .title {
+    font-size: 0.85rem;
+  }
 }
 .body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .sentence {
   margin: 0;
@@ -166,7 +219,17 @@
   align-items: center;
   justify-content: flex-start;
   padding: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .sentence {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .sentence {
+    font-size: 0.85rem;
+  }
 }
 .body .main .accessSection .accessMain .accessBox .sentenceBox .sentenceItem .outLine {
   width: 100%;
@@ -206,10 +269,23 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 3rem;
-}
-.body .main .contactSection .contactMain .contactTitle h1,
-.body .main .contactSection .contactMain .contactTitle h4 {
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .body .main .contactSection .contactMain .contactTitle h4 {
+    font-size: 0.9rem;
+  }
+  .body .main .contactSection .contactMain .contactTitle h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .contactSection .contactMain .contactTitle h4 {
+    font-size: 0.8rem;
+  }
+  .body .main .contactSection .contactMain .contactTitle h1 {
+    font-size: 1.2rem;
+  }
 }
 .body .main .contactSection .contactMain .form {
   display: flex;
@@ -232,6 +308,17 @@
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .body .main .contactSection .contactMain .form .contactItem .label {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .contactSection .contactMain .form .contactItem .label {
+    font-size: 0.85rem;
+  }
 }
 .body .main .contactSection .contactMain .form .contactItem .input {
   width: 100%;
@@ -264,6 +351,16 @@
 .body .main .contactSection .contactMain .form .buttonBox .submitButton:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 768px) {
+  .body .main .contactSection .contactMain .form .buttonBox .submitButton {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .contactSection .contactMain .form .buttonBox .submitButton {
+    font-size: 0.85rem;
+  }
+}
 .body .main .contactSection .contactMain .form .buttonBox .resetButton {
   color: white;
   padding: 0.5rem 1.5rem;
@@ -276,5 +373,93 @@
 }
 .body .main .contactSection .contactMain .form .buttonBox .resetButton:hover {
   opacity: 0.8;
+}
+@media screen and (max-width: 768px) {
+  .body .main .contactSection .contactMain .form .buttonBox .resetButton {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .contactSection .contactMain .form .buttonBox .resetButton {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .body .main .sentenceSection {
+    background-color: pink;
+  }
+  .body .main .linkSection {
+    padding: 3rem;
+  }
+  .body .main .accessSection {
+    background-color: pink;
+  }
+  .body .main .accessSection .accessMain .accessBox {
+    flex-direction: column;
+  }
+  .body .main .accessSection .accessMain .accessBox .map {
+    width: 100%;
+  }
+  .body .main .accessSection .accessMain .accessBox .map .mapSize {
+    height: 250px;
+  }
+  .body .main .accessSection .accessMain .accessBox .sentenceBox {
+    padding: 2rem 0 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body .main .mainImageSection {
+    height: 300px;
+  }
+  .body .main .sentenceSection {
+    background-color: skyblue;
+    padding: 3rem;
+  }
+  .body .main .sentenceSection .sentenceBox {
+    width: 90%;
+  }
+  .body .main .linkSection {
+    padding: 3rem;
+  }
+  .body .main .linkSection .linkBox {
+    width: 90%;
+    flex-direction: column;
+  }
+  .body .main .linkSection .linkBox .linkItem:nth-child(2) {
+    margin: 2.5rem 0;
+  }
+  .body .main .linkSection .linkBox .linkItem {
+    width: 100%;
+    height: 180px;
+  }
+  .body .main .linkSection .linkBox .linkItem .linkTitle h4 {
+    font-size: 0.9rem;
+  }
+  .body .main .linkSection .linkBox .linkItem .linkTitle h1 {
+    font-size: 1.3rem;
+  }
+  .body .main .accessSection {
+    background-color: skyblue;
+    padding: 3rem;
+  }
+  .body .main .accessSection .accessMain {
+    width: 90%;
+  }
+  .body .main .contactSection {
+    padding: 3rem;
+  }
+  .body .main .contactSection .contactMain {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body .main .sentenceSection {
+    background-color: greenyellow;
+  }
+  .body .main .accessSection {
+    background-color: greenyellow;
+  }
 }
 /*# sourceMappingURL=Home.module.css.map */
