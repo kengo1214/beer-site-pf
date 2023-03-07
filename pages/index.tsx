@@ -75,15 +75,9 @@ export default function Home() {
                 </Link>
               </div>
 
+              {/* 💊💊💊💊💊💊💊 */}
               <div className={styles.linkItem}>
-                <Scroll
-                  to="contact"
-                  smooth={true}
-                  duration={800}
-                  // className={styles.link}
-                  // offset={-129}
-                  offset={-100}
-                >
+                <Scroll to="contact" smooth={true} duration={800} offset={-100}>
                   <Image
                     src="/image/contact-link.jpg"
                     alt="Menu Image"
@@ -96,9 +90,26 @@ export default function Home() {
                     <h1>Contact</h1>
                   </div>
                 </Scroll>
-
-                {/* </Link> */}
               </div>
+              {/* 💊💊💊💊💊💊💊 */}
+
+              {/* 🔰🔰🔰🔰🔰🔰🔰 */}
+              <div className={styles.linkItem}>
+                <Scroll to="contact" smooth={true} duration={800} offset={-80}>
+                  <Image
+                    src="/image/contact-link.jpg"
+                    alt="Menu Image"
+                    layout="fill"
+                    objectFit="cover"
+                    className={styles.image}
+                  />
+                  <div className={styles.linkTitle}>
+                    <h4>お問い合わせ</h4>
+                    <h1>Contact</h1>
+                  </div>
+                </Scroll>
+              </div>
+              {/* 🔰🔰🔰🔰🔰🔰🔰 */}
             </div>
           </section>
 
