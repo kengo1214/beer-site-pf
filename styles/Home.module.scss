@@ -43,6 +43,11 @@
       font-size: 1.2rem;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    // padding-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
 }
 
 @mixin button {
@@ -516,7 +521,7 @@
 
       .sentenceSection {
         background-color: orange;
-        padding: 2rem; //🔥
+        padding: 3rem 2rem; //🔥
 
         .sentenceBox:nth-child(1) {
           // margin-bottom: 5rem;
@@ -530,7 +535,7 @@
       }
 
       .linkSection {
-        padding: 2rem; //🔥
+        padding: 3rem 2rem; //🔥
 
         .linkBox {
           // width: 90%; //🔥
@@ -550,7 +555,7 @@
 
       .accessSection {
         background-color: orange;
-        padding: 2rem; //🔥
+        padding: 3rem 2rem; //🔥
 
         .accessMain {
           width: 100%; //⭐️
@@ -559,7 +564,7 @@
 
       .contactSection {
         min-height: calc(100vh - (80px + 40px));
-        padding: 2rem; //🔥
+        padding: 3rem 2rem; //🔥
 
         .contactMain {
           width: 100%; //⭐️

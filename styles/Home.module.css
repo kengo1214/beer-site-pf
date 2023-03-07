@@ -52,6 +52,11 @@
     font-size: 1.2rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .body .main .sentenceSection .sentenceBox .sentenceTitle {
+    padding-bottom: 2rem;
+  }
+}
 .body .main .sentenceSection .sentenceBox .sentence {
   width: 100%;
 }
@@ -165,6 +170,11 @@
   }
   .body .main .accessSection .accessMain .accessTitle h1 {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .body .main .accessSection .accessMain .accessTitle {
+    padding-bottom: 2rem;
   }
 }
 .body .main .accessSection .accessMain .accessBox {
@@ -292,6 +302,11 @@
   }
   .body .main .contactSection .contactMain .contactTitle h1 {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .body .main .contactSection .contactMain .contactTitle {
+    padding-bottom: 2rem;
   }
 }
 .body .main .contactSection .contactMain .form {
@@ -482,7 +497,7 @@
   }
   .body .main .sentenceSection {
     background-color: orange;
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
   .body .main .sentenceSection .sentenceBox:nth-child(1) {
     margin-bottom: 3rem;
@@ -491,7 +506,7 @@
     width: 100%;
   }
   .body .main .linkSection {
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
   .body .main .linkSection .linkBox {
     width: 100%;
@@ -506,14 +521,14 @@
   }
   .body .main .accessSection {
     background-color: orange;
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
   .body .main .accessSection .accessMain {
     width: 100%;
   }
   .body .main .contactSection {
     min-height: calc(100vh - 120px);
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
   .body .main .contactSection .contactMain {
     width: 100%;
