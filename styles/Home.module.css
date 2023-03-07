@@ -95,11 +95,7 @@
 .body .main .linkSection .linkBox .linkItem:nth-child(2) {
   margin: 0 2rem;
 }
-.body .main .linkSection .linkBox .linkItem:nth-child(3) {
-  border: 3px solid red;
-}
 .body .main .linkSection .linkBox .linkItem:nth-child(4) {
-  border: 3px solid blue;
   display: none;
 }
 .body .main .linkSection .linkBox .linkItem {
@@ -408,14 +404,8 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .body .main .sentenceSection {
-    background-color: pink;
-  }
   .body .main .linkSection {
     padding: 3rem;
-  }
-  .body .main .accessSection {
-    background-color: pink;
   }
   .body .main .accessSection .accessMain .accessBox {
     flex-direction: column;
@@ -436,7 +426,6 @@
     height: 300px;
   }
   .body .main .sentenceSection {
-    background-color: skyblue;
     padding: 3rem;
   }
   .body .main .sentenceSection .sentenceBox {
@@ -463,7 +452,6 @@
     font-size: 1.3rem;
   }
   .body .main .accessSection {
-    background-color: skyblue;
     padding: 3rem;
   }
   .body .main .accessSection .accessMain {
@@ -477,11 +465,8 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .body .main .sentenceSection {
-    background-color: greenyellow;
-  }
-  .body .main .accessSection {
-    background-color: greenyellow;
+  .body .main .contactSection .contactMain .form .contactItem .label {
+    border-left: 2px solid white;
   }
 }
 @media screen and (max-width: 480px) {
@@ -496,7 +481,6 @@
     height: 250px;
   }
   .body .main .sentenceSection {
-    background-color: orange;
     padding: 3rem 2rem;
   }
   .body .main .sentenceSection .sentenceBox:nth-child(1) {
@@ -512,15 +496,12 @@
     width: 100%;
   }
   .body .main .linkSection .linkBox .linkItem:nth-child(3) {
-    border: 3px solid red;
     display: none;
   }
   .body .main .linkSection .linkBox .linkItem:nth-child(4) {
-    border: 3px solid blue;
     display: block;
   }
   .body .main .accessSection {
-    background-color: orange;
     padding: 3rem 2rem;
   }
   .body .main .accessSection .accessMain {

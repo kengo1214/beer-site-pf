@@ -147,12 +147,12 @@
           margin: 0 2rem;
         }
 
-        .linkItem:nth-child(3) {
-          border: 3px solid red;
-        }
+        // .linkItem:nth-child(3) {
+        //   border: 3px solid red;
+        // }
 
         .linkItem:nth-child(4) {
-          border: 3px solid blue;
+          // border: 3px solid blue;
           display: none;
         }
 
@@ -386,9 +386,9 @@
   .body {
     .main {
       //🔥
-      .sentenceSection {
-        background-color: pink;
-      }
+      // .sentenceSection {
+      //   background-color: pink;
+      // }
 
       //🔥
       .linkSection {
@@ -397,7 +397,7 @@
 
       //🔥
       .accessSection {
-        background-color: pink;
+        // background-color: pink;
 
         .accessMain {
           .accessBox {
@@ -431,7 +431,7 @@
       }
 
       .sentenceSection {
-        background-color: skyblue;
+        // background-color: skyblue;
         padding: 3rem; //🔥
 
         .sentenceBox {
@@ -471,7 +471,7 @@
       }
 
       .accessSection {
-        background-color: skyblue;
+        // background-color: skyblue;
         // padding: 5rem;
         padding: 3rem; //🔥
 
@@ -495,12 +495,24 @@
 @media screen and (max-width: 500px) {
   .body {
     .main {
-      .sentenceSection {
-        background-color: greenyellow;
-      }
+      // .sentenceSection {
+      //   background-color: greenyellow;
+      // }
 
-      .accessSection {
-        background-color: greenyellow;
+      // .accessSection {
+      //   background-color: greenyellow;
+      // }
+
+      .contactSection {
+        .contactMain {
+          .form {
+            .contactItem {
+              .label {
+                border-left: 2px solid white;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -520,7 +532,7 @@
       }
 
       .sentenceSection {
-        background-color: orange;
+        // background-color: orange;
         padding: 3rem 2rem; //🔥
 
         .sentenceBox:nth-child(1) {
@@ -542,19 +554,19 @@
           width: 100%; //⭐️
 
           .linkItem:nth-child(3) {
-            border: 3px solid red;
+            // border: 3px solid red;
             display: none;
           }
 
           .linkItem:nth-child(4) {
-            border: 3px solid blue;
+            // border: 3px solid blue;
             display: block;
           }
         }
       }
 
       .accessSection {
-        background-color: orange;
+        // background-color: orange;
         padding: 3rem 2rem; //🔥
 
         .accessMain {
