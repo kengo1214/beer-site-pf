@@ -89,22 +89,49 @@ export default function Header() {
               <h1>Home</h1>
             </Scroll>
           </li>
+
+          <li onClick={handleNav}>
+            <Scroll
+              to="/"
+              smooth={true}
+              duration={800}
+              offset={-80}
+              onClick={handleNav}
+            >
+              <h1>Home</h1>
+            </Scroll>
+          </li>
+
           <li onClick={handleNav}>
             <Link href="/menu">
               <h1>Menu</h1>
             </Link>
           </li>
+
           <li onClick={handleNav}>
             <Link href="/blog">
               <h1>Blog</h1>
             </Link>
           </li>
+
           <li onClick={handleNav}>
             <Scroll
               to="contact"
               smooth={true}
               duration={800}
               offset={-100}
+              onClick={handleNav}
+            >
+              <h1>Contact</h1>
+            </Scroll>
+          </li>
+
+          <li onClick={handleNav}>
+            <Scroll
+              to="contact"
+              smooth={true}
+              duration={800}
+              offset={-80}
               onClick={handleNav}
             >
               <h1>Contact</h1>

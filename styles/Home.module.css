@@ -90,6 +90,13 @@
 .body .main .linkSection .linkBox .linkItem:nth-child(2) {
   margin: 0 2rem;
 }
+.body .main .linkSection .linkBox .linkItem:nth-child(3) {
+  border: 3px solid red;
+}
+.body .main .linkSection .linkBox .linkItem:nth-child(4) {
+  border: 3px solid blue;
+  display: none;
+}
 .body .main .linkSection .linkBox .linkItem {
   background-color: black;
   width: 33%;
@@ -460,6 +467,32 @@
   }
   .body .main .accessSection {
     background-color: greenyellow;
+  }
+}
+@media screen and (max-width: 480px) {
+  .body {
+    min-height: calc(100vh - 80px);
+    top: 80px;
+  }
+  .body .main {
+    min-height: calc(100vh - 80px);
+  }
+  .body .main .sentenceSection {
+    background-color: orange;
+  }
+  .body .main .linkSection .linkBox .linkItem:nth-child(3) {
+    border: 3px solid red;
+    display: none;
+  }
+  .body .main .linkSection .linkBox .linkItem:nth-child(4) {
+    border: 3px solid blue;
+    display: block;
+  }
+  .body .main .accessSection {
+    background-color: orange;
+  }
+  .body .main .contactSection {
+    min-height: calc(100vh - 120px);
   }
 }
 /*# sourceMappingURL=Home.module.css.map */

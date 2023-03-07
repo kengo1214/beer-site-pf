@@ -22,6 +22,31 @@
     padding: 0;
     list-style: none;
 
+    li:nth-child(2) {
+      display: none;
+    }
+
+    li:nth-child(6) {
+      display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+      li:nth-child(1) {
+        display: none;
+      }
+
+      li:nth-child(5) {
+        display: none;
+      }
+      li:nth-child(2) {
+        display: block;
+      }
+
+      li:nth-child(6) {
+        display: block;
+      }
+    }
+
     li {
       padding: 1rem;
       list-style: none;
@@ -62,7 +87,6 @@
 
     h1 {
       font-size: 2rem;
-      margin: 0;
     }
   }
 
@@ -159,42 +183,61 @@
 
 @media screen and (max-width: 480px) {
   .header {
+    // height: 100px;
     height: 80px;
+
+    // padding: 0 2rem;
     padding: 0 1.5rem;
+
     .title {
       h1 {
-        font-size: 1.6rem;
-      }
-    }
-
-    .hamburgerButton {
-      display: none;
-    }
-
-    .hamburgerButtonMobile {
-      display: block;
-    }
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .header {
-    padding: 0 1rem;
-    .title {
-      h1 {
-        font-size: 1.5rem;
+        // font-size: 1.6em;
+        font-size: 1.3em;
       }
     }
   }
 }
 
-@media screen and (max-width: 320px) {
-  .header {
-    padding: 0 1rem;
-    .title {
-      h1 {
-        font-size: 1.4rem;
-      }
-    }
-  }
-}
+//Before Code
+
+// @media screen and (max-width: 480px) {
+//   .header {
+//     height: 80px;
+//     padding: 0 1.5rem;
+//     .title {
+//       h1 {
+//         font-size: 1.6rem;
+//       }
+//     }
+
+//     .hamburgerButton {
+//       display: none;
+//     }
+
+//     .hamburgerButtonMobile {
+//       display: block;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 390px) {
+//   .header {
+//     padding: 0 1rem;
+//     .title {
+//       h1 {
+//         font-size: 1.5rem;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 320px) {
+//   .header {
+//     padding: 0 1rem;
+//     .title {
+//       h1 {
+//         font-size: 1.4rem;
+//       }
+//     }
+//   }
+// }
