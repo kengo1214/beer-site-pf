@@ -1,2 +1,2 @@
-.footer{width:100%;height:40px;background-color:#b2b2b2;display:flex;justify-content:center;align-items:center}.footer p{color:#fff}
+.footer{width:100%;height:40px;background-color:#b2b2b2;display:flex;justify-content:center;align-items:center}.footer p{color:#fff}@media screen and (max-width: 768px){.footer{height:30px}.footer p{font-size:.8rem}}
 /*# sourceMappingURL=Footer.module.min.css.map */

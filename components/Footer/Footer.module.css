@@ -9,4 +9,13 @@
 .footer p {
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 30px;
+  }
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
 /*# sourceMappingURL=Footer.module.css.map */
