@@ -4,6 +4,7 @@
   align-items: center;
 }
 
+//⭐️⭐️⭐️
 @mixin menu {
   background-color: black;
   width: 100%;
@@ -30,23 +31,6 @@
       display: none;
     }
 
-    @media screen and (max-width: 480px) {
-      li:nth-child(1) {
-        display: none;
-      }
-
-      li:nth-child(5) {
-        display: none;
-      }
-      li:nth-child(2) {
-        display: block;
-      }
-
-      li:nth-child(6) {
-        display: block;
-      }
-    }
-
     li {
       padding: 1rem;
       list-style: none;
@@ -65,11 +49,28 @@
         }
       }
     }
+
+    @media screen and (max-width: 480px) {
+      li:nth-child(1) {
+        display: none;
+      }
+
+      li:nth-child(2) {
+        display: block;
+      }
+
+      li:nth-child(5) {
+        display: none;
+      }
+
+      li:nth-child(6) {
+        display: block;
+      }
+    }
   }
 }
 
 .header {
-  // border: 3px solid red;
   background-color: black;
   width: 100%;
   height: 100px;
@@ -82,7 +83,6 @@
   padding: 0 3rem;
 
   .title {
-    // border: 3px solid blue;
     color: white;
 
     h1 {
@@ -91,10 +91,7 @@
   }
 
   nav {
-    // border: 3px solid green;
-
     ul {
-      // border: 3px solid orange;
       list-style: none;
       display: flex;
 
@@ -106,13 +103,11 @@
       }
 
       li {
-        // border: 3px solid red;
         margin-right: 1rem;
         border-radius: 10px;
         @include center;
 
         .link {
-          // border: 3px solid blue;
           border: 1px solid black;
           padding: 0.8rem;
           font-weight: bold;
@@ -130,7 +125,6 @@
   }
 
   .hamburgerButton {
-    // border: 3px solid magenta;
     z-index: 10;
     color: white;
     @include center;
@@ -147,10 +141,12 @@
     cursor: pointer;
   }
 
+  //⭐️⭐️⭐️
   .menuOpen {
     @include menu;
   }
 
+  //⭐️⭐️⭐️
   .menuClose {
     @include menu;
     left: -100%;
@@ -183,61 +179,13 @@
 
 @media screen and (max-width: 480px) {
   .header {
-    // height: 100px;
     height: 80px;
-
-    // padding: 0 2rem;
     padding: 0 1.5rem;
 
     .title {
       h1 {
-        // font-size: 1.6em;
         font-size: 1.3em;
       }
     }
   }
 }
-
-//Before Code
-
-// @media screen and (max-width: 480px) {
-//   .header {
-//     height: 80px;
-//     padding: 0 1.5rem;
-//     .title {
-//       h1 {
-//         font-size: 1.6rem;
-//       }
-//     }
-
-//     .hamburgerButton {
-//       display: none;
-//     }
-
-//     .hamburgerButtonMobile {
-//       display: block;
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 390px) {
-//   .header {
-//     padding: 0 1rem;
-//     .title {
-//       h1 {
-//         font-size: 1.5rem;
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 320px) {
-//   .header {
-//     padding: 0 1rem;
-//     .title {
-//       h1 {
-//         font-size: 1.4rem;
-//       }
-//     }
-//   }
-// }
