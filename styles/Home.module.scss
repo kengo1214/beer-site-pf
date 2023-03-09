@@ -301,6 +301,10 @@
           @include center;
           flex-direction: column;
 
+          .contactItem:nth-child(5) {
+            margin-bottom: 3rem;
+          }
+
           .contactItem {
             width: 100%;
             display: flex;
@@ -498,11 +502,18 @@
       }
 
       .contactSection {
-        min-height: calc(100vh - (80px + 30px));
+        // min-height: calc(100vh - (80px + 30px));
+        min-height: auto; //⭐️⭐️⭐️
         padding: 3rem 2rem;
 
         .contactMain {
           width: 100%;
+
+          .form {
+            .contactItem:nth-child(5) {
+              margin-bottom: 2rem;
+            }
+          }
         }
       }
     }
@@ -510,38 +521,4 @@
 }
 
 @media screen and (max-width: 390px) {
-  .body {
-    .main {
-      .accessSection {
-        .accessMain {
-          .accessBox {
-            .sentenceBox {
-              .sentenceItem {
-                .title {
-                  width: 70px;
-                  font-size: 0.7rem;
-                }
-                .sentence {
-                  font-size: 0.7rem;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .contactSection {
-        .contactMain {
-          .form {
-            .contactItem {
-              .label {
-                width: 170px;
-                font-size: 0.7rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
