@@ -508,3 +508,40 @@
     }
   }
 }
+
+@media screen and (max-width: 390px) {
+  .body {
+    .main {
+      .accessSection {
+        .accessMain {
+          .accessBox {
+            .sentenceBox {
+              .sentenceItem {
+                .title {
+                  width: 70px;
+                  font-size: 0.7rem;
+                }
+                .sentence {
+                  font-size: 0.7rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .contactSection {
+        .contactMain {
+          .form {
+            .contactItem {
+              .label {
+                width: 170px;
+                font-size: 0.7rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
