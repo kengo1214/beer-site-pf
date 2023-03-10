@@ -203,17 +203,17 @@
   .header {
     .title {
       h1 {
-        font-size: 1.2em;
+        font-size: 1.3em;
       }
     }
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .header {
     .title {
       h1 {
-        font-size: 1em;
+        font-size: 1.1em;
       }
     }
   }
