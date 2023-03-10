@@ -210,5 +210,16 @@
   .header .title h1 {
     font-size: 1.3em;
   }
+  .header .hamburgerButton {
+    display: none;
+  }
+  .header .hamburgerButtonMobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 390px) {
+  .header .title h1 {
+    font-size: 1.2em;
+  }
 }
 /*# sourceMappingURL=Header.module.css.map */

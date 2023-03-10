@@ -4,7 +4,6 @@
   align-items: center;
 }
 
-//⭐️⭐️⭐️
 @mixin menu {
   background-color: black;
   width: 100%;
@@ -69,6 +68,8 @@
     }
   }
 }
+
+//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
 .header {
   background-color: black;
@@ -141,17 +142,17 @@
     cursor: pointer;
   }
 
-  //⭐️⭐️⭐️
   .menuOpen {
     @include menu;
   }
 
-  //⭐️⭐️⭐️
   .menuClose {
     @include menu;
     left: -100%;
   }
 }
+
+//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
 @media screen and (max-width: 1024px) {
   .header {
@@ -185,6 +186,24 @@
     .title {
       h1 {
         font-size: 1.3em;
+      }
+    }
+
+    .hamburgerButton {
+      display: none;
+    }
+
+    .hamburgerButtonMobile {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .header {
+    .title {
+      h1 {
+        font-size: 1.2em;
       }
     }
   }
