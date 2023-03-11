@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Inter } from "next/font/google";
 import { Link as Scroll } from "react-scroll";
 import styles from "@/styles/Home.module.scss";
-import Header from "../components/Header/Header";
+import MainHeader from "../components/Header/MainHeader";
 import Footer from "../components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.body} id="/">
-        <Header />
+        <MainHeader />
         <main className={styles.main}>
           <section className={styles.mainImageSection}></section>
           <section className={styles.sentenceSection}>

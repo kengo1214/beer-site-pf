@@ -2,9 +2,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Link as Scroll } from "react-scroll";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import styles from "./Header.module.scss";
+import styles from "./MainHeader.module.scss";
 
-export default function Header() {
+export default function MainHeader() {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
