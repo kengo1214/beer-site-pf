@@ -45,7 +45,7 @@ export default function Home() {
           <section className={styles.linkSection}>
             <div className={styles.linkBox}>
               <div className={styles.linkItem}>
-                <Link href="/menu">
+                <Link href="/menu/all-menu">
                   <Image
                     src="/image/menu-link.jpg"
                     alt="Menu Image"

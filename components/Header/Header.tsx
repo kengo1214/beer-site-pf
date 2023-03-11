@@ -40,7 +40,7 @@ export default function Header() {
           </li>
 
           <li>
-            <Link href="/menu">
+            <Link href="/menu/all-menu">
               <div className={styles.link}>Menu</div>
             </Link>
           </li>
@@ -103,7 +103,7 @@ export default function Header() {
           </li>
 
           <li onClick={handleNav}>
-            <Link href="/menu">
+            <Link href="/menu/all-menu">
               <h1>Menu</h1>
             </Link>
           </li>
