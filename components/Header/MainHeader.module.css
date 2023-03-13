@@ -18,11 +18,11 @@
 .header .title h1 {
   font-size: 2rem;
 }
-.header .nav ul {
+.header nav ul {
   list-style: none;
   display: flex;
 }
-.header .nav ul li:nth-child(4) {
+.header nav ul li:nth-child(4) {
   margin-right: 0;
   background-color: orangered;
   display: flex;
@@ -30,14 +30,14 @@
   align-items: center;
   color: white;
 }
-.header .nav ul li {
+.header nav ul li {
   margin-right: 1rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .nav ul li .link {
+.header nav ul li .link {
   border: 1px solid black;
   padding: 0.8rem;
   font-size: 1rem;
@@ -45,7 +45,7 @@
   border-radius: 10px;
   color: white;
 }
-.header .nav ul li .link:hover {
+.header nav ul li .link:hover {
   background-color: orange;
   transition: 300ms;
 }
@@ -190,7 +190,7 @@
   .header .title h1 {
     font-size: 1.4rem;
   }
-  .header .nav ul li .link {
+  .header nav ul li .link {
     padding: 0.7rem;
     font-size: 0.9rem;
   }

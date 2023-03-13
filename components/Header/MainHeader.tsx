@@ -25,7 +25,7 @@ export default function MainHeader() {
         </Scroll>
       </div>
 
-      <nav className={styles.nav}>
+      <nav>
         <ul>
           <li>
             <Scroll
