@@ -1,12 +1,4 @@
-.body {
-  border: 1px solid black;
-  background-color: white;
-  width: 100%;
-  min-height: calc(100vh - 100px);
-  position: absolute;
-  top: 100px;
-}
-.body .nav {
+.nav {
   width: 100%;
   height: 100px;
   padding: 0 5rem;
@@ -16,7 +8,7 @@
   justify-content: center;
   align-items: center;
 }
-.body .nav::after {
+.nav::after {
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -26,7 +18,7 @@
   bottom: 0;
   height: 100%;
 }
-.body .nav .insideLine {
+.nav .insideLine {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +26,7 @@
   width: 60%;
   z-index: 5;
 }
-.body .nav .insideLine .pageTitle {
+.nav .insideLine .pageTitle {
   color: white;
   display: flex;
   justify-content: center;
@@ -42,17 +34,17 @@
   flex-direction: column;
   z-index: 5;
 }
-.body .nav .insideLine ul {
+.nav .insideLine ul {
   z-index: 5;
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.body .nav .insideLine ul li:nth-child(2) {
+.nav .insideLine ul li:nth-child(2) {
   margin: 0 1.5rem;
 }
-.body .nav .insideLine ul li {
+.nav .insideLine ul li {
   background-color: darkorange;
   box-shadow: 1px 3px 5px gray;
   color: white;
@@ -60,7 +52,7 @@
   border-radius: 10px;
   width: 130px;
 }
-.body .nav .insideLine ul li .list {
+.nav .insideLine ul li .list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,101 +60,89 @@
   border-radius: 10px;
   padding: 0.3rem 0;
 }
-.body .nav .insideLine ul li .list h4 {
+.nav .insideLine ul li .list h4 {
   font-size: 0.8rem;
 }
-.body .nav .insideLine ul li .list h1 {
+.nav .insideLine ul li .list h1 {
   font-size: 1.1rem;
 }
 
 @media screen and (max-width: 1200px) {
-  .body {
-    background-color: pink;
-  }
-  .body .nav .insideLine {
+  .nav .insideLine {
     width: 80%;
   }
 }
 @media screen and (max-width: 1024px) {
-  .body {
-    background-color: skyblue;
-  }
-  .body .nav .insideLine {
+  .nav .insideLine {
     width: 100%;
   }
-  .body .nav .insideLine .pageTitle h4 {
+  .nav .insideLine .pageTitle h4 {
     font-size: 0.8rem;
   }
-  .body .nav .insideLine .pageTitle h1 {
+  .nav .insideLine .pageTitle h1 {
     font-size: 1.3rem;
   }
-  .body .nav .insideLine ul li {
+  .nav .insideLine ul li {
     width: 120px;
   }
-  .body .nav .insideLine ul li .list h4 {
+  .nav .insideLine ul li .list h4 {
     font-size: 0.8rem;
   }
-  .body .nav .insideLine ul li .list h1 {
+  .nav .insideLine ul li .list h1 {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .body {
-    background-color: greenyellow;
-  }
-  .body .nav {
+  .nav {
     padding: 0 2rem;
     padding: 0 5rem;
   }
-  .body .nav .insideLine {
+  .nav .insideLine {
     width: 100%;
   }
-  .body .nav .insideLine .pageTitle h4 {
+  .nav .insideLine .pageTitle h4 {
     font-size: 0.7rem;
   }
-  .body .nav .insideLine .pageTitle h1 {
+  .nav .insideLine .pageTitle h1 {
     font-size: 1.1rem;
   }
-  .body .nav .insideLine ul li:nth-child(2) {
+  .nav .insideLine ul li:nth-child(2) {
     margin: 0 1rem;
   }
-  .body .nav .insideLine ul li {
+  .nav .insideLine ul li {
     width: 100px;
   }
-  .body .nav .insideLine ul li .list h4 {
+  .nav .insideLine ul li .list h4 {
     font-size: 0.7rem;
   }
-  .body .nav .insideLine ul li .list h1 {
+  .nav .insideLine ul li .list h1 {
     font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .body {
-    background-color: orange;
-  }
-  .body .nav {
+  .nav {
     padding: 0 2rem;
   }
-  .body .nav .insideLine {
+  .nav .insideLine {
     width: 100%;
   }
-  .body .nav .insideLine .pageTitle h4 {
+  .nav .insideLine .pageTitle h4 {
     font-size: 0.7rem;
   }
-  .body .nav .insideLine .pageTitle h1 {
+  .nav .insideLine .pageTitle h1 {
     font-size: 1.1rem;
   }
-  .body .nav .insideLine ul li:nth-child(2) {
+  .nav .insideLine ul li:nth-child(2) {
     margin: 0 1rem;
   }
-  .body .nav .insideLine ul li {
+  .nav .insideLine ul li {
     width: 90px;
   }
-  .body .nav .insideLine ul li .list h4 {
+  .nav .insideLine ul li .list h4 {
     font-size: 0.7rem;
   }
-  .body .nav .insideLine ul li .list h1 {
+  .nav .insideLine ul li .list h1 {
     font-size: 0.8rem;
   }
 }
-/*# sourceMappingURL=all-menu.module.css.map */
+/*# sourceMappingURL=all-menu-nav.module.css.map */

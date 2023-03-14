@@ -1,0 +1,2 @@
+.body{border:1px solid #000;background-color:#fff;width:100%;min-height:calc(100vh - 100px);position:absolute;top:100px}@media screen and (max-width: 1200px){.body{background-color:pink}}@media screen and (max-width: 1024px){.body{background-color:skyblue}}@media screen and (max-width: 768px){.body{background-color:#adff2f}}@media screen and (max-width: 600px){.body{background-color:orange}}
+/*# sourceMappingURL=all-menu.module.min.css.map */
