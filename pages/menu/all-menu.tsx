@@ -33,7 +33,6 @@ export default function AllMenu({
   bottlebeer,
   cocktailhardliquor,
 }: Props) {
-  // console.log(barrelbeer, bottlebeer, cocktailhardliquor);
   return (
     <>
       <div className={styles.body}>
