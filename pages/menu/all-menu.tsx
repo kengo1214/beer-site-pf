@@ -28,11 +28,7 @@ type Props = {
   cocktailhardliquor: Menu[];
 };
 
-export default function AllMenu({
-  barrelbeer,
-  bottlebeer,
-  cocktailhardliquor,
-}: Props) {
+export default function AllMenu({ barrelbeer }: Props) {
   return (
     <>
       <div className={styles.body}>
