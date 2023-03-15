@@ -1,10 +1,69 @@
 .body {
-  border: 1px solid black;
   background-color: white;
   width: 100%;
   min-height: calc(100vh - 100px);
   position: absolute;
   top: 100px;
+}
+.body .barrelSection {
+  border: 5px solid red;
+  width: 100%;
+  padding: calc(100px + 5rem) 5rem 5rem;
+}
+.body .barrelSection .sectionTitle {
+  width: 100%;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body .barrelSection .menuBox {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.body .barrelSection .menuBox .menuItem {
+  border: 3px solid red;
+  width: calc(33% - 2rem);
+  margin: 0 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body .barrelSection .menuBox .menuItem .title {
+  border: 3px solid blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.body .barrelSection .menuBox .menuItem .price {
+  border: 3px solid greenyellow;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.body .barrelSection .menuBox .menuItem .product {
+  border: 3px solid orange;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.body .barrelSection .menuBox .menuItem .image {
+  border: 3px solid magenta;
+  width: 100%;
+  height: 200px;
+  position: relative;
 }
 
 @media screen and (max-width: 1200px) {
