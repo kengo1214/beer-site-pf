@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import { Link as Scroll } from "react-scroll";
 import { clientMenu } from "../../libs/client";
 import type { Menu } from "../../src/types/menu"; //🔥🔥🔥
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 //SSG(getStaticProps)
 export async function getStaticProps() {
@@ -99,7 +99,7 @@ export default function AllMenu({ barrelbeer }: Props) {
                 />
                 <div className={styles.image}>
                   <Image
-                    src={barrelbeer.image}
+                    src={barrelbeer.image.url}
                     alt="image"
                     layout="fill"
                     objectFit="contain"
