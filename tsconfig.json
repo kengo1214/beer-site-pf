@@ -14,9 +14,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    // "paths": {
-    //   "@/*": ["./*"]
-    // }
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "libs/client.tsx"],
   "exclude": ["node_modules"]
