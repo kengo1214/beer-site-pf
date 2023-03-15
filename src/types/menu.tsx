@@ -5,7 +5,7 @@ export type Menu = {
   price: string;
   product: string;
   detail: string;
-  image: string;
+  image: { url: string };
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
