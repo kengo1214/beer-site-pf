@@ -18,4 +18,16 @@
   background-color: black;
   transition: 300ms;
 }
+
+@media screen and (max-width: 1200px) {
+  .button {
+    padding: 0.7rem 0.9rem;
+  }
+  .button p {
+    font-size: 0.7rem;
+  }
+  .button .icon {
+    margin-left: 0.5rem;
+  }
+}
 /*# sourceMappingURL=Button.module.css.map */

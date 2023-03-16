@@ -1,2 +1,2 @@
-.button{border:1px solid #000;border-radius:5px;padding:.8rem 1rem;font-weight:bold;display:flex;justify-content:center;align-items:center}.button p{font-size:.8rem}.button .icon{margin-left:.5rem}.button:hover{color:#fff;background-color:#000;transition:300ms}
+.button{border:1px solid #000;border-radius:5px;padding:.8rem 1rem;font-weight:bold;display:flex;justify-content:center;align-items:center}.button p{font-size:.8rem}.button .icon{margin-left:.5rem}.button:hover{color:#fff;background-color:#000;transition:300ms}@media screen and (max-width: 1200px){.button{padding:.7rem .9rem}.button p{font-size:.7rem}.button .icon{margin-left:.5rem}}
 /*# sourceMappingURL=Button.module.min.css.map */
