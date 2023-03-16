@@ -1,6 +1,7 @@
 import styles from "../../styles/all-menu/all-menu.module.scss";
 import stylesNav from "../../styles/all-menu/all-menu-nav.module.scss";
 import Header from "../../components/Header/Header";
+import Button from "../../components/Button/Button";
 import { Link as Scroll } from "react-scroll";
 import { clientMenu } from "../../libs/client";
 import type { Menu } from "../../src/types/menu"; //🔥🔥🔥
@@ -105,6 +106,14 @@ export default function AllMenu({ barrelbeer }: Props) {
                     objectFit="contain"
                   />
                 </div>
+
+                <div className={styles.button}>
+                  <Button />
+                </div>
+
+                {/* <button className={styles.button}>
+                  <Button />
+                </button> */}
               </div>
             ))}
           </div>

@@ -6,9 +6,25 @@
   top: 100px;
 }
 .body .barrelSection {
-  border: 5px solid red;
   width: 100%;
-  padding: calc(100px + 5rem) 5rem 5rem;
+  padding: calc(100px + 3rem) 5rem 3rem;
+  background-image: url("/image/all-menu/barrel.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.body .barrelSection::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
 }
 .body .barrelSection .sectionTitle {
   width: 100%;
@@ -17,53 +33,68 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 .body .barrelSection .menuBox {
+  position: relative;
+  z-index: 1;
   width: 100%;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
 .body .barrelSection .menuBox .menuItem {
-  border: 3px solid red;
+  background-color: white;
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 5px;
+  border-radius: 5px;
   width: calc(33% - 2rem);
   margin: 0 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1rem 0;
 }
 .body .barrelSection .menuBox .menuItem .title {
-  border: 3px solid blue;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
 }
 .body .barrelSection .menuBox .menuItem .price {
-  border: 3px solid greenyellow;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
+  padding: 0.5rem 0;
 }
 .body .barrelSection .menuBox .menuItem .product {
-  border: 3px solid orange;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
+  padding: 0.5rem 0;
 }
 .body .barrelSection .menuBox .menuItem .image {
-  border: 3px solid magenta;
-  width: 100;
+  width: 100%;
   height: 200px;
   position: relative;
+}
+.body .barrelSection .menuBox .menuItem .button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 @media screen and (max-width: 1200px) {
