@@ -1,0 +1,27 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  @include center;
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    color: white;
+    background-color: black;
+    transition: 300ms;
+  }
+}

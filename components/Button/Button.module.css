@@ -1,0 +1,21 @@
+.button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button p {
+  font-size: 0.8rem;
+}
+.button .icon {
+  margin-left: 0.5rem;
+}
+.button:hover {
+  color: white;
+  background-color: black;
+  transition: 300ms;
+}
+/*# sourceMappingURL=Button.module.css.map */
