@@ -7,7 +7,7 @@
 .button {
   border: 1px solid black;
   border-radius: 5px;
-  padding: 0.8rem 1rem;
+  padding: 0.7rem 0.9rem;
   font-weight: bold;
   @include center;
 
@@ -23,21 +23,5 @@
     color: white;
     background-color: black;
     transition: 300ms;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .button {
-    // padding: 0.8rem 1rem;
-    padding: 0.7rem 0.9rem;
-
-    p {
-      // font-size: 0.8rem;
-      font-size: 0.7rem;
-    }
-
-    .icon {
-      margin-left: 0.5rem;
-    }
   }
 }
