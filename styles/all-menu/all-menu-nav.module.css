@@ -93,9 +93,6 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .nav .insideLine {
-    width: 100%;
-  }
   .nav .insideLine .pageTitle h4 {
     font-size: 0.7rem;
   }
@@ -119,23 +116,8 @@
   .nav {
     padding: 0 2rem;
   }
-  .nav .insideLine {
-    width: 100%;
-  }
-  .nav .insideLine .pageTitle h4 {
-    font-size: 0.7rem;
-  }
-  .nav .insideLine .pageTitle h1 {
-    font-size: 1.1rem;
-  }
-  .nav .insideLine ul li:nth-child(2) {
-    margin: 0 1rem;
-  }
   .nav .insideLine ul li {
     width: 90px;
-  }
-  .nav .insideLine ul li .list h4 {
-    font-size: 0.7rem;
   }
   .nav .insideLine ul li .list h1 {
     font-size: 0.8rem;
@@ -147,10 +129,10 @@
     padding: 0;
   }
   .nav .insideLine {
-    flex-direction: column;
+    padding: 1rem;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    flex-direction: column;
   }
   .nav .insideLine .pageTitle {
     padding-bottom: 0.8rem;
@@ -172,28 +154,6 @@
   }
 }
 @media screen and (max-width: 350px) {
-  .nav {
-    height: 130px;
-    padding: 0;
-  }
-  .nav .insideLine {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-  }
-  .nav .insideLine .pageTitle {
-    padding-bottom: 0.8rem;
-  }
-  .nav .insideLine .pageTitle h4 {
-    font-size: 0.6rem;
-  }
-  .nav .insideLine .pageTitle h1 {
-    font-size: 1rem;
-  }
-  .nav .insideLine ul li:nth-child(2) {
-    margin: 0 1.5rem;
-  }
   .nav .insideLine ul li {
     width: 80px;
   }

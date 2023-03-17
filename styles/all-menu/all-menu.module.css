@@ -102,9 +102,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .body {
-    min-height: calc(100vh - 100px);
-  }
   .body .barrelSection {
     padding: calc(100px + 3rem) 2.5rem 3rem;
   }
@@ -117,9 +114,6 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .body {
-    min-height: calc(100vh - 100px);
-  }
   .body .barrelSection {
     padding: calc(100px + 3rem) 2rem 3rem;
   }
@@ -131,20 +125,11 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .body {
-    min-height: calc(100vh - 100px);
-  }
-  .body .barrelSection .menuBox .menuItem {
-    width: calc(50% - 2rem);
-  }
   .body .barrelSection .menuBox .menuItem .title {
     font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 650px) {
-  .body {
-    min-height: calc(100vh - 100px);
-  }
   .body .barrelSection .menuBox .menuItem {
     width: 80%;
     margin: 0 0rem 2rem;
@@ -190,63 +175,8 @@
   }
 }
 @media screen and (max-width: 390px) {
-  .body {
-    min-height: calc(100vh - 80px);
-    top: 80px;
-  }
-  .body .barrelSection {
-    padding: calc(130px + 3rem) 2rem 3rem;
-  }
-  .body .barrelSection .sectionTitle {
-    padding-bottom: 2rem;
-  }
-  .body .barrelSection .sectionTitle h4 {
-    font-size: 0.8rem;
-  }
-  .body .barrelSection .sectionTitle h1 {
-    font-size: 1.3rem;
-  }
   .body .barrelSection .menuBox .menuItem {
     width: 100%;
-  }
-  .body .barrelSection .menuBox .menuItem .title {
-    font-size: 0.9rem;
-  }
-  .body .barrelSection .menuBox .menuItem .price {
-    font-size: 0.8rem;
-  }
-  .body .barrelSection .menuBox .menuItem .product {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 350px) {
-  .body {
-    min-height: calc(100vh - 80px);
-    top: 80px;
-  }
-  .body .barrelSection {
-    padding: calc(130px + 3rem) 2rem 3rem;
-  }
-  .body .barrelSection .sectionTitle {
-    padding-bottom: 2rem;
-  }
-  .body .barrelSection .sectionTitle h4 {
-    font-size: 0.8rem;
-  }
-  .body .barrelSection .sectionTitle h1 {
-    font-size: 1.3rem;
-  }
-  .body .barrelSection .menuBox .menuItem {
-    width: 100%;
-  }
-  .body .barrelSection .menuBox .menuItem .title {
-    font-size: 0.8rem;
-  }
-  .body .barrelSection .menuBox .menuItem .price {
-    font-size: 0.8rem;
-  }
-  .body .barrelSection .menuBox .menuItem .product {
-    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=all-menu.module.css.map */

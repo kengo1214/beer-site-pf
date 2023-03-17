@@ -119,19 +119,17 @@
 
 @media screen and (max-width: 1200px) {
   .body {
-    min-height: calc(100vh - 100px);
-
     //🍺🍺🍺
     .barrelSection {
       padding: calc(100px + 3rem) 2.5rem 3rem;
 
       .menuBox {
         .menuItem {
-          width: calc(33% - 2rem); //🔥
-          margin: 0 1rem 2rem; //🔥
+          width: calc(33% - 2rem);
+          margin: 0 1rem 2rem;
 
           .title {
-            font-size: 0.85rem; //🔥
+            font-size: 0.85rem;
           }
         }
       }
@@ -142,19 +140,16 @@
 //2列表示2列表示2列表示2列表示2列表示
 @media screen and (max-width: 1024px) {
   .body {
-    // border: 3px solid blue;
-    min-height: calc(100vh - 100px);
-
     //🍺🍺🍺
     .barrelSection {
       padding: calc(100px + 3rem) 2rem 3rem;
 
       .menuBox {
         .menuItem {
-          width: calc(50% - 2rem); //🔥
+          width: calc(50% - 2rem);
 
           .title {
-            font-size: 1rem; //🔥
+            font-size: 1rem;
           }
         }
       }
@@ -164,16 +159,12 @@
 
 @media screen and (max-width: 768px) {
   .body {
-    min-height: calc(100vh - 100px);
-
     //🍺🍺🍺
     .barrelSection {
       .menuBox {
         .menuItem {
-          width: calc(50% - 2rem); //🔥
-
           .title {
-            font-size: 0.8rem; //🔥
+            font-size: 0.8rem;
           }
         }
       }
@@ -183,25 +174,23 @@
 
 @media screen and (max-width: 650px) {
   .body {
-    min-height: calc(100vh - 100px);
-
     //🍺🍺🍺
     .barrelSection {
       .menuBox {
         .menuItem {
-          width: 80%; //🔥
-          margin: 0 0rem 2rem; //🔥
+          width: 80%;
+          margin: 0 0rem 2rem;
 
           .title {
-            font-size: 1rem; //🔥
+            font-size: 1rem;
           }
 
           .price {
-            font-size: 0.9rem; //🔥
+            font-size: 0.9rem;
           }
 
           .product {
-            font-size: 0.9rem; //🔥
+            font-size: 0.9rem;
           }
         }
       }
@@ -220,7 +209,7 @@
       padding: calc(130px + 3rem) 2rem 3rem;
 
       .sectionTitle {
-        padding-bottom: 2rem; //🔥
+        padding-bottom: 2rem;
 
         h4 {
           font-size: 0.8rem;
@@ -233,7 +222,7 @@
 
       .menuBox {
         .menuItem {
-          width: 90%; //🔥
+          width: 90%;
           .title {
             font-size: 0.9rem;
           }
@@ -253,80 +242,10 @@
 
 @media screen and (max-width: 390px) {
   .body {
-    min-height: calc(100vh - 80px);
-    top: 80px;
-
     .barrelSection {
-      padding: calc(130px + 3rem) 2rem 3rem;
-
-      .sectionTitle {
-        padding-bottom: 2rem; //🔥
-
-        h4 {
-          font-size: 0.8rem;
-        }
-
-        h1 {
-          font-size: 1.3rem;
-        }
-      }
-
       .menuBox {
         .menuItem {
-          width: 100%; //🔥
-
-          .title {
-            font-size: 0.9rem;
-          }
-
-          .price {
-            font-size: 0.8rem;
-          }
-
-          .product {
-            font-size: 0.8rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .body {
-    min-height: calc(100vh - 80px);
-    top: 80px;
-
-    .barrelSection {
-      padding: calc(130px + 3rem) 2rem 3rem;
-
-      .sectionTitle {
-        padding-bottom: 2rem; //🔥
-
-        h4 {
-          font-size: 0.8rem;
-        }
-
-        h1 {
-          font-size: 1.3rem;
-        }
-      }
-
-      .menuBox {
-        .menuItem {
-          width: 100%; //🔥
-
-          .title {
-            font-size: 0.8rem;
-          }
-
-          .price {
-            font-size: 0.8rem;
-          }
-
-          .product {
-            font-size: 0.8rem;
-          }
+          width: 100%;
         }
       }
     }
