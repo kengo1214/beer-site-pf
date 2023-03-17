@@ -93,10 +93,6 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .nav {
-    padding: 0 2rem;
-    padding: 0 5rem;
-  }
   .nav .insideLine {
     width: 100%;
   }
@@ -143,6 +139,69 @@
   }
   .nav .insideLine ul li .list h1 {
     font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav {
+    height: 130px;
+    padding: 0;
+  }
+  .nav .insideLine {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .nav .insideLine .pageTitle {
+    padding-bottom: 0.8rem;
+  }
+  .nav .insideLine .pageTitle h4 {
+    font-size: 0.6rem;
+  }
+  .nav .insideLine .pageTitle h1 {
+    font-size: 1rem;
+  }
+  .nav .insideLine ul li:nth-child(2) {
+    margin: 0 1.5rem;
+  }
+  .nav .insideLine ul li .list h4 {
+    font-size: 0.6rem;
+  }
+  .nav .insideLine ul li .list h1 {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .nav {
+    height: 130px;
+    padding: 0;
+  }
+  .nav .insideLine {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .nav .insideLine .pageTitle {
+    padding-bottom: 0.8rem;
+  }
+  .nav .insideLine .pageTitle h4 {
+    font-size: 0.6rem;
+  }
+  .nav .insideLine .pageTitle h1 {
+    font-size: 1rem;
+  }
+  .nav .insideLine ul li:nth-child(2) {
+    margin: 0 1.5rem;
+  }
+  .nav .insideLine ul li {
+    width: 80px;
+  }
+  .nav .insideLine ul li .list h4 {
+    font-size: 0.5rem;
+  }
+  .nav .insideLine ul li .list h1 {
+    font-size: 0.7rem;
   }
 }
 /*# sourceMappingURL=all-menu-nav.module.css.map */
