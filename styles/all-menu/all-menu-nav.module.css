@@ -66,6 +66,9 @@
 .nav .insideLine ul li .list h1 {
   font-size: 1.1rem;
 }
+.nav .insideLine ul li .mobileList {
+  display: none;
+}
 
 @media screen and (max-width: 1200px) {
   .nav .insideLine {
@@ -146,10 +149,22 @@
   .nav .insideLine ul li:nth-child(2) {
     margin: 0 1.5rem;
   }
-  .nav .insideLine ul li .list h4 {
+  .nav .insideLine ul li .list {
+    display: none;
+  }
+  .nav .insideLine ul li .mobileList {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0.3rem 0;
+  }
+  .nav .insideLine ul li .mobileList h4 {
     font-size: 0.6rem;
   }
-  .nav .insideLine ul li .list h1 {
+  .nav .insideLine ul li .mobileList h1 {
     font-size: 0.8rem;
   }
 }

@@ -4,6 +4,95 @@
   align-items: center;
 }
 
+@mixin parts {
+  width: 100%;
+  padding: calc(100px + 3rem) 2.5rem 3rem;
+  background-image: url("/image/all-menu/barrel.jpg"); //🔥
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  @include center;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
+
+  .sectionTitle {
+    width: 100%;
+    padding-bottom: 3rem;
+    @include center;
+    flex-direction: column;
+    position: relative; //🔥
+    z-index: 1;
+    color: white;
+  }
+
+  .menuBox {
+    position: relative; //🔥
+    z-index: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    @include center;
+
+    .menuItem {
+      background-color: white;
+      box-shadow: 5px 5px 10px gray;
+      border-radius: 5px;
+      border-radius: 10px;
+      width: calc(33% - 3rem); //🔥
+      margin: 0 1.5rem 2rem; //🔥
+      @include center;
+      flex-direction: column;
+      padding: 1rem 0.8rem;
+
+      .title {
+        width: 100%;
+        @include center;
+        font-size: 1rem; //🔥
+        font-weight: bold;
+        padding: 0.5rem 0;
+      }
+
+      .price {
+        width: 100%;
+        @include center;
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+      }
+
+      .product {
+        width: 100%;
+        @include center;
+        font-size: 0.8rem;
+        padding: 0.5rem 0 1.5rem;
+      }
+
+      .image {
+        width: 100%;
+        height: 200px;
+        position: relative;
+      }
+
+      .button {
+        width: 100%;
+        @include center;
+        padding: 1.5rem 0 1rem;
+      }
+    }
+  }
+}
+
 .body {
   // border: 1px solid black;
   background-color: white;
@@ -14,113 +103,29 @@
 
   //🍺🍺🍺
   .barrelSection {
-    width: 100%;
-    padding: calc(100px + 3rem) 2.5rem 3rem;
+    @include parts;
     background-image: url("/image/all-menu/barrel.jpg"); //🔥
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    @include center;
-    flex-direction: column;
-
-    &::after {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.4);
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      height: 100%;
-    }
-
-    .sectionTitle {
-      width: 100%;
-      padding-bottom: 3rem;
-      @include center;
-      flex-direction: column;
-      position: relative; //🔥
-      z-index: 1;
-      color: white;
-    }
-
-    .menuBox {
-      position: relative; //🔥
-      z-index: 1;
-      width: 100%;
-      flex-wrap: wrap;
-      @include center;
-
-      .menuItem {
-        background-color: white;
-        box-shadow: 5px 5px 10px gray;
-        border-radius: 5px;
-        border-radius: 10px;
-        width: calc(33% - 3rem); //🔥
-        margin: 0 1.5rem 2rem; //🔥
-        @include center;
-        flex-direction: column;
-        padding: 1rem 0.8rem;
-
-        .title {
-          width: 100%;
-          @include center;
-          font-size: 1rem; //🔥
-          font-weight: bold;
-          padding: 0.5rem 0;
-        }
-
-        .price {
-          width: 100%;
-          @include center;
-          font-size: 0.8rem;
-          padding: 0.5rem 0;
-        }
-
-        .product {
-          width: 100%;
-          @include center;
-          font-size: 0.8rem;
-          padding: 0.5rem 0 1.5rem;
-        }
-
-        .image {
-          width: 100%;
-          height: 200px;
-          position: relative;
-        }
-
-        .button {
-          width: 100%;
-          @include center;
-          padding: 1.5rem 0 1rem;
-        }
-      }
-    }
   }
 
   //🍻🍻🍻
-  // .bottleSection {
-  //   border: 3px solid greenyellow;
-  //   width: 100%;
-  //   min-height: calc(100vh - 100px);
-  // }
+  .bottleSection {
+    @include parts;
+    background-image: url("/image/all-menu/bottle.jpg"); //🔥
+  }
 
   //🍷🍷🍷
-  // .cocktailSection {
-  //   border: 3px solid orange;
-  //   width: 100%;
-  //   min-height: calc(100vh - 100px);
-  // }
+  .cocktailSection {
+    @include parts;
+    background-image: url("/image/all-menu/cocktail.jpg"); //🔥
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .body {
     //🍺🍺🍺
-    .barrelSection {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
       padding: calc(100px + 3rem) 2.5rem 3rem;
 
       .menuBox {
@@ -141,7 +146,9 @@
 @media screen and (max-width: 1024px) {
   .body {
     //🍺🍺🍺
-    .barrelSection {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
       padding: calc(100px + 3rem) 2rem 3rem;
 
       .menuBox {
@@ -160,7 +167,9 @@
 @media screen and (max-width: 768px) {
   .body {
     //🍺🍺🍺
-    .barrelSection {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
       .menuBox {
         .menuItem {
           .title {
@@ -175,7 +184,9 @@
 @media screen and (max-width: 650px) {
   .body {
     //🍺🍺🍺
-    .barrelSection {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
       .menuBox {
         .menuItem {
           width: 80%;
@@ -205,7 +216,9 @@
     min-height: calc(100vh - 80px);
     top: 80px;
 
-    .barrelSection {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
       padding: calc(130px + 3rem) 2rem 3rem;
 
       .sectionTitle {
@@ -242,7 +255,9 @@
 
 @media screen and (max-width: 390px) {
   .body {
-    .barrelSection {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
       .menuBox {
         .menuItem {
           width: 100%;

@@ -29,7 +29,11 @@ type Props = {
   cocktailhardliquor: Menu[];
 };
 
-export default function AllMenu({ barrelbeer }: Props) {
+export default function AllMenu({
+  barrelbeer,
+  bottlebeer,
+  cocktailhardliquor,
+}: Props) {
   return (
     <>
       <div className={styles.body}>
@@ -44,11 +48,26 @@ export default function AllMenu({ barrelbeer }: Props) {
             <ul>
               <li>
                 <Scroll
-                  to="barrel"
+                  to="a"
+                  // to="barrel"
                   smooth={true}
                   duration={800}
-                  offset={-230}
+                  offset={-100}
+                  // offset={-230}
                   className={stylesNav.list}
+                >
+                  <h4>樽ビール</h4>
+                  <h1>Barrel Beer</h1>
+                </Scroll>
+
+                <Scroll
+                  to="a"
+                  // to="barrel"
+                  smooth={true}
+                  duration={800}
+                  offset={-80}
+                  // offset={-230}
+                  className={stylesNav.mobileList}
                 >
                   <h4>樽ビール</h4>
                   <h1>Barrel Beer</h1>
@@ -56,11 +75,25 @@ export default function AllMenu({ barrelbeer }: Props) {
               </li>
               <li>
                 <Scroll
-                  to="barrel"
+                  to="b"
+                  // to="barrel"
                   smooth={true}
                   duration={800}
-                  offset={-230}
+                  offset={-100}
+                  // offset={-230}
                   className={stylesNav.list}
+                >
+                  <h4>ボトルビール</h4>
+                  <h1>Bottle Beer</h1>
+                </Scroll>
+                <Scroll
+                  to="b"
+                  // to="barrel"
+                  smooth={true}
+                  duration={800}
+                  offset={-80}
+                  // offset={-230}
+                  className={stylesNav.mobileList}
                 >
                   <h4>ボトルビール</h4>
                   <h1>Bottle Beer</h1>
@@ -68,11 +101,25 @@ export default function AllMenu({ barrelbeer }: Props) {
               </li>
               <li>
                 <Scroll
-                  to="barrel"
+                  to="c"
+                  // to="barrel"
                   smooth={true}
                   duration={800}
-                  offset={-230}
+                  offset={-100}
+                  // offset={-230}
                   className={stylesNav.list}
+                >
+                  <h4>カクテル</h4>
+                  <h1>Cocktail</h1>
+                </Scroll>
+                <Scroll
+                  to="c"
+                  // to="barrel"
+                  smooth={true}
+                  duration={800}
+                  offset={-80}
+                  // offset={-230}
+                  className={stylesNav.mobileList}
                 >
                   <h4>カクテル</h4>
                   <h1>Cocktail</h1>
@@ -82,7 +129,9 @@ export default function AllMenu({ barrelbeer }: Props) {
           </div>
         </nav>
 
-        <section className={styles.barrelSection}>
+        {/* 🔥🔥🔥 */}
+        <section className={styles.barrelSection} id="a">
+          {/* <section className={styles.barrelSection} id="barrel"> */}
           <div className={styles.sectionTitle}>
             <h4>樽ビール</h4>
             <h1>Barrel Beer</h1>
@@ -110,18 +159,79 @@ export default function AllMenu({ barrelbeer }: Props) {
                 <div className={styles.button}>
                   <Button />
                 </div>
-
-                {/* <button className={styles.button}>
-                  <Button />
-                </button> */}
               </div>
             ))}
           </div>
         </section>
 
-        <section className={styles.bottleSection}></section>
+        {/* 🔥🔥🔥 */}
+        <section className={styles.bottleSection} id="b">
+          {/* <section className={styles.bottleSection} id="bottle"> */}
+          <div className={styles.sectionTitle}>
+            <h4>ボトルビール</h4>
+            <h1>Bottle Beer</h1>
+          </div>
+          <div className={styles.menuBox}>
+            {bottlebeer.map((bottlebeer) => (
+              <div className={styles.menuItem} key={bottlebeer.id}>
+                <p className={styles.title}>{bottlebeer.title}</p>
+                <p className={styles.price}>{bottlebeer.price}</p>
+                <p
+                  className={styles.product}
+                  dangerouslySetInnerHTML={{
+                    __html: `${bottlebeer.product}`,
+                  }}
+                />
+                <div className={styles.image}>
+                  <Image
+                    src={bottlebeer.image.url}
+                    alt="image"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
 
-        <section className={styles.cocktailSection}></section>
+                <div className={styles.button}>
+                  <Button />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 🔥🔥🔥 */}
+        <section className={styles.cocktailSection} id="c">
+          <div className={styles.sectionTitle}>
+            <h4>カクテル</h4>
+            <h1>Cocktail and Hardliquor</h1>
+          </div>
+          <div className={styles.menuBox}>
+            {cocktailhardliquor.map((cocktailhardliquor) => (
+              <div className={styles.menuItem} key={cocktailhardliquor.id}>
+                <p className={styles.title}>{cocktailhardliquor.title}</p>
+                <p className={styles.price}>{cocktailhardliquor.price}</p>
+                <p
+                  className={styles.product}
+                  dangerouslySetInnerHTML={{
+                    __html: `${cocktailhardliquor.product}`,
+                  }}
+                />
+                <div className={styles.image}>
+                  <Image
+                    src={cocktailhardliquor.image.url}
+                    alt="image"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
+
+                <div className={styles.button}>
+                  <Button />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </>
   );
