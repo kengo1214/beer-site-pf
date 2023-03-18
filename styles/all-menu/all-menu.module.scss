@@ -111,6 +111,14 @@
   .bottleSection {
     @include parts;
     background-image: url("/image/all-menu/bottle.jpg"); //🔥
+
+    .menuBox {
+      .menuItem {
+        .title {
+          font-size: 0.9rem; //⭐️
+        }
+      }
+    }
   }
 
   //🍷🍷🍷
@@ -122,7 +130,6 @@
 
 @media screen and (max-width: 1200px) {
   .body {
-    //🍺🍺🍺
     .barrelSection,
     .bottleSection,
     .cocktailSection {
@@ -139,13 +146,22 @@
         }
       }
     }
+
+    .bottleSection {
+      .menuBox {
+        .menuItem {
+          .title {
+            font-size: 0.8rem; //⭐️
+          }
+        }
+      }
+    }
   }
 }
 
 //2列表示2列表示2列表示2列表示2列表示
 @media screen and (max-width: 1024px) {
   .body {
-    //🍺🍺🍺
     .barrelSection,
     .bottleSection,
     .cocktailSection {
@@ -161,19 +177,12 @@
         }
       }
     }
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .body {
-    //🍺🍺🍺
-    .barrelSection,
-    .bottleSection,
-    .cocktailSection {
+    .bottleSection {
       .menuBox {
         .menuItem {
           .title {
-            font-size: 0.8rem;
+            font-size: 0.9rem; //⭐️
           }
         }
       }
@@ -181,9 +190,42 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .body {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
+      .menuBox {
+        .menuItem {
+          width: calc(50% - 1.6rem); //⭐️
+          margin: 0 0.8rem 2rem; //⭐️
+
+          .title {
+            font-size: 0.8rem;
+          }
+
+          .image {
+            height: 150px;
+          }
+        }
+      }
+    }
+
+    .bottleSection {
+      .menuBox {
+        .menuItem {
+          .title {
+            font-size: 0.77rem; //⭐️
+          }
+        }
+      }
+    }
+  }
+}
+
+//1列表示1列表示1列表示1列表示
 @media screen and (max-width: 650px) {
   .body {
-    //🍺🍺🍺
     .barrelSection,
     .bottleSection,
     .cocktailSection {
@@ -202,6 +244,34 @@
 
           .product {
             font-size: 0.9rem;
+          }
+
+          .image {
+            height: 170px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .body {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
+      .menuBox {
+        .menuItem {
+          .title {
+            font-size: 0.9rem;
+          }
+
+          .price {
+            font-size: 0.8rem;
+          }
+
+          .product {
+            font-size: 0.8rem;
           }
         }
       }
@@ -236,15 +306,14 @@
       .menuBox {
         .menuItem {
           width: 90%;
+        }
+      }
+    }
+
+    .bottleSection {
+      .menuBox {
+        .menuItem {
           .title {
-            font-size: 0.9rem;
-          }
-
-          .price {
-            font-size: 0.8rem;
-          }
-
-          .product {
             font-size: 0.8rem;
           }
         }
@@ -258,9 +327,63 @@
     .barrelSection,
     .bottleSection,
     .cocktailSection {
+      .sectionTitle {
+        h4 {
+          font-size: 0.7rem;
+        }
+
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+
       .menuBox {
         .menuItem {
           width: 100%;
+
+          .title {
+            font-size: 0.8rem;
+          }
+
+          .price {
+            font-size: 0.75rem;
+          }
+
+          .product {
+            font-size: 0.75rem;
+          }
+
+          .image {
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .body {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
+      .menuBox {
+        .menuItem {
+          width: 100%;
+
+          .title {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    .bottleSection {
+      .menuBox {
+        .menuItem {
+          .title {
+            font-size: 0.7rem;
+          }
         }
       }
     }
