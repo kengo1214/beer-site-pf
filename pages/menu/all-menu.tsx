@@ -3,11 +3,14 @@ import stylesNav from "../../styles/all-menu/all-menu-nav.module.scss";
 import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
 import { Link as Scroll } from "react-scroll";
+import Link from "next/link";
 import { clientMenu } from "../../libs/client";
-import type { Menu } from "../../src/types/menu"; //🔥🔥🔥
 import Image from "next/legacy/image";
+import type { Menu } from "../../src/types/menu";
 
-//SSG(getStaticProps)
+
+
+//SSG(getStaticProps)🔥🔥🔥
 export async function getStaticProps() {
   const data01 = await clientMenu.get({ endpoint: "barrel-beer" });
   const data02 = await clientMenu.get({ endpoint: "bottle-beer" });
@@ -157,7 +160,9 @@ export default function AllMenu({
                 </div>
 
                 <div className={styles.button}>
-                  <Button />
+                  <Link href={`/menu/barrelbeer/${barrelbeer.id}`}>
+                    <Button />
+                  </Link>
                 </div>
               </div>
             ))}
