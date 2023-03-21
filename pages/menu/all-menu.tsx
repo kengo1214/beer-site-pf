@@ -1,14 +1,13 @@
 import styles from "../../styles/all-menu/all-menu.module.scss";
 import stylesNav from "../../styles/all-menu/all-menu-nav.module.scss";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import { Link as Scroll } from "react-scroll";
 import Link from "next/link";
 import { clientMenu } from "../../libs/client";
 import Image from "next/legacy/image";
 import type { Menu } from "../../src/types/menu";
-
-
 
 //SSG(getStaticProps)🔥🔥🔥
 export async function getStaticProps() {
@@ -134,7 +133,6 @@ export default function AllMenu({
 
         {/* 🔥🔥🔥 */}
         <section className={styles.barrelSection} id="a">
-          {/* <section className={styles.barrelSection} id="barrel"> */}
           <div className={styles.sectionTitle}>
             <h4>樽ビール</h4>
             <h1>Barrel Beer</h1>
@@ -171,7 +169,6 @@ export default function AllMenu({
 
         {/* 🔥🔥🔥 */}
         <section className={styles.bottleSection} id="b">
-          {/* <section className={styles.bottleSection} id="bottle"> */}
           <div className={styles.sectionTitle}>
             <h4>ボトルビール</h4>
             <h1>Bottle Beer</h1>
@@ -237,6 +234,7 @@ export default function AllMenu({
             ))}
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );
