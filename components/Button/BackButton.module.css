@@ -1,0 +1,22 @@
+.backButton {
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 0.7rem 0.9rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backButton p {
+  font-size: 0.8rem;
+}
+.backButton .icon {
+  margin-right: 0.5rem;
+}
+.backButton:hover {
+  color: black;
+  background-color: white;
+  transition: 300ms;
+}
+/*# sourceMappingURL=BackButton.module.css.map */
