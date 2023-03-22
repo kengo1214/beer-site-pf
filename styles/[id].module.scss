@@ -5,7 +5,6 @@
 }
 
 .body {
-  // border: 3px solid red;
   background-color: white;
   width: 100%;
   // min-height: calc(100vh - 100px);
@@ -74,6 +73,7 @@
           grid-area: title;
           @include center;
           padding: 0.5rem;
+          font-size: 1.3rem;
         }
 
         .about {
@@ -81,12 +81,26 @@
           // border: 3px solid blue;
           @include center;
           padding: 0.5rem;
+
+          .price {
+            // border: 3px solid red;
+            font-size: 0.9rem;
+            margin-right: 1.5rem;
+          }
+
+          .product {
+            // border: 3px solid blue;
+            font-size: 0.9rem;
+          }
         }
 
         .detail {
           // border: 3px solid greenyellow;
           grid-area: detail;
-          padding: 0.5rem;
+          // padding: 0.5rem;
+          padding: 0.5rem 1rem 0.5rem 0.5rem;
+          font-size: 0.9rem;
+          line-height: 1.8;
         }
 
         .image {
@@ -94,6 +108,8 @@
           grid-area: image;
           position: relative;
           height: 100%;
+          height: 80%;
+          height: 280px;
         }
       }
       .back {
@@ -102,6 +118,74 @@
         @include center;
         // border: 3px solid magenta;
         color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .body {
+    .section {
+      .main {
+        width: 90%;
+
+        .itemBox {
+          .title {
+            font-size: 1.1rem;
+          }
+
+          .about {
+            .price {
+              font-size: 0.8rem;
+            }
+
+            .product {
+              font-size: 0.8rem;
+            }
+          }
+
+          .detail {
+            font-size: 0.8rem;
+          }
+        }
+        .back {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body {
+    .section {
+      .main {
+        .itemBox {
+          grid-template:
+            "title "
+            "about"
+            "image"
+            "detail"
+            /1fr;
+
+          .detail {
+            padding: 1rem;
+          }
+
+          .image {
+            height: 240px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .body {
+    .section {
+      .main {
+        width: 100%;
       }
     }
   }
