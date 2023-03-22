@@ -151,6 +151,7 @@
   }
   .body .section {
     min-height: calc(100vh - 110px);
+    padding: 3rem 2rem;
   }
   .body .section .main {
     width: 100%;
@@ -164,12 +165,44 @@
   .body .section .main .sectionTitle h1 {
     font-size: 1.3rem;
   }
+  .body .section .main .itemBox {
+    padding: 1rem 0.8rem;
+  }
+  .body .section .main .itemBox .title {
+    font-size: 1.1rem;
+    font-size: 1rem;
+  }
   .body .section .main .itemBox .about {
     flex-direction: column;
   }
   .body .section .main .itemBox .about .price {
     margin-right: 0rem;
     margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+  .body .section .main .itemBox .about .product {
+    font-size: 0.8rem;
+  }
+  .body .section .main .itemBox .detail {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .body .section .main .itemBox .title {
+    font-size: 1.1rem;
+    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+  .body .section .main .itemBox .about .price {
+    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+  .body .section .main .itemBox .about .product {
+    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+  .body .section .main .itemBox .detail {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=[id].module.css.map */

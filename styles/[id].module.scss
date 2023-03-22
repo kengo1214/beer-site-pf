@@ -195,6 +195,7 @@
 
     .section {
       min-height: calc(100vh - 110px);
+      padding: 3rem 2rem;
 
       .main {
         width: 100%;
@@ -215,14 +216,63 @@
         }
 
         .itemBox {
+          padding: 1rem 0.8rem;
+
+          .title {
+            font-size: 1.1rem; //🔥
+            font-size: 1rem; //🔥
+          }
+
           .about {
             flex-direction: column;
 
             .price {
-              // margin-right: 1.5rem;
               margin-right: 0rem;
               margin-bottom: 1rem;
+
+              font-size: 0.8rem; //🔥
             }
+
+            .product {
+              font-size: 0.8rem; //🔥
+            }
+          }
+
+          .detail {
+            font-size: 0.8rem; //🔥
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .body {
+    .section {
+      .main {
+        .itemBox {
+          .title {
+            font-size: 1.1rem; //🔥
+            font-size: 1rem; //🔥
+            font-size: 0.8rem; //🔥
+          }
+
+          .about {
+            .price {
+              font-size: 0.8rem; //🔥
+              font-size: 0.75rem; //🔥
+            }
+
+            .product {
+              font-size: 0.8rem; //🔥
+              font-size: 0.75rem; //🔥
+            }
+          }
+          
+          .detail {
+            font-size: 0.8rem; //🔥
+            // font-size: 0.75rem; //🔥
           }
         }
       }
