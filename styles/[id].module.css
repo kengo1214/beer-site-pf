@@ -59,7 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 1.3rem;
 }
 .body .section .main .itemBox .about {
@@ -67,7 +67,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .body .section .main .itemBox .about .price {
   font-size: 0.9rem;
@@ -78,24 +78,22 @@
 }
 .body .section .main .itemBox .detail {
   grid-area: detail;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  padding: 1rem 1rem 0;
   font-size: 0.9rem;
   line-height: 1.8;
 }
 .body .section .main .itemBox .image {
   grid-area: image;
   position: relative;
-  height: 100%;
-  height: 80%;
   height: 280px;
 }
 .body .section .main .back {
+  color: white;
   width: 100%;
   padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
 
 @media screen and (max-width: 1024px) {
@@ -119,19 +117,59 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .body {
+    min-height: calc(100vh - 130px);
+  }
+  .body .section {
+    min-height: calc(100vh - 130px);
+  }
   .body .section .main .itemBox {
     grid-template: "title " "about" "image" "detail"/1fr;
   }
-  .body .section .main .itemBox .detail {
-    padding: 1rem;
+  .body .section .main .itemBox .title {
+    padding: 1rem 0;
+  }
+  .body .section .main .itemBox .about {
+    padding: 1rem 0;
   }
   .body .section .main .itemBox .image {
     height: 240px;
+  }
+  .body .section .main .itemBox .detail {
+    padding: 1rem 0 0;
   }
 }
 @media screen and (max-width: 600px) {
   .body .section .main {
     width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .body {
+    min-height: calc(100vh - 110px);
+    top: 80px;
+  }
+  .body .section {
+    min-height: calc(100vh - 110px);
+  }
+  .body .section .main {
+    width: 100%;
+  }
+  .body .section .main .sectionTitle {
+    padding-bottom: 2rem;
+  }
+  .body .section .main .sectionTitle h4 {
+    font-size: 0.8rem;
+  }
+  .body .section .main .sectionTitle h1 {
+    font-size: 1.3rem;
+  }
+  .body .section .main .itemBox .about {
+    flex-direction: column;
+  }
+  .body .section .main .itemBox .about .price {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=[id].module.css.map */
