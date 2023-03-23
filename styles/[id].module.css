@@ -124,6 +124,7 @@
     min-height: calc(100vh - 130px);
   }
   .body .section .main .itemBox {
+    padding: 1rem 0.8rem;
     grid-template: "title " "about" "image" "detail"/1fr;
   }
   .body .section .main .itemBox .title {
@@ -169,7 +170,6 @@
     padding: 1rem 0.8rem;
   }
   .body .section .main .itemBox .title {
-    font-size: 1.1rem;
     font-size: 1rem;
   }
   .body .section .main .itemBox .about {
@@ -189,20 +189,21 @@
 }
 @media screen and (max-width: 390px) {
   .body .section .main .itemBox .title {
-    font-size: 1.1rem;
-    font-size: 1rem;
     font-size: 0.8rem;
   }
   .body .section .main .itemBox .about .price {
-    font-size: 0.8rem;
     font-size: 0.75rem;
   }
   .body .section .main .itemBox .about .product {
-    font-size: 0.8rem;
     font-size: 0.75rem;
   }
   .body .section .main .itemBox .detail {
     font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .body .section .main .itemBox .title {
+    font-size: 0.75rem;
   }
 }
 /*# sourceMappingURL=[id].module.css.map */

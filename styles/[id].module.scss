@@ -16,7 +16,7 @@
     min-height: calc(100vh - 140px);
     padding: 3rem;
 
-    background-image: url("/image/all-menu/barrel.jpg"); //🔥
+    background-image: url("/image/all-menu/barrel.jpg");
     position: relative;
     background-size: cover;
     background-position: center;
@@ -64,7 +64,6 @@
         .title {
           grid-area: title;
           @include center;
-          // padding: 0.5rem;
           padding: 1rem;
           font-size: 1.3rem;
         }
@@ -72,7 +71,6 @@
         .about {
           grid-area: about;
           @include center;
-          // padding: 0.5rem;
           padding: 1rem;
 
           .price {
@@ -143,11 +141,12 @@
 
 @media screen and (max-width: 768px) {
   .body {
-    min-height: calc(100vh - 130px); //🔥
+    min-height: calc(100vh - 130px);
     .section {
-      min-height: calc(100vh - 130px); //🔥
+      min-height: calc(100vh - 130px);
       .main {
         .itemBox {
+          padding: 1rem 0.8rem;
           grid-template:
             "title "
             "about"
@@ -168,7 +167,6 @@
           }
 
           .detail {
-            // border: 3px solid greenyellow;
             padding: 1rem 0 0;
           }
         }
@@ -189,7 +187,6 @@
 
 @media screen and (max-width: 480px) {
   .body {
-    // border: 3px solid red;
     min-height: calc(100vh - 110px);
     top: 80px;
 
@@ -201,16 +198,13 @@
         width: 100%;
 
         .sectionTitle {
-          // border: 3px solid blue;
           padding-bottom: 2rem;
 
           h4 {
-            // font-size: 1rem;
             font-size: 0.8rem;
           }
 
           h1 {
-            // font-size: 1.5rem;
             font-size: 1.3rem;
           }
         }
@@ -219,8 +213,7 @@
           padding: 1rem 0.8rem;
 
           .title {
-            font-size: 1.1rem; //🔥
-            font-size: 1rem; //🔥
+            font-size: 1rem;
           }
 
           .about {
@@ -230,16 +223,16 @@
               margin-right: 0rem;
               margin-bottom: 1rem;
 
-              font-size: 0.8rem; //🔥
+              font-size: 0.8rem;
             }
 
             .product {
-              font-size: 0.8rem; //🔥
+              font-size: 0.8rem;
             }
           }
 
           .detail {
-            font-size: 0.8rem; //🔥
+            font-size: 0.8rem;
           }
         }
       }
@@ -253,26 +246,35 @@
       .main {
         .itemBox {
           .title {
-            font-size: 1.1rem; //🔥
-            font-size: 1rem; //🔥
-            font-size: 0.8rem; //🔥
+            font-size: 0.8rem;
           }
 
           .about {
             .price {
-              font-size: 0.8rem; //🔥
-              font-size: 0.75rem; //🔥
+              font-size: 0.75rem;
             }
 
             .product {
-              font-size: 0.8rem; //🔥
-              font-size: 0.75rem; //🔥
+              font-size: 0.75rem;
             }
           }
-          
+
           .detail {
-            font-size: 0.8rem; //🔥
-            // font-size: 0.75rem; //🔥
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .body {
+    .section {
+      .main {
+        .itemBox {
+          .title {
+            font-size: 0.75rem;
           }
         }
       }
