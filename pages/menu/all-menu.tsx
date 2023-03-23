@@ -141,13 +141,17 @@ export default function AllMenu({
             {barrelbeer.map((barrelbeer) => (
               <div className={styles.menuItem} key={barrelbeer.id}>
                 <p className={styles.title}>{barrelbeer.title}</p>
-                <p className={styles.price}>{barrelbeer.price}</p>
-                <p
-                  className={styles.product}
-                  dangerouslySetInnerHTML={{
-                    __html: `${barrelbeer.product}`,
-                  }}
-                />
+
+                <div className={styles.about}>
+                  <p className={styles.price}>{barrelbeer.price}</p>
+                  <p
+                    className={styles.product}
+                    dangerouslySetInnerHTML={{
+                      __html: `${barrelbeer.product}`,
+                    }}
+                  />
+                </div>
+
                 <div className={styles.image}>
                   <Image
                     src={barrelbeer.image.url}
@@ -177,13 +181,17 @@ export default function AllMenu({
             {bottlebeer.map((bottlebeer) => (
               <div className={styles.menuItem} key={bottlebeer.id}>
                 <p className={styles.title}>{bottlebeer.title}</p>
-                <p className={styles.price}>{bottlebeer.price}</p>
-                <p
-                  className={styles.product}
-                  dangerouslySetInnerHTML={{
-                    __html: `${bottlebeer.product}`,
-                  }}
-                />
+
+                <div className={styles.about}>
+                  <p className={styles.price}>{bottlebeer.price}</p>
+                  <p
+                    className={styles.product}
+                    dangerouslySetInnerHTML={{
+                      __html: `${bottlebeer.product}`,
+                    }}
+                  />
+                </div>
+
                 <div className={styles.image}>
                   <Image
                     src={bottlebeer.image.url}
@@ -211,13 +219,17 @@ export default function AllMenu({
             {cocktailhardliquor.map((cocktailhardliquor) => (
               <div className={styles.menuItem} key={cocktailhardliquor.id}>
                 <p className={styles.title}>{cocktailhardliquor.title}</p>
-                <p className={styles.price}>{cocktailhardliquor.price}</p>
-                <p
-                  className={styles.product}
-                  dangerouslySetInnerHTML={{
-                    __html: `${cocktailhardliquor.product}`,
-                  }}
-                />
+
+                <div className={styles.about}>
+                  <p className={styles.price}>{cocktailhardliquor.price}</p>
+                  <p
+                    className={styles.product}
+                    dangerouslySetInnerHTML={{
+                      __html: `${cocktailhardliquor.product}`,
+                    }}
+                  />
+                </div>
+
                 <div className={styles.image}>
                   <Image
                     src={cocktailhardliquor.image.url}

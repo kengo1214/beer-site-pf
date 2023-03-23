@@ -7,7 +7,7 @@
 @mixin parts {
   width: 100%;
   padding: calc(100px + 3rem) 2.5rem 3rem;
-  background-image: url("/image/all-menu/barrel.jpg"); //🔥
+  background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: cover;
   background-position: center;
@@ -48,10 +48,9 @@
     .menuItem {
       background-color: white;
       box-shadow: 5px 5px 10px gray;
-      border-radius: 5px;
       border-radius: 10px;
-      width: calc(33% - 3rem); //🔥
-      margin: 0 1.5rem 2rem; //🔥
+      width: calc(33% - 3rem);
+      margin: 0 1.5rem 2rem;
       @include center;
       flex-direction: column;
       padding: 1rem 0.8rem;
@@ -59,23 +58,29 @@
       .title {
         width: 100%;
         @include center;
-        font-size: 1rem; //🔥
+        font-size: 1rem;
         font-weight: bold;
         padding: 0.5rem 0;
       }
 
-      .price {
+      .about {
         width: 100%;
         @include center;
-        font-size: 0.8rem;
-        padding: 0.5rem 0;
-      }
+        flex-direction: column;
 
-      .product {
-        width: 100%;
-        @include center;
-        font-size: 0.8rem;
-        padding: 0.5rem 0 1.5rem;
+        .price {
+          width: 100%;
+          @include center;
+          font-size: 0.8rem;
+          padding: 0.5rem 0;
+        }
+
+        .product {
+          width: 100%;
+          @include center;
+          font-size: 0.8rem;
+          padding: 0.5rem 0 1.5rem;
+        }
       }
 
       .image {
@@ -94,7 +99,6 @@
 }
 
 .body {
-  // border: 1px solid black;
   background-color: white;
   width: 100%;
   min-height: calc(100vh - 100px);
@@ -104,18 +108,30 @@
   //🍺🍺🍺
   .barrelSection {
     @include parts;
-    background-image: url("/image/all-menu/barrel.jpg"); //🔥
+    background-image: url("/image/all-menu/barrel.jpg");
+
+    .menuBox {
+      .menuItem {
+        .image {
+          height: 200px; //🔥🔥🔥
+        }
+      }
+    }
   }
 
   //🍻🍻🍻
   .bottleSection {
     @include parts;
-    background-image: url("/image/all-menu/bottle.jpg"); //🔥
+    background-image: url("/image/all-menu/bottle.jpg");
 
     .menuBox {
       .menuItem {
         .title {
-          font-size: 0.9rem; //⭐️
+          font-size: 0.9rem;
+        }
+
+        .image {
+          height: 170px; //🔥🔥🔥
         }
       }
     }
@@ -125,6 +141,14 @@
   .cocktailSection {
     @include parts;
     background-image: url("/image/all-menu/cocktail.jpg"); //🔥
+
+    .menuBox {
+      .menuItem {
+        .image {
+          height: 170px; //🔥🔥🔥
+        }
+      }
+    }
   }
 }
 
@@ -151,7 +175,7 @@
       .menuBox {
         .menuItem {
           .title {
-            font-size: 0.8rem; //⭐️
+            font-size: 0.8rem;
           }
         }
       }
@@ -182,7 +206,7 @@
       .menuBox {
         .menuItem {
           .title {
-            font-size: 0.9rem; //⭐️
+            font-size: 0.9rem;
           }
         }
       }
@@ -192,20 +216,21 @@
 
 @media screen and (max-width: 768px) {
   .body {
+    // border: 3px solid red;
     .barrelSection,
     .bottleSection,
     .cocktailSection {
       .menuBox {
         .menuItem {
-          width: calc(50% - 1.6rem); //⭐️
-          margin: 0 0.8rem 2rem; //⭐️
+          width: calc(50% - 1.6rem);
+          margin: 0 0.8rem 2rem;
 
           .title {
             font-size: 0.8rem;
           }
 
           .image {
-            height: 150px;
+            height: 200px; //🔥🔥🔥
           }
         }
       }
@@ -215,7 +240,18 @@
       .menuBox {
         .menuItem {
           .title {
-            font-size: 0.77rem; //⭐️
+            font-size: 0.77rem;
+          }
+        }
+      }
+    }
+
+    .bottleSection,
+    .cocktailSection {
+      .menuBox {
+        .menuItem {
+          .image {
+            height: 170px; //🔥🔥🔥
           }
         }
       }
@@ -229,27 +265,78 @@
     .barrelSection,
     .bottleSection,
     .cocktailSection {
+      padding: calc(100px + 3rem) 3rem 3rem;
+
+      .sectionTitle {
+        width: 90%;
+      }
+
       .menuBox {
+        width: 90%;
+
         .menuItem {
-          width: 80%;
+          width: 100%;
           margin: 0 0rem 2rem;
 
           .title {
-            font-size: 1rem;
+            font-size: 1.1rem;
+            padding: 1rem 0;
           }
 
-          .price {
-            font-size: 0.9rem;
-          }
+          .about {
+            width: 100%;
+            @include center;
+            flex-direction: row;
+            padding: 1rem 0;
 
-          .product {
-            font-size: 0.9rem;
+            .price {
+              font-size: 0.8rem;
+              padding: 0;
+              width: auto;
+              margin-right: 1.5rem;
+            }
+
+            .product {
+              font-size: 0.8rem;
+              padding: 0;
+              width: auto;
+            }
           }
 
           .image {
-            height: 170px;
+            height: 240px; //🔥🔥🔥
+          }
+
+          .button {
+            padding: 1rem 0;
           }
         }
+      }
+    }
+
+    .bottleSection,
+    .cocktailSection {
+      .menuBox {
+        .menuItem {
+          .image {
+            height: 210px; //🔥🔥🔥
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .body {
+    .barrelSection,
+    .bottleSection,
+    .cocktailSection {
+      .sectionTitle {
+        width: 100%;
+      }
+
+      .menuBox {
+        width: 100%;
       }
     }
   }
@@ -305,7 +392,25 @@
 
       .menuBox {
         .menuItem {
-          width: 90%;
+          width: 100%;
+
+          .title {
+            font-size: 1rem;
+          }
+
+          .about {
+            flex-direction: column;
+
+            .price {
+              margin-right: 0;
+              margin-bottom: 1rem;
+              font-size: 0.8rem;
+            }
+
+            .product {
+              font-size: 0.8rem;
+            }
+          }
         }
       }
     }
@@ -351,10 +456,6 @@
 
           .product {
             font-size: 0.75rem;
-          }
-
-          .image {
-            height: 150px;
           }
         }
       }
