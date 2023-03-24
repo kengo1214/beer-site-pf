@@ -186,6 +186,9 @@
   .body .section .main .itemBox .detail {
     font-size: 0.8rem;
   }
+  .body .section .main .back {
+    padding-top: 2rem;
+  }
 }
 @media screen and (max-width: 390px) {
   .body .section .main .itemBox .title {
