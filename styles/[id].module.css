@@ -5,11 +5,10 @@
   position: absolute;
   top: 100px;
 }
-.body .section {
+.body .barrelSection {
   width: 100%;
   min-height: calc(100vh - 140px);
   padding: 3rem;
-  background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: cover;
   background-position: center;
@@ -20,8 +19,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url("/image/all-menu/barrel.jpg");
 }
-.body .section::after {
+.body .barrelSection::after {
   content: "";
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -31,11 +31,11 @@
   bottom: 0;
   height: 100%;
 }
-.body .section .main {
+.body .barrelSection .main {
   width: 70%;
   z-index: 5;
 }
-.body .section .main .sectionTitle {
+.body .barrelSection .main .sectionTitle {
   color: white;
   padding-bottom: 3rem;
   display: flex;
@@ -43,7 +43,7 @@
   align-items: center;
   flex-direction: column;
 }
-.body .section .main .itemBox {
+.body .barrelSection .main .itemBox {
   width: 100%;
   padding: 1rem;
   border-radius: 10px;
@@ -54,7 +54,7 @@
   display: grid;
   grid-template: "title image" "about image" "detail image"/70% 30%;
 }
-.body .section .main .itemBox .title {
+.body .barrelSection .main .itemBox .title {
   grid-area: title;
   display: flex;
   justify-content: center;
@@ -62,32 +62,212 @@
   padding: 1rem;
   font-size: 1.3rem;
 }
-.body .section .main .itemBox .about {
+.body .barrelSection .main .itemBox .about {
   grid-area: about;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
 }
-.body .section .main .itemBox .about .price {
+.body .barrelSection .main .itemBox .about .price {
   font-size: 0.9rem;
   margin-right: 1.5rem;
 }
-.body .section .main .itemBox .about .product {
+.body .barrelSection .main .itemBox .about .product {
   font-size: 0.9rem;
 }
-.body .section .main .itemBox .detail {
+.body .barrelSection .main .itemBox .detail {
   grid-area: detail;
   padding: 1rem 1rem 0;
   font-size: 0.9rem;
   line-height: 1.8;
 }
-.body .section .main .itemBox .image {
+.body .barrelSection .main .itemBox .image {
   grid-area: image;
   position: relative;
   height: 280px;
 }
-.body .section .main .back {
+.body .barrelSection .main .back {
+  color: white;
+  width: 100%;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body .bottleSection {
+  width: 100%;
+  min-height: calc(100vh - 140px);
+  padding: 3rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/image/all-menu/bottle.jpg");
+}
+.body .bottleSection::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+.body .bottleSection .main {
+  width: 70%;
+  z-index: 5;
+}
+.body .bottleSection .main .sectionTitle {
+  color: white;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body .bottleSection .main .itemBox {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template: "title image" "about image" "detail image"/70% 30%;
+}
+.body .bottleSection .main .itemBox .title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.body .bottleSection .main .itemBox .about {
+  grid-area: about;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.body .bottleSection .main .itemBox .about .price {
+  font-size: 0.9rem;
+  margin-right: 1.5rem;
+}
+.body .bottleSection .main .itemBox .about .product {
+  font-size: 0.9rem;
+}
+.body .bottleSection .main .itemBox .detail {
+  grid-area: detail;
+  padding: 1rem 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.body .bottleSection .main .itemBox .image {
+  grid-area: image;
+  position: relative;
+  height: 280px;
+}
+.body .bottleSection .main .back {
+  color: white;
+  width: 100%;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body .cocktailSection {
+  width: 100%;
+  min-height: calc(100vh - 140px);
+  padding: 3rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/image/all-menu/cocktail.jpg");
+}
+.body .cocktailSection::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+.body .cocktailSection .main {
+  width: 70%;
+  z-index: 5;
+}
+.body .cocktailSection .main .sectionTitle {
+  color: white;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body .cocktailSection .main .itemBox {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template: "title image" "about image" "detail image"/70% 30%;
+}
+.body .cocktailSection .main .itemBox .title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.body .cocktailSection .main .itemBox .about {
+  grid-area: about;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.body .cocktailSection .main .itemBox .about .price {
+  font-size: 0.9rem;
+  margin-right: 1.5rem;
+}
+.body .cocktailSection .main .itemBox .about .product {
+  font-size: 0.9rem;
+}
+.body .cocktailSection .main .itemBox .detail {
+  grid-area: detail;
+  padding: 1rem 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.body .cocktailSection .main .itemBox .image {
+  grid-area: image;
+  position: relative;
+  height: 280px;
+}
+.body .cocktailSection .main .back {
   color: white;
   width: 100%;
   padding-top: 3rem;
@@ -97,22 +277,34 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .body .section .main {
+  .body .barrelSection .main,
+.body .bottleSection .main,
+.body .cocktailSection .main {
     width: 90%;
   }
-  .body .section .main .itemBox .title {
+  .body .barrelSection .main .itemBox .title,
+.body .bottleSection .main .itemBox .title,
+.body .cocktailSection .main .itemBox .title {
     font-size: 1.1rem;
   }
-  .body .section .main .itemBox .about .price {
+  .body .barrelSection .main .itemBox .about .price,
+.body .bottleSection .main .itemBox .about .price,
+.body .cocktailSection .main .itemBox .about .price {
     font-size: 0.8rem;
   }
-  .body .section .main .itemBox .about .product {
+  .body .barrelSection .main .itemBox .about .product,
+.body .bottleSection .main .itemBox .about .product,
+.body .cocktailSection .main .itemBox .about .product {
     font-size: 0.8rem;
   }
-  .body .section .main .itemBox .detail {
+  .body .barrelSection .main .itemBox .detail,
+.body .bottleSection .main .itemBox .detail,
+.body .cocktailSection .main .itemBox .detail {
     font-size: 0.8rem;
   }
-  .body .section .main .back {
+  .body .barrelSection .main .back,
+.body .bottleSection .main .back,
+.body .cocktailSection .main .back {
     width: 100%;
   }
 }
@@ -120,28 +312,42 @@
   .body {
     min-height: calc(100vh - 130px);
   }
-  .body .section {
+  .body .barrelSection,
+.body .bottleSection,
+.body .cocktailSection {
     min-height: calc(100vh - 130px);
   }
-  .body .section .main .itemBox {
+  .body .barrelSection .main .itemBox,
+.body .bottleSection .main .itemBox,
+.body .cocktailSection .main .itemBox {
     padding: 1rem 0.8rem;
     grid-template: "title " "about" "image" "detail"/1fr;
   }
-  .body .section .main .itemBox .title {
+  .body .barrelSection .main .itemBox .title,
+.body .bottleSection .main .itemBox .title,
+.body .cocktailSection .main .itemBox .title {
     padding: 1rem 0;
   }
-  .body .section .main .itemBox .about {
+  .body .barrelSection .main .itemBox .about,
+.body .bottleSection .main .itemBox .about,
+.body .cocktailSection .main .itemBox .about {
     padding: 1rem 0;
   }
-  .body .section .main .itemBox .image {
+  .body .barrelSection .main .itemBox .image,
+.body .bottleSection .main .itemBox .image,
+.body .cocktailSection .main .itemBox .image {
     height: 240px;
   }
-  .body .section .main .itemBox .detail {
+  .body .barrelSection .main .itemBox .detail,
+.body .bottleSection .main .itemBox .detail,
+.body .cocktailSection .main .itemBox .detail {
     padding: 1rem 0 0;
   }
 }
 @media screen and (max-width: 600px) {
-  .body .section .main {
+  .body .barrelSection .main,
+.body .bottleSection .main,
+.body .cocktailSection .main {
     width: 100%;
   }
 }
@@ -150,62 +356,96 @@
     min-height: calc(100vh - 110px);
     top: 80px;
   }
-  .body .section {
+  .body .barrelSection,
+.body .bottleSection,
+.body .cocktailSection {
     min-height: calc(100vh - 110px);
     padding: 3rem 2rem;
   }
-  .body .section .main {
+  .body .barrelSection .main,
+.body .bottleSection .main,
+.body .cocktailSection .main {
     width: 100%;
   }
-  .body .section .main .sectionTitle {
+  .body .barrelSection .main .sectionTitle,
+.body .bottleSection .main .sectionTitle,
+.body .cocktailSection .main .sectionTitle {
     padding-bottom: 2rem;
   }
-  .body .section .main .sectionTitle h4 {
+  .body .barrelSection .main .sectionTitle h4,
+.body .bottleSection .main .sectionTitle h4,
+.body .cocktailSection .main .sectionTitle h4 {
     font-size: 0.8rem;
   }
-  .body .section .main .sectionTitle h1 {
+  .body .barrelSection .main .sectionTitle h1,
+.body .bottleSection .main .sectionTitle h1,
+.body .cocktailSection .main .sectionTitle h1 {
     font-size: 1.3rem;
   }
-  .body .section .main .itemBox {
+  .body .barrelSection .main .itemBox,
+.body .bottleSection .main .itemBox,
+.body .cocktailSection .main .itemBox {
     padding: 1rem 0.8rem;
   }
-  .body .section .main .itemBox .title {
+  .body .barrelSection .main .itemBox .title,
+.body .bottleSection .main .itemBox .title,
+.body .cocktailSection .main .itemBox .title {
     font-size: 1rem;
   }
-  .body .section .main .itemBox .about {
+  .body .barrelSection .main .itemBox .about,
+.body .bottleSection .main .itemBox .about,
+.body .cocktailSection .main .itemBox .about {
     flex-direction: column;
   }
-  .body .section .main .itemBox .about .price {
+  .body .barrelSection .main .itemBox .about .price,
+.body .bottleSection .main .itemBox .about .price,
+.body .cocktailSection .main .itemBox .about .price {
     margin-right: 0rem;
     margin-bottom: 1rem;
     font-size: 0.8rem;
   }
-  .body .section .main .itemBox .about .product {
+  .body .barrelSection .main .itemBox .about .product,
+.body .bottleSection .main .itemBox .about .product,
+.body .cocktailSection .main .itemBox .about .product {
     font-size: 0.8rem;
   }
-  .body .section .main .itemBox .detail {
+  .body .barrelSection .main .itemBox .detail,
+.body .bottleSection .main .itemBox .detail,
+.body .cocktailSection .main .itemBox .detail {
     font-size: 0.8rem;
   }
-  .body .section .main .back {
+  .body .barrelSection .main .back,
+.body .bottleSection .main .back,
+.body .cocktailSection .main .back {
     padding-top: 2rem;
   }
 }
 @media screen and (max-width: 390px) {
-  .body .section .main .itemBox .title {
+  .body .barrelSection .main .itemBox .title,
+.body .bottleSection .main .itemBox .title,
+.body .cocktailSection .main .itemBox .title {
     font-size: 0.8rem;
   }
-  .body .section .main .itemBox .about .price {
+  .body .barrelSection .main .itemBox .about .price,
+.body .bottleSection .main .itemBox .about .price,
+.body .cocktailSection .main .itemBox .about .price {
     font-size: 0.75rem;
   }
-  .body .section .main .itemBox .about .product {
+  .body .barrelSection .main .itemBox .about .product,
+.body .bottleSection .main .itemBox .about .product,
+.body .cocktailSection .main .itemBox .about .product {
     font-size: 0.75rem;
   }
-  .body .section .main .itemBox .detail {
+  .body .barrelSection .main .itemBox .detail,
+.body .bottleSection .main .itemBox .detail,
+.body .cocktailSection .main .itemBox .detail {
     font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 350px) {
-  .body .section .main .itemBox .title {
+  .body .barrelSection .main .itemBox .title,
+.body .bottleSection .main .itemBox .title,
+.body .cocktailSection .main .itemBox .title {
     font-size: 0.75rem;
   }
 }

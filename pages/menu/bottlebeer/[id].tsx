@@ -45,11 +45,11 @@ export default function MoreInformation({ bottlebeer }: Props) {
     <>
       <div className={styles.body}>
         <Header />
-        <section className={styles.section}>
+        <section className={styles.bottleSection}>
           <main className={styles.main}>
             <div className={styles.sectionTitle}>
-              <h4>樽ビール</h4>
-              <h1>Barrel Beer</h1>
+              <h4>ボトルビール</h4>
+              <h1>Bottle Beer</h1>
             </div>
             <div className={styles.itemBox}>
               <h1 className={styles.title}>{bottlebeer.title}</h1>

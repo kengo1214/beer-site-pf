@@ -45,7 +45,7 @@ export default function MoreInformation({ barrelbeer }: Props) {
     <>
       <div className={styles.body}>
         <Header />
-        <section className={styles.section}>
+        <section className={styles.barrelSection}>
           <main className={styles.main}>
             <div className={styles.sectionTitle}>
               <h4>樽ビール</h4>
