@@ -1,14 +1,11 @@
+import styles from "../../../styles/[id].module.scss";
+import { clientMenu } from "../../../libs/client";
+import type { Menu } from "../../../src/types/menu";
 import Image from "next/legacy/image";
 import { useRouter } from "next/router";
-import { clientMenu } from "../../../libs/client";
 import Header from "../../../components/Header/Header";
-import { AiOutlineRollback } from "react-icons/ai";
-import styles from "../../../styles/[id].module.scss";
-
-import type { Menu } from "../../../src/types/menu";
 import Footer from "../../../components/Footer/Footer";
 import BuckButton from "../../../components/Button/BackButton";
-import Link from "next/link";
 
 //getStaticPaths（パスの指定）🔥🔥🔥
 export async function getStaticPaths() {
@@ -42,6 +39,8 @@ type Props = {
 };
 
 export default function MoreInformation({ barrelbeer }: Props) {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.body}>
@@ -81,11 +80,14 @@ export default function MoreInformation({ barrelbeer }: Props) {
               </div>
             </div>
 
-            <div className={styles.back}>
+            <div className={styles.back} onClick={() => router.back()}>
+              <BuckButton />
+            </div>
+            {/* <div className={styles.back}>
               <Link href="/">
                 <BuckButton />
               </Link>
-            </div>
+            </div> */}
           </main>
         </section>
         <Footer />
