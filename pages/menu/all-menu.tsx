@@ -202,7 +202,9 @@ export default function AllMenu({
                 </div>
 
                 <div className={styles.button}>
-                  <Button />
+                  <Link href={`/menu/bottlebeer/${bottlebeer.id}`}>
+                    <Button />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -240,7 +242,11 @@ export default function AllMenu({
                 </div>
 
                 <div className={styles.button}>
-                  <Button />
+                  <Link
+                    href={`/menu/cocktailhardliquor/${cocktailhardliquor.id}`}
+                  >
+                    <Button />
+                  </Link>
                 </div>
               </div>
             ))}
