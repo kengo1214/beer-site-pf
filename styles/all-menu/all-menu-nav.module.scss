@@ -229,8 +229,11 @@
   .nav {
     .insideLine {
       ul {
+        li:nth-child(2) {
+          margin: 0 1rem;
+        }
         li {
-          width: 80px;
+          width: 90px;
 
           .list {
             h4 {
