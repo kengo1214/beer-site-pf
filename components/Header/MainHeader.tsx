@@ -46,7 +46,7 @@ export default function MainHeader() {
           </li>
 
           <li>
-            <Link href="/blog">
+            <Link href="/blog/latest-blog">
               <div className={styles.link}>Blog</div>
             </Link>
           </li>
@@ -109,7 +109,7 @@ export default function MainHeader() {
           </li>
 
           <li onClick={handleNav}>
-            <Link href="/blog">
+            <Link href="/blog/latest-blog">
               <h1>Blog</h1>
             </Link>
           </li>
