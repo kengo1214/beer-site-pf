@@ -1,4 +1,4 @@
-import styles from "../../../styles/[id].module.scss";
+import styles from "../../../styles/menu/[id].module.scss";
 import { clientMenu } from "../../../libs/client";
 import type { Menu } from "../../../src/types/menu";
 import Image from "next/legacy/image";

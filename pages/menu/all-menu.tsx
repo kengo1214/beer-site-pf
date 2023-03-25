@@ -1,5 +1,5 @@
-import styles from "../../styles/all-menu/all-menu.module.scss";
-import stylesNav from "../../styles/all-menu/all-menu-nav.module.scss";
+import styles from "../../styles/menu/all-menu.module.scss";
+import stylesNav from "../../styles/menu/all-menu-nav.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
