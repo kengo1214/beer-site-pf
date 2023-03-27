@@ -1,0 +1,185 @@
+.body {
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: fixed;
+  top: 100px;
+  background-image: url("/image/blog-link.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.body::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.body .titleSection {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.body .titleSection::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.body .titleSection .blogSectionTitle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  color: white;
+  width: calc(100% - 250px);
+  padding-right: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .body .titleSection .blogSectionTitle h4 {
+    font-size: 0.8rem;
+  }
+  .body .titleSection .blogSectionTitle h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body .titleSection .blogSectionTitle h4 {
+    font-size: 0.7rem;
+  }
+  .body .titleSection .blogSectionTitle h1 {
+    font-size: 1.1rem;
+  }
+}
+.body .titleSection .archiveSectionTitle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  color: white;
+  width: 250px;
+}
+@media screen and (max-width: 1024px) {
+  .body .titleSection .archiveSectionTitle h4 {
+    font-size: 0.8rem;
+  }
+  .body .titleSection .archiveSectionTitle h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body .titleSection .archiveSectionTitle h4 {
+    font-size: 0.7rem;
+  }
+  .body .titleSection .archiveSectionTitle h1 {
+    font-size: 1.1rem;
+  }
+}
+.body .outline {
+  width: 100%;
+  height: calc(100vh - 200px);
+  position: relative;
+  z-index: 10;
+}
+.body .outline .mainSection {
+  width: 100%;
+  height: calc(100vh - 200px);
+  overflow: scroll;
+}
+.body .outline .mainSection .archiveSection {
+  width: 250px;
+  height: calc(100vh - 240px);
+  position: absolute;
+  right: 0;
+}
+.body .outline .mainSection .scrollSection {
+  width: 80px;
+  height: calc(100vh - 240px);
+  position: absolute;
+  right: 250px;
+}
+.body .outline .mainSection .blogSection {
+  width: calc(100% - 330px);
+  min-height: calc(100vh - 240px);
+  padding: 1rem 2rem;
+  padding: 2rem;
+}
+.body .outline .mainSection .blogSection h1 {
+  color: white;
+  font-size: 2rem;
+}
+.body .outline .mainSection .blogSection .blog {
+  background-color: white;
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.body .outline .mainSection .blogSection .blog .articleBox {
+  width: calc(100% - 300px);
+  min-height: 200px;
+  width: calc(100% - 270px);
+  min-height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.body .outline .mainSection .blogSection .blog .articleBox .article {
+  width: 100%;
+  min-height: 100px;
+  min-height: 90px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.body .outline .mainSection .blogSection .blog .articleBox .button {
+  width: 100%;
+  min-height: 100px;
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.body .outline .mainSection .blogSection .blog .imageBox {
+  width: 300px;
+  height: 200px;
+  width: 270px;
+  height: 180px;
+}
+.body .outline .mainSection .blogSection .blog .imageBox .image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/*# sourceMappingURL=latest-blog.module.css.map */
