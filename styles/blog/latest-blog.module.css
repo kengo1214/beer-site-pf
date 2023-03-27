@@ -117,13 +117,40 @@
 .body .outline .mainSection .scrollSection {
   width: 80px;
   height: calc(100vh - 240px);
+  padding-bottom: 4rem;
   position: absolute;
   right: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  align-items: flex-end;
+}
+.body .outline .mainSection .scrollSection .scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.body .outline .mainSection .scrollSection .scroll .scrollTop,
+.body .outline .mainSection .scrollSection .scroll .scrollDown {
+  color: white;
+  width: 35px;
+  height: 35px;
+}
+.body .outline .mainSection .scrollSection .scroll .scrollTop:hover,
+.body .outline .mainSection .scrollSection .scroll .scrollDown:hover {
+  color: orangered;
+  transition: 300ms;
+}
+.body .outline .mainSection .scrollSection .scroll .scrollTop {
+  margin-bottom: 0.5rem;
 }
 .body .outline .mainSection .blogSection {
   width: calc(100% - 330px);
   min-height: calc(100vh - 240px);
-  padding: 1rem 2rem;
   padding: 2rem;
 }
 .body .outline .mainSection .blogSection h1 {
@@ -134,7 +161,6 @@
   background-color: white;
   width: 100%;
   padding: 2rem;
-  margin-bottom: 3rem;
   margin-bottom: 2rem;
   border-radius: 10px;
   display: flex;
@@ -143,8 +169,6 @@
   box-sizing: border-box;
 }
 .body .outline .mainSection .blogSection .blog .articleBox {
-  width: calc(100% - 300px);
-  min-height: 200px;
   width: calc(100% - 270px);
   min-height: 180px;
   display: flex;
@@ -155,7 +179,6 @@
 }
 .body .outline .mainSection .blogSection .blog .articleBox .article {
   width: 100%;
-  min-height: 100px;
   min-height: 90px;
   padding: 1rem;
   display: flex;
@@ -164,7 +187,6 @@
 }
 .body .outline .mainSection .blogSection .blog .articleBox .button {
   width: 100%;
-  min-height: 100px;
   min-height: 90px;
   display: flex;
   justify-content: center;
@@ -172,8 +194,6 @@
   box-sizing: border-box;
 }
 .body .outline .mainSection .blogSection .blog .imageBox {
-  width: 300px;
-  height: 200px;
   width: 270px;
   height: 180px;
 }

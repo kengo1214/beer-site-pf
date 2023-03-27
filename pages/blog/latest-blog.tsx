@@ -50,9 +50,19 @@ export default function LatestBlog({ blog }: Props) {
         <section className={styles.outline}>
           <section className={styles.mainSection}>
             <section className={styles.archiveSection}></section>
-            <section className={styles.scrollSection}></section>
 
-            <section className={styles.blogSection}>
+            <section className={styles.scrollSection}>
+              <div className={styles.scroll}>
+                <Link href="#top">
+                  <BsFillArrowUpCircleFill className={styles.scrollTop} />
+                </Link>
+                <Link href="#down">
+                  <BsFillArrowDownCircleFill className={styles.scrollDown} />
+                </Link>
+              </div>
+            </section>
+
+            <section className={styles.blogSection} id="top">
               {blog.map((blog) => (
                 <div className={styles.blog} key={blog.id}>
                   <div className={styles.articleBox}>
@@ -80,7 +90,9 @@ export default function LatestBlog({ blog }: Props) {
               ))}
             </section>
 
-            <Footer />
+            <footer id="down">
+              <Footer />
+            </footer>
           </section>
         </section>
       </div>
