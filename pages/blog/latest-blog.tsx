@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/legacy/image";
 
 import { clientBlog } from "../../libs/client";
+import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
 
 import { BsChevronDoubleLeft } from "react-icons/bs";
@@ -19,18 +20,27 @@ import { BsFillArrowDownCircleFill } from "react-icons/bs";
 export async function getStaticProps() {
   const data = await clientBlog.get({ endpoint: "beer-blog" });
 
+  const monthlyIndex = groupBy(data.contents);
+
   return {
     props: {
       blog: data.contents,
+      monthlyIndex: monthlyIndex,
     },
   };
 }
 
 type Props = {
   blog: Blog[];
+  monthlyIndex: { [key: string]: Blog[] };
 };
 
-export default function LatestBlog({ blog }: Props) {
+// type Props = {
+//   blog: Blog[];
+//   monthlyIndex: Blog[];
+// };
+
+export default function LatestBlog({ blog, monthlyIndex }: Props) {
   return (
     <>
       <div className={styles.body}>
@@ -49,7 +59,20 @@ export default function LatestBlog({ blog }: Props) {
 
         <section className={styles.outline}>
           <section className={styles.mainSection}>
-            <section className={styles.archiveSection}></section>
+            {/* 🔥🔥🔥 */}
+            <section className={styles.archiveSection}>
+              <ul>
+                {Object.keys(monthlyIndex).map((index) => (
+                  <li key={index}>
+                    <Link href={`/archive/${index}`} className={styles.link}>
+                      {index.split("_")[0] + "年" + index.split("_")[1] + "月"}
+                      （{monthlyIndex[index].length + "件"}）
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+            {/* 🔥🔥🔥 */}
 
             <section className={styles.scrollSection}>
               <div className={styles.scroll}>
@@ -61,7 +84,6 @@ export default function LatestBlog({ blog }: Props) {
                 </Link>
               </div>
             </section>
-
             <section className={styles.blogSection} id="top">
               {blog.map((blog) => (
                 <div className={styles.blog} key={blog.id}>
@@ -89,7 +111,6 @@ export default function LatestBlog({ blog }: Props) {
                 </div>
               ))}
             </section>
-
             <footer id="down">
               <Footer />
             </footer>
