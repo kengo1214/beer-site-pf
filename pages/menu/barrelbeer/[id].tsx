@@ -80,14 +80,11 @@ export default function MoreInformation({ barrelbeer }: Props) {
               </div>
             </div>
 
-            <div className={styles.back} onClick={() => router.back()}>
-              <BuckButton />
-            </div>
-            {/* <div className={styles.back}>
-              <Link href="/">
+            <div className={styles.backButtonBox}>
+              <div className={styles.backButton} onClick={() => router.back()}>
                 <BuckButton />
-              </Link>
-            </div> */}
+              </div>
+            </div>
           </main>
         </section>
         <Footer />

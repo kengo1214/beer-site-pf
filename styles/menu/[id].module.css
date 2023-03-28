@@ -87,7 +87,7 @@
   position: relative;
   height: 280px;
 }
-.body .barrelSection .main .back {
+.body .barrelSection .main .backButtonBox {
   color: white;
   width: 100%;
   padding-top: 3rem;
@@ -177,7 +177,7 @@
   position: relative;
   height: 280px;
 }
-.body .bottleSection .main .back {
+.body .bottleSection .main .backButtonBox {
   color: white;
   width: 100%;
   padding-top: 3rem;
@@ -267,7 +267,7 @@
   position: relative;
   height: 280px;
 }
-.body .cocktailSection .main .back {
+.body .cocktailSection .main .backButtonBox {
   color: white;
   width: 100%;
   padding-top: 3rem;

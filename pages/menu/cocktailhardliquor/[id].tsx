@@ -83,8 +83,10 @@ export default function MoreInformation({ cocktail }: Props) {
               </div>
             </div>
 
-            <div className={styles.back} onClick={() => router.back()}>
-              <BuckButton />
+            <div className={styles.backButtonBox}>
+              <div onClick={() => router.back()}>
+                <BuckButton />
+              </div>
             </div>
           </main>
         </section>
