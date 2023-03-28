@@ -93,7 +93,7 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
                       <div>{blog.publishedAt}</div>
                     </div>
                     <div className={styles.button}>
-                      <Link href="/">
+                      <Link href={`/blog/${blog.id}`}>
                         <Button />
                       </Link>
                     </div>
