@@ -1,22 +1,17 @@
 // ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️
-// ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️
-// ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️
-
-import { clientBlog } from "../../libs/client";
-import { groupBy } from "../../libs/util";
-import type { Blog } from "../../src/types/blog";
 
 import styles from "../../styles/blog/more.module.scss";
+import { clientBlog } from "../../libs/client";
+import type { Blog } from "../../src/types/blog";
+import { groupBy } from "../../libs/util";
 
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import Button from "../../components/Button/Button";
-
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/legacy/image";
 
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import BackButton from "../../components/Button/BackButton";
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
@@ -50,6 +45,8 @@ type Props = {
 };
 
 export default function HogeId({ blog, monthlyIndex }: Props) {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.body}>
@@ -110,9 +107,11 @@ export default function HogeId({ blog, monthlyIndex }: Props) {
                 </div>
               </div>
 
-              
-
-
+              <div className={styles.backButtonBox}>
+                <div onClick={() => router.back()}>
+                  <BackButton />
+                </div>
+              </div>
             </section>
 
             <footer id="down">
@@ -125,6 +124,4 @@ export default function HogeId({ blog, monthlyIndex }: Props) {
   );
 }
 
-// ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️
-// ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️
 // ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️

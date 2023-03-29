@@ -151,7 +151,7 @@
         }
 
         .blog {
-          border: 3px solid red;
+          // border: 3px solid red;
           background-color: white;
           width: 100%;
 
@@ -200,6 +200,13 @@
               position: relative;
             }
           }
+        }
+
+        .backButtonBox {
+          color: white;
+          width: 100%;
+          padding-top: 3rem;
+          @include center;
         }
       }
     }
