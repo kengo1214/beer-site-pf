@@ -5,7 +5,7 @@ import Image from "next/legacy/image";
 import { useRouter } from "next/router";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer/Footer";
-import BuckButton from "../../../components/Button/BackButton";
+import BackButton from "../../../components/Button/BackButton";
 
 //getStaticPaths（パスの指定）🔥🔥🔥
 export async function getStaticPaths() {
@@ -81,8 +81,8 @@ export default function MoreInformation({ barrelbeer }: Props) {
             </div>
 
             <div className={styles.backButtonBox}>
-              <div className={styles.backButton} onClick={() => router.back()}>
-                <BuckButton />
+              <div onClick={() => router.back()}>
+                <BackButton />
               </div>
             </div>
           </main>
