@@ -119,6 +119,7 @@
   list-style: none;
   width: 100%;
   height: 100%;
+  height: calc(100% - 5rem);
   padding: 2rem 2rem 0 0;
   overflow: scroll;
 }
@@ -145,7 +146,13 @@
 .body .outline .mainSection .blogSection {
   width: calc(100% - 250px);
   min-height: calc(100vh - 240px);
-  padding: 2rem;
+  padding: 2rem 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .body .outline .mainSection .blogSection h1 {
   color: white;

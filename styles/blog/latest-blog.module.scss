@@ -96,7 +96,6 @@
       height: calc(100vh - 200px);
       overflow: scroll;
 
-      //🔥🔥🔥
       .archiveSection {
         // border: 3px solid red;
         width: 250px;
@@ -110,7 +109,8 @@
           list-style: none;
           width: 100%;
           height: 100%;
-          padding: 2rem 2rem 0 0; //⭐️
+          height: calc(100% - 5rem);
+          padding: 2rem 2rem 0 0;
           overflow: scroll;
 
           li {
@@ -140,13 +140,13 @@
         // border: 3px solid red;
         width: 80px;
         height: calc(100vh - 240px);
-        padding-bottom: 4rem;
+        padding-bottom: 5rem;
         position: absolute;
         right: 250px;
 
-        overflow: hidden; //🔥
-        @include center; //🔥
-        align-items: flex-end; //🔥
+        overflow: hidden;
+        @include center;
+        align-items: flex-end;
 
         .scroll {
           // border: 3px solid blue;
@@ -175,12 +175,15 @@
         // border: 3px solid red;
         width: calc(100% - 330px);
         min-height: calc(100vh - 240px);
-        // padding: 2rem;
-        padding: 2rem 0 2rem 2rem; //⭐️
+        padding: 2rem 0 5rem 2rem;
 
         h1 {
           color: white;
           font-size: 2rem;
+        }
+
+        .blog:nth-last-child(1) {
+          margin-bottom: 0;
         }
 
         .blog {
