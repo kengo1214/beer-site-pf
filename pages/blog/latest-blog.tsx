@@ -11,8 +11,6 @@ import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
 
-import { BsChevronDoubleLeft } from "react-icons/bs";
-import { BsChevronDoubleRight } from "react-icons/bs";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 
@@ -35,11 +33,6 @@ type Props = {
   monthlyIndex: { [key: string]: Blog[] };
 };
 
-// type Props = {
-//   blog: Blog[];
-//   monthlyIndex: Blog[];
-// };
-
 export default function LatestBlog({ blog, monthlyIndex }: Props) {
   return (
     <>
@@ -58,9 +51,15 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
         </section>
 
         <section className={styles.outline}>
+          {/* 🔴🔴🔴 */}
           <section className={styles.mainSection}>
-            {/* 🔥🔥🔥 */}
+            {/* 🔵🔵🔵 */}
             <section className={styles.archiveSection}>
+              <div className={styles.archiveSectionTitleHidden}>
+                <h4>アーカイブ</h4>
+                <h1>Archive</h1>
+              </div>
+
               <ul>
                 {Object.keys(monthlyIndex).map((index) => (
                   <li key={index}>
@@ -72,8 +71,8 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
                 ))}
               </ul>
             </section>
-            {/* 🔥🔥🔥 */}
 
+            {/* 🟢🟢🟢 */}
             <section className={styles.scrollSection}>
               <div className={styles.scroll}>
                 <Link href="#top">
@@ -84,13 +83,16 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
                 </Link>
               </div>
             </section>
+
+            {/* 🟠🟠🟠 */}
             <section className={styles.blogSection} id="top">
               {blog.map((blog) => (
                 <div className={styles.blog} key={blog.id}>
                   <div className={styles.articleBox}>
                     <div className={styles.article}>
-                      <h3>{blog.title}</h3>
-                      <div>{blog.publishedAt}</div>
+                      <p className={styles.title}>{blog.title}</p>
+                      <p className={styles.publishedAt}>{blog.publishedAt}</p>
+                      {/* <div>{blog.publishedAt}</div> */}
                     </div>
                     <div className={styles.button}>
                       <Link href={`/blog/${blog.id}`}>
@@ -111,6 +113,7 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
                 </div>
               ))}
             </section>
+
             <footer id="down">
               <Footer />
             </footer>
