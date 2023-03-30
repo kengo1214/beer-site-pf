@@ -4,9 +4,9 @@ import { AiOutlineDoubleRight } from "react-icons/ai";
 export default function Button() {
   return (
     <>
-      <div className={styles.button}>
+      <div className={`${styles.button} ${styles.blogButton}`}>
         <p>More</p>
-        <AiOutlineDoubleRight size={18} className={styles.icon} />
+        <AiOutlineDoubleRight className={styles.icon} />
       </div>
     </>
   );
