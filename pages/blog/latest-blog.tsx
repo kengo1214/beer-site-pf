@@ -87,30 +87,31 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
             {/* 🟠🟠🟠 */}
             <section className={styles.blogSection} id="top">
               {blog.map((blog) => (
-                <div className={styles.blog} key={blog.id}>
-                  <div className={styles.articleBox}>
-                    <div className={styles.article}>
-                      <p className={styles.title}>{blog.title}</p>
-                      <p className={styles.publishedAt}>{blog.publishedAt}</p>
-                      {/* <div>{blog.publishedAt}</div> */}
+                <Link
+                  href={`/blog/${blog.id}`}
+                  className={styles.link}
+                  key={blog.id}
+                >
+                  <div className={styles.blog}>
+                    <div className={styles.articleBox}>
+                      
+                        <p className={styles.title}>{blog.title}</p>
+                        <p className={styles.publishedAt}>{blog.publishedAt}</p>
+                      
                     </div>
-                    <div className={styles.button}>
-                      <Link href={`/blog/${blog.id}`}>
-                        <Button />
-                      </Link>
+
+                    <div className={styles.imageBox}>
+                      <div className={styles.image}>
+                        <Image
+                          src={blog.image.url}
+                          layout="fill"
+                          objectFit="cover"
+                          alt="image"
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div className={styles.imageBox}>
-                    <div className={styles.image}>
-                      <Image
-                        src={blog.image.url}
-                        layout="fill"
-                        objectFit="cover"
-                        alt="image"
-                      />
-                    </div>
-                  </div>
-                </div>
+                </Link>
               ))}
             </section>
 

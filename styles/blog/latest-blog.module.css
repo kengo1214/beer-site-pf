@@ -121,7 +121,6 @@
 .body .outline .mainSection .archiveSection ul {
   list-style: none;
   width: 100%;
-  height: 100%;
   height: calc(100% - 5rem);
   padding: 2rem 2rem 0 0;
   overflow: scroll;
@@ -185,64 +184,50 @@
   min-height: calc(100vh - 240px);
   padding: 2rem 0 5rem 2rem;
 }
-.body .outline .mainSection .blogSection h1 {
-  color: white;
-  font-size: 2rem;
-}
 .body .outline .mainSection .blogSection .blog:nth-last-child(1) {
   margin-bottom: 0;
 }
-.body .outline .mainSection .blogSection .blog {
+.body .outline .mainSection .blogSection .link {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  display: flex;
+}
+.body .outline .mainSection .blogSection .link .blog {
   background-color: white;
   width: 100%;
   padding: 1rem;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
-.body .outline .mainSection .blogSection .blog .articleBox {
+.body .outline .mainSection .blogSection .link .blog .articleBox {
   width: calc(100% - 225px);
   min-height: 150px;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.body .outline .mainSection .blogSection .blog .articleBox .article {
-  width: 100%;
-  min-height: 85px;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.body .outline .mainSection .blogSection .blog .articleBox .article .title {
+.body .outline .mainSection .blogSection .link .blog .articleBox .title {
   font-weight: bold;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
-.body .outline .mainSection .blogSection .blog .articleBox .article .publishedAt {
+.body .outline .mainSection .blogSection .link .blog .articleBox .publishedAt {
   font-size: 1rem;
 }
-.body .outline .mainSection .blogSection .blog .articleBox .button {
-  width: 100%;
-  min-height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-.body .outline .mainSection .blogSection .blog .imageBox {
-  width: 270px;
-  height: 180px;
+.body .outline .mainSection .blogSection .link .blog .imageBox {
   width: 225px;
   height: 150px;
 }
-.body .outline .mainSection .blogSection .blog .imageBox .image {
+.body .outline .mainSection .blogSection .link .blog .imageBox .image {
   width: 100%;
   height: 100%;
   position: relative;
@@ -260,7 +245,6 @@
     display: none;
   }
   .body .outline {
-    width: 100%;
     height: calc(100vh - 180px);
   }
   .body .outline .mainSection {
@@ -310,7 +294,6 @@
   .body .outline .mainSection .archiveSection ul {
     height: 100%;
     padding: 0rem;
-    padding-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,7 +302,6 @@
     flex-wrap: wrap;
   }
   .body .outline .mainSection .archiveSection ul li {
-    margin: 0 1rem 2rem;
     margin: 0 1rem 1rem;
     width: calc(33% - 2rem);
   }
@@ -364,122 +346,28 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .body .titleSection {
-    height: 80px;
-  }
-  .body .titleSection .blogSectionTitle {
-    width: 100%;
-    padding-right: 0;
-  }
-  .body .titleSection .archiveSectionTitle {
-    display: none;
-  }
-  .body .outline {
-    width: 100%;
-    height: calc(100vh - 180px);
-  }
-  .body .outline .mainSection {
-    height: calc(100vh - 180px);
-  }
-  .body .outline .mainSection .archiveSection {
-    width: 100%;
-    height: 130px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    flex-direction: column;
-    color: white;
-    width: auto;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 1024px) {
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
-    font-size: 0.8rem;
-  }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
-    font-size: 1.3rem;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
-    font-size: 0.7rem;
-  }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
-    font-size: 1.1rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .body .outline .mainSection .archiveSection ul {
-    height: 100%;
-    padding: 0rem;
-    padding-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
   .body .outline .mainSection .archiveSection ul li {
-    margin: 0 1rem 1rem;
     width: calc(50% - 2rem);
   }
-  .body .outline .mainSection .archiveSection ul li .link {
+  .body .outline .mainSection .blogSection .link .blog {
+    padding: 1rem;
     padding: 0.8rem;
+  }
+  .body .outline .mainSection .blogSection .link .blog .articleBox {
+    width: calc(100% - 165px);
+    min-height: 110px;
+    padding: 1rem;
+    padding: 0.5rem;
+  }
+  .body .outline .mainSection .blogSection .link .blog .articleBox .title {
     font-size: 0.9rem;
   }
-}
-@media screen and (max-width: 768px) {
-  .body .outline .mainSection .scrollSection {
-    width: 100%;
-    height: 70px;
-    padding-bottom: 0rem;
-    right: 0px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: flex-end;
-    padding-right: 2rem;
+  .body .outline .mainSection .blogSection .link .blog .articleBox .publishedAt {
+    font-size: 0.8rem;
   }
-  .body .outline .mainSection .scrollSection .scroll {
-    flex-direction: row;
-  }
-  .body .outline .mainSection .scrollSection .scroll .scrollTop,
-.body .outline .mainSection .scrollSection .scroll .scrollDown {
-    width: 30px;
-    height: 30px;
-  }
-  .body .outline .mainSection .scrollSection .scroll .scrollTop {
-    margin-bottom: 0rem;
-    margin-right: 0.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .body .outline .mainSection .blogSection {
-    width: 100%;
-    min-height: calc(100vh - 440px);
-    padding: 2rem;
-    padding-top: 0;
-  }
-  .body .outline .mainSection .blogSection .blog .articleBox .article .title {
-    font-size: 1rem;
-  }
-  .body .outline .mainSection .blogSection .blog .articleBox .article .publishedAt {
-    font-size: 0.9rem;
+  .body .outline .mainSection .blogSection .link .blog .imageBox {
+    width: 165px;
+    height: 110px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -490,13 +378,7 @@
     box-sizing: border-box;
   }
   .body .outline .mainSection .archiveSection ul li {
-    margin: 0 1rem 2rem;
-    margin: 0 1rem 1rem;
     width: calc(80% - 2rem);
-  }
-  .body .outline .mainSection .archiveSection ul li .link {
-    padding: 0.8rem;
-    font-size: 0.9rem;
   }
 }
 /*# sourceMappingURL=latest-blog.module.css.map */
