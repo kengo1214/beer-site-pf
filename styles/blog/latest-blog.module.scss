@@ -197,7 +197,6 @@
 
       // 💊💊💊💊💊💊💊💊💊
       .outlineSection {
-        // border: 8px solid greenyellow;
         width: 100%;
 
         // 🟠🟠🟠🟠🟠🟠🟠🟠🟠
@@ -206,6 +205,9 @@
           width: calc(100% - 330px);
           min-height: calc(100vh - 240px);
           padding: 2rem 0 5rem 2rem;
+
+          @include center;
+          flex-direction: column;
 
           .link:nth-last-child(1) {
             margin-bottom: 0;
@@ -490,6 +492,9 @@
             min-height: calc(100vh - 380px);
 
             .link {
+              width: 100%;
+              width: 90%;
+
               .blog {
                 // border: 3px solid red;
                 flex-direction: column;
@@ -499,7 +504,8 @@
                   width: 100%;
                   min-height: auto;
                   @include center;
-                  padding: 0.8rem;
+                  // padding: 0.8rem;
+                  padding: 0rem; //🔥
                   margin-bottom: 0.8rem;
 
                   .title {
@@ -529,6 +535,14 @@
           ul {
             li {
               width: calc(95% - 2rem);
+            }
+          }
+        }
+
+        .outlineSection {
+          .blogSection {
+            .link {
+              width: 100%;
             }
           }
         }
