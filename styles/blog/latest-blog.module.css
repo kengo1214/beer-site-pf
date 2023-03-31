@@ -68,6 +68,22 @@
     font-size: 1.1rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .body .titleSection .blogSectionTitle h4 {
+    font-size: 0.6rem;
+  }
+  .body .titleSection .blogSectionTitle h1 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .body .titleSection .blogSectionTitle h4 {
+    font-size: 0.6rem;
+  }
+  .body .titleSection .blogSectionTitle h1 {
+    font-size: 0.9rem;
+  }
+}
 .body .titleSection .archiveSectionTitle {
   width: 100%;
   height: 100%;
@@ -95,6 +111,22 @@
   }
   .body .titleSection .archiveSectionTitle h1 {
     font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .body .titleSection .archiveSectionTitle h4 {
+    font-size: 0.6rem;
+  }
+  .body .titleSection .archiveSectionTitle h1 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .body .titleSection .archiveSectionTitle h4 {
+    font-size: 0.6rem;
+  }
+  .body .titleSection .archiveSectionTitle h1 {
+    font-size: 0.9rem;
   }
 }
 .body .outline {
@@ -293,6 +325,22 @@
     font-size: 1.1rem;
   }
 }
+@media screen and (max-width: 1024px) and (max-width: 480px) {
+  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
+    font-size: 0.6rem;
+  }
+  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 350px) {
+  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
+    font-size: 0.6rem;
+  }
+  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
+    font-size: 0.9rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .body .outline .mainSection .archiveSection ul {
     height: 100%;
@@ -397,7 +445,6 @@
     height: calc(100vh - 160px);
   }
   .body .outline .mainSection .archiveSection {
-    height: 110px;
     height: 100px;
   }
   .body .outline .mainSection .archiveSection ul li .link {
@@ -418,6 +465,42 @@
   }
   .body .outline .mainSection .outlineSection .blogSection {
     min-height: calc(100vh - 380px);
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog {
+    flex-direction: column;
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+    margin-bottom: 0.8rem;
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+    width: 210px;
+    height: 140px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .body .outline .mainSection .archiveSection ul li {
+    width: calc(95% - 2rem);
+  }
+}
+@media screen and (max-width: 350px) {
+  .body .outline .mainSection .archiveSection ul li {
+    width: calc(100% - 2rem);
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+    font-size: 0.8rem;
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
+    font-size: 0.7rem;
   }
 }
 /*# sourceMappingURL=latest-blog.module.css.map */

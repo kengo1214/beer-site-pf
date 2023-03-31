@@ -88,42 +88,6 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
             <section className={styles.outlineSection}>
               {/* 🟠🟠🟠 */}
               <section className={styles.blogSection} id="top">
-                {/* <div className={styles.link}>
-                  <div className={styles.blog}>
-                    <div className={styles.articleBox}>
-                      <p className={styles.title}></p>
-                      <p className={styles.publishedAt}></p>
-                    </div>
-
-                    <div className={styles.imageBox}>
-                      <div className={styles.image}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.link}>
-                  <div className={styles.blog}>
-                    <div className={styles.articleBox}>
-                      <p className={styles.title}></p>
-                      <p className={styles.publishedAt}></p>
-                    </div>
-
-                    <div className={styles.imageBox}>
-                      <div className={styles.image}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.link}>
-                  <div className={styles.blog}>
-                    <div className={styles.articleBox}>
-                      <p className={styles.title}></p>
-                      <p className={styles.publishedAt}></p>
-                    </div>
-
-                    <div className={styles.imageBox}>
-                      <div className={styles.image}></div>
-                    </div>
-                  </div>
-                </div> */}
                 {blog.map((blog) => (
                   <Link
                     href={`/blog/${blog.id}`}

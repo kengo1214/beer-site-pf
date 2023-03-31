@@ -42,6 +42,24 @@
       font-size: 1.1rem;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    h4 {
+      font-size: 0.6rem;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    h4 {
+      font-size: 0.6rem;
+    }
+    h1 {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 //🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -439,7 +457,6 @@
         height: calc(100vh - 160px);
 
         .archiveSection {
-          height: 110px;
           height: 100px; //🔥
 
           ul {
@@ -471,6 +488,84 @@
 
           .blogSection {
             min-height: calc(100vh - 380px);
+
+            .link {
+              .blog {
+                // border: 3px solid red;
+                flex-direction: column;
+
+                .articleBox {
+                  // border: 3px solid blue;
+                  width: 100%;
+                  min-height: auto;
+                  @include center;
+                  padding: 0.8rem;
+                  margin-bottom: 0.8rem;
+
+                  .title {
+                    margin-bottom: 0.8rem;
+                  }
+                }
+
+                .imageBox {
+                  // border: 3px solid orange;
+                  width: 210px;
+                  height: 140px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .body {
+    .outline {
+      .mainSection {
+        .archiveSection {
+          ul {
+            li {
+              width: calc(95% - 2rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .body {
+    .outline {
+      .mainSection {
+        .archiveSection {
+          ul {
+            li {
+              width: calc(100% - 2rem);
+            }
+          }
+        }
+
+        .outlineSection {
+          .blogSection {
+            .link {
+              .blog {
+                .articleBox {
+                  .title {
+                    // font-size: 0.9rem;
+                    font-size: 0.8rem;
+                  }
+
+                  .publishedAt {
+                    // font-size: 0.8rem;
+                    font-size: 0.7rem;
+                  }
+                }
+              }
+            }
           }
         }
       }
