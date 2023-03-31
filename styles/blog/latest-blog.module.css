@@ -481,6 +481,7 @@
     min-height: calc(100vh - 335px);
   }
   .body .outline .mainSection .outlineSection .blogSection .link {
+    width: 90%;
     width: auto;
   }
   .body .outline .mainSection .outlineSection .blogSection .link .blog {
@@ -509,8 +510,8 @@
     width: calc(95% - 2rem);
   }
   .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
-    width: 240px;
-    height: 160px;
+    width: 255px;
+    height: 170px;
   }
 }
 @media screen and (max-width: 350px) {
