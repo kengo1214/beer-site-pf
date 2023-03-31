@@ -179,21 +179,24 @@
 .body .outline .mainSection .scrollSection .scroll .scrollTop {
   margin-bottom: 0.5rem;
 }
-.body .outline .mainSection .blogSection {
+.body .outline .mainSection .outlineSection {
+  width: 100%;
+}
+.body .outline .mainSection .outlineSection .blogSection {
   width: calc(100% - 330px);
   min-height: calc(100vh - 240px);
   padding: 2rem 0 5rem 2rem;
 }
-.body .outline .mainSection .blogSection .blog:nth-last-child(1) {
+.body .outline .mainSection .outlineSection .blogSection .link:nth-last-child(1) {
   margin-bottom: 0;
 }
-.body .outline .mainSection .blogSection .link {
+.body .outline .mainSection .outlineSection .blogSection .link {
   width: 100%;
   margin-bottom: 2rem;
   border-radius: 10px;
   display: flex;
 }
-.body .outline .mainSection .blogSection .link .blog {
+.body .outline .mainSection .outlineSection .blogSection .link .blog {
   background-color: white;
   width: 100%;
   padding: 1rem;
@@ -203,7 +206,7 @@
   align-items: center;
   box-sizing: border-box;
 }
-.body .outline .mainSection .blogSection .link .blog .articleBox {
+.body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
   width: calc(100% - 225px);
   min-height: 150px;
   padding: 1rem;
@@ -215,19 +218,19 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.body .outline .mainSection .blogSection .link .blog .articleBox .title {
+.body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-.body .outline .mainSection .blogSection .link .blog .articleBox .publishedAt {
+.body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
   font-size: 1rem;
 }
-.body .outline .mainSection .blogSection .link .blog .imageBox {
+.body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
   width: 225px;
   height: 150px;
 }
-.body .outline .mainSection .blogSection .link .blog .imageBox .image {
+.body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox .image {
   width: 100%;
   height: 100%;
   position: relative;
@@ -252,7 +255,7 @@
   }
   .body .outline .mainSection .archiveSection {
     width: 100%;
-    height: 130px;
+    height: 100px;
     position: relative;
     padding: 1.5rem 2rem 0;
     display: flex;
@@ -313,8 +316,8 @@
 @media screen and (max-width: 1024px) {
   .body .outline .mainSection .scrollSection {
     width: 100%;
-    height: 70px;
-    padding-bottom: 0rem;
+    height: 85px;
+    padding: 1.5rem 2rem;
     right: 0px;
     position: relative;
     display: flex;
@@ -322,7 +325,6 @@
     align-items: center;
     box-sizing: border-box;
     justify-content: flex-end;
-    padding-right: 2rem;
   }
   .body .outline .mainSection .scrollSection .scroll {
     flex-direction: row;
@@ -338,34 +340,36 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .body .outline .mainSection .blogSection {
+  .body .outline .mainSection .outlineSection {
+    overflow: scroll;
+    position: relative;
+    height: calc(100vh - 365px);
+  }
+  .body .outline .mainSection .outlineSection .blogSection {
     width: 100%;
-    min-height: calc(100vh - 440px);
-    padding: 2rem;
-    padding-top: 0;
+    min-height: calc(100vh - 405px);
+    padding: 0 2rem 5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .body .outline .mainSection .archiveSection ul li {
     width: calc(50% - 2rem);
   }
-  .body .outline .mainSection .blogSection .link .blog {
-    padding: 1rem;
+  .body .outline .mainSection .outlineSection .blogSection .link .blog {
     padding: 0.8rem;
   }
-  .body .outline .mainSection .blogSection .link .blog .articleBox {
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
     width: calc(100% - 165px);
     min-height: 110px;
-    padding: 1rem;
     padding: 0.5rem;
   }
-  .body .outline .mainSection .blogSection .link .blog .articleBox .title {
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
     font-size: 0.9rem;
   }
-  .body .outline .mainSection .blogSection .link .blog .articleBox .publishedAt {
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
     font-size: 0.8rem;
   }
-  .body .outline .mainSection .blogSection .link .blog .imageBox {
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
     width: 165px;
     height: 110px;
   }
@@ -379,6 +383,41 @@
   }
   .body .outline .mainSection .archiveSection ul li {
     width: calc(80% - 2rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .body {
+    height: calc(100vh - 80px);
+    top: 80px;
+  }
+  .body .outline {
+    height: calc(100vh - 160px);
+  }
+  .body .outline .mainSection {
+    height: calc(100vh - 160px);
+  }
+  .body .outline .mainSection .archiveSection {
+    height: 110px;
+    height: 100px;
+  }
+  .body .outline .mainSection .archiveSection ul li .link {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .body .outline .mainSection .scrollSection {
+    height: 80px;
+    padding: 1.5rem 2rem;
+  }
+  .body .outline .mainSection .scrollSection .scroll .scrollTop,
+.body .outline .mainSection .scrollSection .scroll .scrollDown {
+    width: 25px;
+    height: 25px;
+  }
+  .body .outline .mainSection .outlineSection {
+    height: calc(100vh - 340px);
+  }
+  .body .outline .mainSection .outlineSection .blogSection {
+    min-height: calc(100vh - 380px);
   }
 }
 /*# sourceMappingURL=latest-blog.module.css.map */

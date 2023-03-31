@@ -84,40 +84,78 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
               </div>
             </section>
 
-            {/* 🟠🟠🟠 */}
-            <section className={styles.blogSection} id="top">
-              {blog.map((blog) => (
-                <Link
-                  href={`/blog/${blog.id}`}
-                  className={styles.link}
-                  key={blog.id}
-                >
+            {/* 💊💊💊 */}
+            <section className={styles.outlineSection}>
+              {/* 🟠🟠🟠 */}
+              <section className={styles.blogSection} id="top">
+                {/* <div className={styles.link}>
                   <div className={styles.blog}>
                     <div className={styles.articleBox}>
-                      
-                        <p className={styles.title}>{blog.title}</p>
-                        <p className={styles.publishedAt}>{blog.publishedAt}</p>
-                      
+                      <p className={styles.title}></p>
+                      <p className={styles.publishedAt}></p>
                     </div>
 
                     <div className={styles.imageBox}>
-                      <div className={styles.image}>
-                        <Image
-                          src={blog.image.url}
-                          layout="fill"
-                          objectFit="cover"
-                          alt="image"
-                        />
-                      </div>
+                      <div className={styles.image}></div>
                     </div>
                   </div>
-                </Link>
-              ))}
-            </section>
+                </div>
+                <div className={styles.link}>
+                  <div className={styles.blog}>
+                    <div className={styles.articleBox}>
+                      <p className={styles.title}></p>
+                      <p className={styles.publishedAt}></p>
+                    </div>
 
-            <footer id="down">
-              <Footer />
-            </footer>
+                    <div className={styles.imageBox}>
+                      <div className={styles.image}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.link}>
+                  <div className={styles.blog}>
+                    <div className={styles.articleBox}>
+                      <p className={styles.title}></p>
+                      <p className={styles.publishedAt}></p>
+                    </div>
+
+                    <div className={styles.imageBox}>
+                      <div className={styles.image}></div>
+                    </div>
+                  </div>
+                </div> */}
+                {blog.map((blog) => (
+                  <Link
+                    href={`/blog/${blog.id}`}
+                    className={styles.link}
+                    key={blog.id}
+                  >
+                    <div className={styles.blog}>
+                      <div className={styles.articleBox}>
+                        <p className={styles.title}>{blog.title}</p>
+                        <p className={styles.publishedAt}>{blog.publishedAt}</p>
+                      </div>
+
+                      <div className={styles.imageBox}>
+                        <div className={styles.image}>
+                          <Image
+                            src={blog.image.url}
+                            layout="fill"
+                            objectFit="cover"
+                            alt="image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </section>
+
+              <footer id="down">
+                <Footer />
+              </footer>
+            </section>
+            {/* 💊💊💊 */}
           </section>
         </section>
       </div>
