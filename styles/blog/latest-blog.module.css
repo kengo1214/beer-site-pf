@@ -229,7 +229,7 @@
 }
 .body .outline .mainSection .outlineSection .blogSection .link {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border-radius: 10px;
   display: flex;
 }
@@ -238,10 +238,15 @@
   width: 100%;
   padding: 1rem;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px gray;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+}
+.body .outline .mainSection .outlineSection .blogSection .link .blog:hover {
+  background-color: #dddddd;
+  transition: 300ms;
 }
 .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
   width: calc(100% - 225px);
