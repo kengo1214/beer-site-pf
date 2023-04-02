@@ -408,6 +408,20 @@
     min-height: calc(100vh - 405px);
     padding: 0 2rem 3rem;
   }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
+    width: calc(100% - 195px);
+    min-height: 130px;
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+    font-size: 1.1rem;
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
+    font-size: 0.9rem;
+  }
+  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+    width: 195px;
+    height: 130px;
+  }
 }
 @media screen and (max-width: 768px) {
   .body .outline .mainSection .archiveSection ul li {
