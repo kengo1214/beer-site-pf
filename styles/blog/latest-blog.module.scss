@@ -65,6 +65,7 @@
 //🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
 .body {
+  // border: 5px dashed red;
   width: 100%;
   height: calc(100vh - 100px);
   position: fixed;
@@ -271,6 +272,22 @@
                   position: relative;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .body {
+    .outline {
+      .mainSection {
+        .outlineSection {
+          .blogSection {
+            .link {
+              width: 85%;
             }
           }
         }
@@ -519,9 +536,11 @@
         }
 
         .outlineSection {
+          // border: 3px dashed red;
           height: calc(100vh - 305px);
 
           .blogSection {
+            // border: 3px dashed red;
             min-height: calc(100vh - 335px);
 
             .link {
