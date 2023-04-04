@@ -51,6 +51,7 @@ export default function HogeId({ blog, monthlyIndex }: Props) {
     <>
       <div className={styles.body}>
         <Header />
+
         <section className={styles.titleSection}>
           <div className={styles.blogSectionTitle}>
             <h4>最新のブログ</h4>
@@ -63,38 +64,39 @@ export default function HogeId({ blog, monthlyIndex }: Props) {
           </div>
         </section>
 
-        <section className={styles.outline}>
-          <section className={styles.mainSection}>
-            {/* 🔥🔥🔥 */}
-            <section className={styles.archiveSection}>
-              <ul>
-                {Object.keys(monthlyIndex).map((index) => (
-                  <li key={index}>
-                    <Link href={`/archive/${index}`} className={styles.link}>
-                      {index.split("_")[0] + "年" + index.split("_")[1] + "月"}
-                      （{monthlyIndex[index].length + "件"}）
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-            {/* 🔥🔥🔥 */}
+        <section className={styles.mainSectiom}>
+          <section className={styles.archiveSection}>
+            <div className={styles.archiveSectionTitleHidden}>
+              <h4>アーカイブ</h4>
+              <h1>Archive</h1>
+            </div>
 
-            <section className={styles.blogSection} id="top">
-              <div className={styles.blog} key={blog.id}>
+            <ul>
+              {Object.keys(monthlyIndex).map((index) => (
+                <li key={index}>
+                  <Link href={`/archive/${index}`} className={styles.link}>
+                    {index.split("_")[0] + "年" + index.split("_")[1] + "月"}（
+                    {monthlyIndex[index].length + "件"}）
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className={styles.outlineSection}>
+            <section className={styles.blogSection}>
+              <div className={styles.blog}>
                 <div className={styles.articleBox}>
-                  <div className={styles.article}>
-                    <h3>{blog.title}</h3>
-                    <div>{blog.publishedAt}</div>
-                  </div>
-                  <div className={styles.detail}>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: `${blog.body}`,
-                      }}
-                    />
-                  </div>
+                  <p className={styles.title}>{blog.title}</p>
+                  <p className={styles.publishedAt}>{blog.publishedAt}</p>
+                  <p
+                    className={styles.detail}
+                    dangerouslySetInnerHTML={{
+                      __html: `${blog.body}`,
+                    }}
+                  />
                 </div>
+
                 <div className={styles.imageBox}>
                   <div className={styles.image}>
                     <Image
@@ -107,14 +109,14 @@ export default function HogeId({ blog, monthlyIndex }: Props) {
                 </div>
               </div>
 
-              <div className={styles.backButtonBox}>
-                <div onClick={() => router.back()}>
-                  <BackButton />
-                </div>
-              </div>
-            </section>
 
-            <footer id="down">
+              <div className={styles.backButtonBox}>
+                  <div onClick={() => router.back()}>
+                    <BackButton />
+                  </div>
+                </div>
+            </section>
+            <footer className={styles.footer}>
               <Footer />
             </footer>
           </section>
