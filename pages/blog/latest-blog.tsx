@@ -38,6 +38,7 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
     <>
       <div className={styles.body}>
         <Header />
+
         <section className={styles.titleSection}>
           <div className={styles.blogSectionTitle}>
             <h4>最新のブログ</h4>
@@ -50,76 +51,67 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
           </div>
         </section>
 
-        <section className={styles.outline}>
-          {/* 🔴🔴🔴 */}
-          <section className={styles.mainSection}>
-            {/* 🔵🔵🔵 */}
-            <section className={styles.archiveSection}>
-              <div className={styles.archiveSectionTitleHidden}>
-                <h4>アーカイブ</h4>
-                <h1>Archive</h1>
-              </div>
+        <section className={styles.mainSectiom}>
+          <section className={styles.archiveSection}>
+            <div className={styles.archiveSectionTitleHidden}>
+              <h4>アーカイブ</h4>
+              <h1>Archive</h1>
+            </div>
 
-              <ul>
-                {Object.keys(monthlyIndex).map((index) => (
-                  <li key={index}>
-                    <Link href={`/archive/${index}`} className={styles.link}>
-                      {index.split("_")[0] + "年" + index.split("_")[1] + "月"}
-                      （{monthlyIndex[index].length + "件"}）
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            <ul>
+              {Object.keys(monthlyIndex).map((index) => (
+                <li key={index}>
+                  <Link href={`/archive/${index}`} className={styles.link}>
+                    {index.split("_")[0] + "年" + index.split("_")[1] + "月"}（
+                    {monthlyIndex[index].length + "件"}）
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-            {/* 🟢🟢🟢 */}
-            <section className={styles.scrollSection}>
-              <div className={styles.scroll}>
-                <Link href="#top">
-                  <BsFillArrowUpCircleFill className={styles.scrollTop} />
-                </Link>
-                <Link href="#down">
-                  <BsFillArrowDownCircleFill className={styles.scrollDown} />
-                </Link>
-              </div>
-            </section>
+          <section className={styles.scrollSection}>
+            <div className={styles.scroll}>
+              <Link href="#top">
+                <BsFillArrowUpCircleFill className={styles.scrollTop} />
+              </Link>
+              <Link href="#down">
+                <BsFillArrowDownCircleFill className={styles.scrollDown} />
+              </Link>
+            </div>
+          </section>
 
-            {/* 💊💊💊 */}
-            <section className={styles.outlineSection}>
-              {/* 🟠🟠🟠 */}
-              <section className={styles.blogSection} id="top">
-                {blog.map((blog) => (
-                  <Link
-                    href={`/blog/${blog.id}`}
-                    className={styles.link}
-                    key={blog.id}
-                  >
-                    <div className={styles.blog}>
-                      <div className={styles.articleBox}>
-                        <p className={styles.title}>{blog.title}</p>
-                        <p className={styles.publishedAt}>{blog.publishedAt}</p>
-                      </div>
+          <section className={styles.outlineSection}>
+            <section className={styles.blogSection}>
+              {blog.map((blog) => (
+                <Link
+                  href={`/blog/${blog.id}`}
+                  className={styles.link}
+                  key={blog.id}
+                >
+                  <div className={styles.blog}>
+                    <div className={styles.articleBox}>
+                      <p className={styles.title}>{blog.title}</p>
+                      <p className={styles.publishedAt}>{blog.publishedAt}</p>
+                    </div>
 
-                      <div className={styles.imageBox}>
-                        <div className={styles.image}>
-                          <Image
-                            src={blog.image.url}
-                            layout="fill"
-                            objectFit="cover"
-                            alt="image"
-                          />
-                        </div>
+                    <div className={styles.imageBox}>
+                      <div className={styles.image}>
+                        <Image
+                          src={blog.image.url}
+                          layout="fill"
+                          objectFit="cover"
+                          alt="image"
+                        />
                       </div>
                     </div>
-                  </Link>
-                ))}
-              </section>
-
-              <footer id="down">
-                <Footer />
-              </footer>
+                  </div>
+                </Link>
+              ))}
             </section>
-            {/* 💊💊💊 */}
+            <footer className={styles.footer}>
+              <Footer />
+            </footer>
           </section>
         </section>
       </div>

@@ -65,7 +65,6 @@
 //🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
 .body {
-  // border: 5px dashed red;
   width: 100%;
   height: calc(100vh - 100px);
   position: fixed;
@@ -105,172 +104,149 @@
     }
   }
 
-  .outline {
-    // border: 3px dashed white;
+  .mainSectiom {
     width: 100%;
-    height: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
     position: relative;
     z-index: 10;
 
-    .mainSection {
-      // border: 5px solid greenyellow;
+    .archiveSection {
+      width: 250px;
+      height: calc(100vh - 240px);
+      position: absolute;
+      right: 0;
+
+      .archiveSectionTitleHidden {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        width: 100%;
+        height: calc(100% - 3rem);
+        padding: 2rem 2rem 0 0;
+        overflow: scroll;
+
+        li {
+          margin-bottom: 2rem;
+          border-radius: 10px;
+
+          .link {
+            background-color: darkorange;
+            color: white;
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            @include center;
+
+            &:hover {
+              background-color: orange;
+              transition: 300ms;
+            }
+          }
+        }
+      }
+    }
+
+    .scrollSection {
+      width: 80px;
+      height: calc(100vh - 240px);
+      position: absolute;
+      right: 250px;
+      padding-bottom: 3rem;
+      overflow: hidden;
+      @include center;
+      align-items: flex-end;
+
+      .scroll {
+        @include center;
+        flex-direction: column;
+
+        .scrollTop,
+        .scrollDown {
+          color: white;
+          width: 35px;
+          height: 35px;
+
+          &:hover {
+            color: orangered;
+            transition: 300ms;
+          }
+        }
+
+        .scrollTop {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    .outlineSection {
       width: 100%;
       height: calc(100vh - 200px);
       overflow: scroll;
 
-      // 🔴🔴🔴🔴🔴🔴🔴🔴🔴
-      .archiveSection {
-        // border: 3px solid red;
-        width: 250px;
-        height: calc(100vh - 240px);
-        position: absolute;
-        right: 0;
-        color: white;
+      .blogSection {
+        width: calc(100% - 330px);
+        min-height: calc(100vh - 240px); //💊
+        padding: 2rem 0 3rem 2rem;
 
-        .archiveSectionTitleHidden {
-          display: none;
-        }
-
-        ul {
-          // border: 3px solid blue;
-          list-style: none;
-          width: 100%;
-          height: calc(100% - 3rem);
-          padding: 2rem 2rem 0 0;
-          overflow: scroll;
-
-          li {
-            // border: 3px solid greenyellow;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-
-            .link {
-              background-color: darkorange;
-              width: 100%;
-              height: 100%;
-              padding: 1rem;
-              border-radius: 10px;
-              font-weight: bold;
-              @include center;
-
-              &:hover {
-                background-color: orange;
-                transition: 300ms;
-              }
-            }
-          }
-        }
-      }
-
-      // 🔵🔵🔵🔵🔵🔵🔵🔵🔵
-      .scrollSection {
-        // border: 3px solid blue;
-        width: 80px;
-        height: calc(100vh - 240px);
-        padding-bottom: 3rem;
-        position: absolute;
-        right: 250px;
-        overflow: hidden;
         @include center;
-        align-items: flex-end;
+        flex-direction: column;
 
-        .scroll {
-          // border: 3px solid blue;
-          @include center;
-          flex-direction: column;
+        .link:nth-last-child(1) {
+          margin-bottom: 0;
+        }
 
-          .scrollTop,
-          .scrollDown {
-            color: white;
-            width: 35px;
-            height: 35px;
+        .link {
+          width: 100%;
+          margin-bottom: 3rem;
+          border-radius: 10px;
+          display: flex;
+
+          .blog {
+            background-color: white;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+            @include center;
 
             &:hover {
-              color: orangered;
+              background-color: #dddddd;
               transition: 300ms;
             }
-          }
 
-          .scrollTop {
-            margin-bottom: 0.5rem;
-          }
-        }
-      }
-
-      // 💊💊💊💊💊💊💊💊💊
-      .outlineSection {
-        width: 100%;
-
-        // 🟠🟠🟠🟠🟠🟠🟠🟠🟠
-        .blogSection {
-          // border: 5px solid orange;
-          width: calc(100% - 330px);
-          min-height: calc(100vh - 240px);
-          padding: 2rem 0 3rem 2rem;
-
-          @include center;
-          flex-direction: column;
-
-          .link:nth-last-child(1) {
-            margin-bottom: 0;
-          }
-
-          //⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️
-          .link {
-            // border: 3px solid red;
-            width: 100%;
-            margin-bottom: 3rem;
-            border-radius: 10px;
-            display: flex;
-
-            .blog {
-              // border: 3px solid blue;
-              background-color: white;
-              width: 100%;
+            .articleBox {
+              width: calc(100% - 225px);
+              min-height: 150px;
               padding: 1rem;
-              border-radius: 10px;
-              box-shadow: 5px 5px 10px gray;
+
               @include center;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
 
-              &:hover {
-                background-color: #dddddd;
-                transition: 300ms;
+              .title {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
               }
 
-              .articleBox {
-                // border: 3px solid greenyellow;
-                width: calc(100% - 225px);
-                min-height: 150px;
-                padding: 1rem;
-
-                @include center;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-
-                .title {
-                  // border: 3px solid blue;
-                  font-weight: bold;
-                  font-size: 1.2rem;
-                  margin-bottom: 1rem;
-                }
-
-                .publishedAt {
-                  // border: 3px solid greenyellow;
-                  font-size: 1rem;
-                }
+              .publishedAt {
+                font-size: 1rem;
               }
+            }
 
-              .imageBox {
-                // border: 3px solid magenta;
-                width: 225px;
-                height: 150px;
+            .imageBox {
+              width: 225px;
+              height: 150px;
 
-                .image {
-                  width: 100%;
-                  height: 100%;
-                  position: relative;
-                }
+              .image {
+                width: 100%;
+                height: 100%;
+                position: relative;
               }
             }
           }
@@ -279,24 +255,6 @@
     }
   }
 }
-
-@media screen and (min-width: 1600px) {
-  .body {
-    .outline {
-      .mainSection {
-        .outlineSection {
-          .blogSection {
-            .link {
-              width: 85%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-//🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴🔴
 
 @media screen and (max-width: 1024px) {
   .body {
@@ -305,7 +263,7 @@
 
       .blogSectionTitle {
         width: 100%;
-        padding-right: 0;
+        padding-right: 0px;
       }
 
       .archiveSectionTitle {
@@ -313,100 +271,95 @@
       }
     }
 
-    .outline {
-      height: calc(100vh - 180px);
+    .mainSectiom {
+      .archiveSection {
+        width: 100%;
+        height: 100px;
+        position: relative;
+        padding: 1.5rem 2rem 0;
+        right: 0;
+        @include center;
 
-      .mainSection {
-        height: calc(100vh - 180px);
-
-        .archiveSection {
-          width: 100%;
-          height: 100px;
-          position: relative;
-          padding: 1.5rem 2rem 0;
-          @include center;
-
-          .archiveSectionTitleHidden {
-            @include sectionTitle;
-            width: auto;
-          }
-
-          ul {
-            height: 100%;
-            padding: 0rem;
-            @include center;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-
-            li {
-              margin: 0 1rem 1rem;
-              width: calc(33% - 2rem);
-
-              .link {
-                padding: 0.8rem;
-                font-size: 0.9rem;
-              }
-            }
-          }
+        .archiveSectionTitleHidden {
+          @include sectionTitle;
+          width: auto;
         }
 
-        .scrollSection {
-          width: 100%;
-          height: 85px;
-          padding: 1.5rem 2rem;
-
-          right: 0px;
-          position: relative;
+        ul {
+          height: 100%;
+          padding: 0rem;
           @include center;
-          justify-content: flex-end;
+          justify-content: flex-start;
+          flex-wrap: wrap;
 
-          .scroll {
-            flex-direction: row;
-
-            .scrollTop,
-            .scrollDown {
-              width: 30px;
-              height: 30px;
-            }
-
-            .scrollTop {
-              margin-bottom: 0rem;
-              margin-right: 0.5rem;
-            }
-          }
-        }
-
-        .outlineSection {
-          // border: 2px dashed greenyellow;
-          overflow: scroll;
-          position: relative;
-          height: calc(100vh - 365px);
-
-          .blogSection {
-            // border: 2px dashed orange;
-            width: 100%;
-            min-height: calc(100vh - 405px);
-            padding: 0 2rem 3rem;
+          li {
+            margin: 0 1rem 1rem;
+            width: calc(33% - 2rem);
 
             .link {
-              .blog {
-                .articleBox {
-                  width: calc(100% - 195px);
-                  min-height: 130px;
+              padding: 0.8rem;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
 
-                  .title {
-                    font-size: 1.1rem;
-                  }
+      .scrollSection {
+        width: 100%;
+        height: 85px;
+        position: relative;
+        right: 0;
+        padding: 1.5rem 2rem;
+        @include center;
+        justify-content: flex-end;
 
-                  .publishedAt {
-                    font-size: 0.9rem;
-                  }
+        .scroll {
+          @include center;
+          flex-direction: row;
+
+          .scrollTop,
+          .scrollDown {
+            width: 30px;
+            height: 30px;
+          }
+
+          .scrollTop {
+            margin-bottom: 0;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      .outlineSection {
+        height: calc(100vh - 365px);
+
+        .blogSection {
+          width: 100%;
+          min-height: calc(100vh - 405px);
+          padding: 0 2rem 3rem;
+
+          .link {
+            .blog {
+              background-color: white;
+              width: 100%;
+              padding: 1rem;
+
+              .articleBox {
+                width: calc(100% - 195px);
+                min-height: 130px;
+
+                .title {
+                  font-size: 1.1rem;
                 }
 
-                .imageBox {
-                  width: 195px; //🔥
-                  height: 130px; //🔥
+                .publishedAt {
+                  font-size: 0.9rem;
                 }
+              }
+
+              .imageBox {
+                width: 195px;
+                height: 130px;
               }
             }
           }
@@ -415,55 +368,40 @@
     }
   }
 }
-
-// 🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵
-
 @media screen and (max-width: 768px) {
   .body {
-    .outline {
-      .mainSection {
-        .archiveSection {
-          ul {
-            li {
-              width: calc(50% - 2rem);
-            }
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          li {
+            width: calc(50% - 2rem);
           }
         }
+      }
+      .outlineSection {
+        .blogSection {
+          min-height: calc(100vh - 395px);
+          .link {
+            .blog {
+              padding: 0.6rem;
 
-        .outlineSection {
-          // border: 2px dashed red;
-          height: calc(100vh - 365px);
+              .articleBox {
+                width: calc(100% - 165px);
+                min-height: 110px;
+                padding: 0.6rem;
 
-          .blogSection {
-            // border: 2px dashed blue;
-            min-height: calc(100vh - 395px);
-            .link {
-              // border: 3px solid red;
-
-              .blog {
-                // border: 3px solid blue;
-                padding: 0.8rem;
-
-                .articleBox {
-                  // border: 3px solid greenyellow;
-                  width: calc(100% - 165px);
-                  min-height: 110px;
-                  padding: 0.5rem;
-
-                  .title {
-                    font-size: 0.9rem;
-                  }
-
-                  .publishedAt {
-                    font-size: 0.8rem;
-                  }
+                .title {
+                  font-size: 0.9rem;
                 }
 
-                .imageBox {
-                  // border: 3px solid orange;
-                  width: 165px;
-                  height: 110px;
+                .publishedAt {
+                  font-size: 0.8rem;
                 }
+              }
+
+              .imageBox {
+                width: 165px;
+                height: 110px;
               }
             }
           }
@@ -472,20 +410,14 @@
     }
   }
 }
-
-// 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢
-
 @media screen and (max-width: 550px) {
   .body {
-    // border: 3px solid white;
-    .outline {
-      .mainSection {
-        .archiveSection {
-          ul {
-            @include center;
-            li {
-              width: calc(80% - 2rem);
-            }
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          @include center;
+          li {
+            width: calc(80% - 2rem);
           }
         }
       }
@@ -502,73 +434,66 @@
       height: 60px;
     }
 
-    .outline {
-      // border: 2px solid red;
-      height: calc(100vh - 140px);
+    .mainSectiom {
+      min-height: calc(100vh - 140px);
 
-      .mainSection {
-        height: calc(100vh - 140px);
-
-        .archiveSection {
-          height: 100px; //🔥
-
-          ul {
-            li {
-              .link {
-                padding: 0.6rem;
-                font-size: 0.8rem;
-              }
-            }
-          }
-        }
-
-        .scrollSection {
-          height: 65px;
-          padding: 1rem 2rem;
-
-          .scroll {
-            .scrollTop,
-            .scrollDown {
-              width: 25px;
-              height: 25px;
-            }
-          }
-        }
-
-        .outlineSection {
-          // border: 3px dashed red;
-          height: calc(100vh - 305px);
-
-          .blogSection {
-            // border: 3px dashed red;
-            min-height: calc(100vh - 335px);
-
+      .archiveSection {
+        ul {
+          li {
             .link {
-              width: 90%;
-              width: auto; //💊
+              padding: 0.6rem;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
 
-              .blog {
-                // border: 3px solid red;
-                flex-direction: column;
+      .scrollSection {
+        height: 65px;
+        padding: 1rem 2rem;
 
-                .articleBox {
-                  // border: 3px solid blue;
-                  width: 100%;
-                  min-height: auto;
-                  @include center;
-                  padding: 0rem;
+        .scroll {
+          .scrollTop,
+          .scrollDown {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+
+      .outlineSection {
+        height: calc(100vh - 305px);
+
+        .blogSection {
+          min-height: calc(100vh - 335px);
+
+          .link {
+            width: auto;
+
+            .blog {
+              flex-direction: column;
+              padding: 0.8rem;
+
+              .articleBox {
+                width: 100%;
+                min-height: auto;
+                @include center;
+                padding: 0.8rem;
+                margin-bottom: 0.8rem;
+
+                .title {
+                  font-size: 0.9rem;
                   margin-bottom: 0.8rem;
-
-                  .title {
-                    margin-bottom: 0.8rem;
-                  }
                 }
 
-                .imageBox {
-                  // border: 3px solid orange;
-                  width: 300px;
-                  height: 200px;
+                .publishedAt {
+                  font-size: 0.8rem;
                 }
+              }
+
+              .imageBox {
+                width: 300px;
+                height: 200px;
               }
             }
           }
@@ -577,32 +502,24 @@
     }
   }
 }
-
 @media screen and (max-width: 390px) {
   .body {
-    .outline {
-      .mainSection {
-        .archiveSection {
-          ul {
-            li {
-              width: calc(95% - 2rem);
-            }
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          li {
+            width: calc(95% - 2rem);
           }
         }
+      }
 
-        .outlineSection {
-          .blogSection {
-            .link {
-              // width: 100%;
-
-              .blog {
-                .imageBox {
-                  // width: 240px;
-                  // height: 160px;
-
-                  width: 255px;
-                  height: 170px;
-                }
+      .outlineSection {
+        .blogSection {
+          .link {
+            .blog {
+              .imageBox {
+                width: 255px;
+                height: 170px;
               }
             }
           }
@@ -614,33 +531,32 @@
 
 @media screen and (max-width: 350px) {
   .body {
-    .outline {
-      .mainSection {
-        .archiveSection {
-          ul {
-            li {
-              width: calc(100% - 2rem);
-            }
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          li {
+            width: calc(100% - 2rem);
           }
         }
+      }
 
-        .outlineSection {
-          .blogSection {
-            .link {
-              .blog {
-                .articleBox {
-                  .title {
-                    font-size: 0.8rem;
-                  }
+      .outlineSection {
+        .blogSection {
+          .link {
+            .blog {
+              .articleBox {
+                .title {
+                  font-size: 0.8rem;
+                }
 
-                  .publishedAt {
-                    font-size: 0.7rem;
-                  }
+                .publishedAt {
+                  font-size: 0.8rem;
                 }
-                .imageBox {
-                  width: 225px;
-                  height: 150px;
-                }
+              }
+
+              .imageBox {
+                width: 225px;
+                height: 150px;
               }
             }
           }

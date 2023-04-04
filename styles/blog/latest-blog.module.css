@@ -129,40 +129,35 @@
     font-size: 0.9rem;
   }
 }
-.body .outline {
+.body .mainSectiom {
   width: 100%;
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   position: relative;
   z-index: 10;
 }
-.body .outline .mainSection {
-  width: 100%;
-  height: calc(100vh - 200px);
-  overflow: scroll;
-}
-.body .outline .mainSection .archiveSection {
+.body .mainSectiom .archiveSection {
   width: 250px;
   height: calc(100vh - 240px);
   position: absolute;
   right: 0;
-  color: white;
 }
-.body .outline .mainSection .archiveSection .archiveSectionTitleHidden {
+.body .mainSectiom .archiveSection .archiveSectionTitleHidden {
   display: none;
 }
-.body .outline .mainSection .archiveSection ul {
+.body .mainSectiom .archiveSection ul {
   list-style: none;
   width: 100%;
   height: calc(100% - 3rem);
   padding: 2rem 2rem 0 0;
   overflow: scroll;
 }
-.body .outline .mainSection .archiveSection ul li {
+.body .mainSectiom .archiveSection ul li {
   margin-bottom: 2rem;
   border-radius: 10px;
 }
-.body .outline .mainSection .archiveSection ul li .link {
+.body .mainSectiom .archiveSection ul li .link {
   background-color: darkorange;
+  color: white;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -173,16 +168,16 @@
   align-items: center;
   box-sizing: border-box;
 }
-.body .outline .mainSection .archiveSection ul li .link:hover {
+.body .mainSectiom .archiveSection ul li .link:hover {
   background-color: orange;
   transition: 300ms;
 }
-.body .outline .mainSection .scrollSection {
+.body .mainSectiom .scrollSection {
   width: 80px;
   height: calc(100vh - 240px);
-  padding-bottom: 3rem;
   position: absolute;
   right: 250px;
+  padding-bottom: 3rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -190,31 +185,33 @@
   box-sizing: border-box;
   align-items: flex-end;
 }
-.body .outline .mainSection .scrollSection .scroll {
+.body .mainSectiom .scrollSection .scroll {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   flex-direction: column;
 }
-.body .outline .mainSection .scrollSection .scroll .scrollTop,
-.body .outline .mainSection .scrollSection .scroll .scrollDown {
+.body .mainSectiom .scrollSection .scroll .scrollTop,
+.body .mainSectiom .scrollSection .scroll .scrollDown {
   color: white;
   width: 35px;
   height: 35px;
 }
-.body .outline .mainSection .scrollSection .scroll .scrollTop:hover,
-.body .outline .mainSection .scrollSection .scroll .scrollDown:hover {
+.body .mainSectiom .scrollSection .scroll .scrollTop:hover,
+.body .mainSectiom .scrollSection .scroll .scrollDown:hover {
   color: orangered;
   transition: 300ms;
 }
-.body .outline .mainSection .scrollSection .scroll .scrollTop {
+.body .mainSectiom .scrollSection .scroll .scrollTop {
   margin-bottom: 0.5rem;
 }
-.body .outline .mainSection .outlineSection {
+.body .mainSectiom .outlineSection {
   width: 100%;
+  height: calc(100vh - 200px);
+  overflow: scroll;
 }
-.body .outline .mainSection .outlineSection .blogSection {
+.body .mainSectiom .outlineSection .blogSection {
   width: calc(100% - 330px);
   min-height: calc(100vh - 240px);
   padding: 2rem 0 3rem 2rem;
@@ -224,16 +221,16 @@
   box-sizing: border-box;
   flex-direction: column;
 }
-.body .outline .mainSection .outlineSection .blogSection .link:nth-last-child(1) {
+.body .mainSectiom .outlineSection .blogSection .link:nth-last-child(1) {
   margin-bottom: 0;
 }
-.body .outline .mainSection .outlineSection .blogSection .link {
+.body .mainSectiom .outlineSection .blogSection .link {
   width: 100%;
   margin-bottom: 3rem;
   border-radius: 10px;
   display: flex;
 }
-.body .outline .mainSection .outlineSection .blogSection .link .blog {
+.body .mainSectiom .outlineSection .blogSection .link .blog {
   background-color: white;
   width: 100%;
   padding: 1rem;
@@ -244,11 +241,11 @@
   align-items: center;
   box-sizing: border-box;
 }
-.body .outline .mainSection .outlineSection .blogSection .link .blog:hover {
+.body .mainSectiom .outlineSection .blogSection .link .blog:hover {
   background-color: #dddddd;
   transition: 300ms;
 }
-.body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
+.body .mainSectiom .outlineSection .blogSection .link .blog .articleBox {
   width: calc(100% - 225px);
   min-height: 150px;
   padding: 1rem;
@@ -260,57 +257,47 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+.body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .title {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-.body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
+.body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .publishedAt {
   font-size: 1rem;
 }
-.body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+.body .mainSectiom .outlineSection .blogSection .link .blog .imageBox {
   width: 225px;
   height: 150px;
 }
-.body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox .image {
+.body .mainSectiom .outlineSection .blogSection .link .blog .imageBox .image {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-@media screen and (min-width: 1600px) {
-  .body .outline .mainSection .outlineSection .blogSection .link {
-    width: 85%;
-  }
-}
 @media screen and (max-width: 1024px) {
   .body .titleSection {
     height: 80px;
   }
   .body .titleSection .blogSectionTitle {
     width: 100%;
-    padding-right: 0;
+    padding-right: 0px;
   }
   .body .titleSection .archiveSectionTitle {
     display: none;
   }
-  .body .outline {
-    height: calc(100vh - 180px);
-  }
-  .body .outline .mainSection {
-    height: calc(100vh - 180px);
-  }
-  .body .outline .mainSection .archiveSection {
+  .body .mainSectiom .archiveSection {
     width: 100%;
     height: 100px;
     position: relative;
     padding: 1.5rem 2rem 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
   }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden {
     width: 100%;
     height: 100%;
     position: relative;
@@ -325,39 +312,39 @@
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1024px) {
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h4 {
     font-size: 0.8rem;
   }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h1 {
     font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 768px) {
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h4 {
     font-size: 0.7rem;
   }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h1 {
     font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 480px) {
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h4 {
     font-size: 0.6rem;
   }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h1 {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 350px) {
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h4 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h4 {
     font-size: 0.6rem;
   }
-  .body .outline .mainSection .archiveSection .archiveSectionTitleHidden h1 {
+  .body .mainSectiom .archiveSection .archiveSectionTitleHidden h1 {
     font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .body .outline .mainSection .archiveSection ul {
+  .body .mainSectiom .archiveSection ul {
     height: 100%;
     padding: 0rem;
     display: flex;
@@ -367,104 +354,108 @@
     justify-content: flex-start;
     flex-wrap: wrap;
   }
-  .body .outline .mainSection .archiveSection ul li {
+  .body .mainSectiom .archiveSection ul li {
     margin: 0 1rem 1rem;
     width: calc(33% - 2rem);
   }
-  .body .outline .mainSection .archiveSection ul li .link {
+  .body .mainSectiom .archiveSection ul li .link {
     padding: 0.8rem;
     font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .body .outline .mainSection .scrollSection {
+  .body .mainSectiom .scrollSection {
     width: 100%;
     height: 85px;
-    padding: 1.5rem 2rem;
-    right: 0px;
     position: relative;
+    right: 0;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     justify-content: flex-end;
   }
-  .body .outline .mainSection .scrollSection .scroll {
+  .body .mainSectiom .scrollSection .scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     flex-direction: row;
   }
-  .body .outline .mainSection .scrollSection .scroll .scrollTop,
-.body .outline .mainSection .scrollSection .scroll .scrollDown {
+  .body .mainSectiom .scrollSection .scroll .scrollTop,
+.body .mainSectiom .scrollSection .scroll .scrollDown {
     width: 30px;
     height: 30px;
   }
-  .body .outline .mainSection .scrollSection .scroll .scrollTop {
-    margin-bottom: 0rem;
+  .body .mainSectiom .scrollSection .scroll .scrollTop {
+    margin-bottom: 0;
     margin-right: 0.5rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .body .outline .mainSection .outlineSection {
-    overflow: scroll;
-    position: relative;
+  .body .mainSectiom .outlineSection {
     height: calc(100vh - 365px);
   }
-  .body .outline .mainSection .outlineSection .blogSection {
+  .body .mainSectiom .outlineSection .blogSection {
     width: 100%;
     min-height: calc(100vh - 405px);
     padding: 0 2rem 3rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog {
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+  }
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox {
     width: calc(100% - 195px);
     min-height: 130px;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .title {
     font-size: 1.1rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .publishedAt {
     font-size: 0.9rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .imageBox {
     width: 195px;
     height: 130px;
   }
 }
 @media screen and (max-width: 768px) {
-  .body .outline .mainSection .archiveSection ul li {
+  .body .mainSectiom .archiveSection ul li {
     width: calc(50% - 2rem);
   }
-  .body .outline .mainSection .outlineSection {
-    height: calc(100vh - 365px);
-  }
-  .body .outline .mainSection .outlineSection .blogSection {
+  .body .mainSectiom .outlineSection .blogSection {
     min-height: calc(100vh - 395px);
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog {
-    padding: 0.8rem;
+  .body .mainSectiom .outlineSection .blogSection .link .blog {
+    padding: 0.6rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox {
     width: calc(100% - 165px);
     min-height: 110px;
-    padding: 0.5rem;
+    padding: 0.6rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .title {
     font-size: 0.9rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .publishedAt {
     font-size: 0.8rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .imageBox {
     width: 165px;
     height: 110px;
   }
 }
 @media screen and (max-width: 550px) {
-  .body .outline .mainSection .archiveSection ul {
+  .body .mainSectiom .archiveSection ul {
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
   }
-  .body .outline .mainSection .archiveSection ul li {
+  .body .mainSectiom .archiveSection ul li {
     width: calc(80% - 2rem);
   }
 }
@@ -476,79 +467,77 @@
   .body .titleSection {
     height: 60px;
   }
-  .body .outline {
-    height: calc(100vh - 140px);
+  .body .mainSectiom {
+    min-height: calc(100vh - 140px);
   }
-  .body .outline .mainSection {
-    height: calc(100vh - 140px);
-  }
-  .body .outline .mainSection .archiveSection {
-    height: 100px;
-  }
-  .body .outline .mainSection .archiveSection ul li .link {
+  .body .mainSectiom .archiveSection ul li .link {
     padding: 0.6rem;
     font-size: 0.8rem;
   }
-  .body .outline .mainSection .scrollSection {
+  .body .mainSectiom .scrollSection {
     height: 65px;
     padding: 1rem 2rem;
   }
-  .body .outline .mainSection .scrollSection .scroll .scrollTop,
-.body .outline .mainSection .scrollSection .scroll .scrollDown {
+  .body .mainSectiom .scrollSection .scroll .scrollTop,
+.body .mainSectiom .scrollSection .scroll .scrollDown {
     width: 25px;
     height: 25px;
   }
-  .body .outline .mainSection .outlineSection {
+  .body .mainSectiom .outlineSection {
     height: calc(100vh - 305px);
   }
-  .body .outline .mainSection .outlineSection .blogSection {
+  .body .mainSectiom .outlineSection .blogSection {
     min-height: calc(100vh - 335px);
   }
-  .body .outline .mainSection .outlineSection .blogSection .link {
-    width: 90%;
+  .body .mainSectiom .outlineSection .blogSection .link {
     width: auto;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog {
+  .body .mainSectiom .outlineSection .blogSection .link .blog {
     flex-direction: column;
+    padding: 0.8rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox {
     width: 100%;
     min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 0rem;
+    padding: 0.8rem;
     margin-bottom: 0.8rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .title {
+    font-size: 0.9rem;
     margin-bottom: 0.8rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .publishedAt {
+    font-size: 0.8rem;
+  }
+  .body .mainSectiom .outlineSection .blogSection .link .blog .imageBox {
     width: 300px;
     height: 200px;
   }
 }
 @media screen and (max-width: 390px) {
-  .body .outline .mainSection .archiveSection ul li {
+  .body .mainSectiom .archiveSection ul li {
     width: calc(95% - 2rem);
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .imageBox {
     width: 255px;
     height: 170px;
   }
 }
 @media screen and (max-width: 350px) {
-  .body .outline .mainSection .archiveSection ul li {
+  .body .mainSectiom .archiveSection ul li {
     width: calc(100% - 2rem);
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .title {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .title {
     font-size: 0.8rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .articleBox .publishedAt {
-    font-size: 0.7rem;
+  .body .mainSectiom .outlineSection .blogSection .link .blog .articleBox .publishedAt {
+    font-size: 0.8rem;
   }
-  .body .outline .mainSection .outlineSection .blogSection .link .blog .imageBox {
+  .body .mainSectiom .outlineSection .blogSection .link .blog .imageBox {
     width: 225px;
     height: 150px;
   }
