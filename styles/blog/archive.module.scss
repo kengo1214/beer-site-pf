@@ -1,0 +1,567 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@mixin after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  content: "";
+}
+
+@mixin sectionTitle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  @include center;
+  flex-direction: column;
+  color: white;
+
+  @media screen and (max-width: 1024px) {
+    h4 {
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h4 {
+      font-size: 0.7rem;
+    }
+    h1 {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h4 {
+      font-size: 0.6rem;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    h4 {
+      font-size: 0.6rem;
+    }
+    h1 {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+.body {
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: fixed;
+  top: 100px;
+  background-image: url("/image/blog-link.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::after {
+    @include after;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .titleSection {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 10;
+
+    @include center;
+
+    &::after {
+      @include after;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .blogSectionTitle {
+      @include sectionTitle;
+      width: calc(100% - 250px);
+      padding-right: 80px;
+    }
+
+    .archiveSectionTitle {
+      @include sectionTitle;
+      width: 250px;
+    }
+  }
+
+  .mainSectiom {
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    position: relative;
+    z-index: 10;
+
+    .archiveSection {
+      width: 250px;
+      height: calc(100vh - 240px);
+      position: absolute;
+      right: 0;
+
+      .archiveSectionTitleHidden {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        width: 100%;
+        height: calc(100% - 3rem);
+        padding: 2rem 2rem 0 0;
+        overflow: scroll;
+
+        li {
+          margin-bottom: 2rem;
+          border-radius: 10px;
+
+          .link {
+            background-color: darkorange;
+            color: white;
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            @include center;
+
+            &:hover {
+              background-color: orange;
+              transition: 300ms;
+            }
+          }
+        }
+      }
+    }
+
+    .scrollSection {
+      width: 80px;
+      height: calc(100vh - 240px);
+      position: absolute;
+      right: 250px;
+      padding-bottom: 3rem;
+      overflow: hidden;
+      @include center;
+      align-items: flex-end;
+
+      .scroll {
+        @include center;
+        flex-direction: column;
+
+        .scrollTop,
+        .scrollDown {
+          color: white;
+          width: 35px;
+          height: 35px;
+
+          &:hover {
+            color: orangered;
+            transition: 300ms;
+          }
+        }
+
+        .scrollTop {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    .outlineSection {
+      width: 100%;
+      height: calc(100vh - 200px);
+      overflow: scroll;
+
+      .blogSection {
+        width: calc(100% - 330px);
+        min-height: calc(100vh - 240px); //💊
+        padding: 2rem 0 3rem 2rem;
+
+        @include center;
+        flex-direction: column;
+
+        .link:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+
+        .link {
+          width: 100%;
+          margin-bottom: 3rem;
+          border-radius: 10px;
+          display: flex;
+
+          .blog {
+            background-color: white;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+            @include center;
+
+            &:hover {
+              background-color: #dddddd;
+              transition: 300ms;
+            }
+
+            .articleBox {
+              width: calc(100% - 225px);
+              min-height: 150px;
+              padding: 1rem;
+
+              @include center;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+
+              .title {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+              }
+
+              .publishedAt {
+                font-size: 1rem;
+              }
+            }
+
+            .imageBox {
+              width: 225px;
+              height: 150px;
+
+              .image {
+                width: 100%;
+                height: 100%;
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .body {
+    .titleSection {
+      height: 80px;
+
+      .blogSectionTitle {
+        width: 100%;
+        padding-right: 0px;
+      }
+
+      .archiveSectionTitle {
+        display: none;
+      }
+    }
+
+    .mainSectiom {
+      .archiveSection {
+        width: 100%;
+        height: 100px;
+        position: relative;
+        padding: 1.5rem 2rem 0;
+        right: 0;
+        @include center;
+
+        .archiveSectionTitleHidden {
+          @include sectionTitle;
+          width: auto;
+        }
+
+        ul {
+          height: 100%;
+          padding: 0rem;
+          @include center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+
+          li {
+            margin: 0 1rem 1rem;
+            width: calc(33% - 2rem);
+
+            .link {
+              padding: 0.8rem;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+
+      .scrollSection {
+        width: 100%;
+        height: 85px;
+        position: relative;
+        right: 0;
+        padding: 1.5rem 2rem;
+        @include center;
+        justify-content: flex-end;
+
+        .scroll {
+          @include center;
+          flex-direction: row;
+
+          .scrollTop,
+          .scrollDown {
+            width: 30px;
+            height: 30px;
+          }
+
+          .scrollTop {
+            margin-bottom: 0;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      .outlineSection {
+        height: calc(100vh - 365px);
+
+        .blogSection {
+          width: 100%;
+          min-height: calc(100vh - 405px);
+          padding: 0 2rem 3rem;
+
+          .link {
+            .blog {
+              background-color: white;
+              width: 100%;
+              padding: 1rem;
+
+              .articleBox {
+                width: calc(100% - 195px);
+                min-height: 130px;
+
+                .title {
+                  font-size: 1.1rem;
+                }
+
+                .publishedAt {
+                  font-size: 0.9rem;
+                }
+              }
+
+              .imageBox {
+                width: 195px;
+                height: 130px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .body {
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          li {
+            width: calc(50% - 2rem);
+          }
+        }
+      }
+      .outlineSection {
+        .blogSection {
+          min-height: calc(100vh - 395px);
+          .link {
+            .blog {
+              padding: 0.6rem;
+
+              .articleBox {
+                width: calc(100% - 165px);
+                min-height: 110px;
+                padding: 0.6rem;
+
+                .title {
+                  font-size: 0.9rem;
+                }
+
+                .publishedAt {
+                  font-size: 0.8rem;
+                }
+              }
+
+              .imageBox {
+                width: 165px;
+                height: 110px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .body {
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          @include center;
+          li {
+            width: calc(80% - 2rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .body {
+    height: calc(100vh - 80px);
+    top: 80px;
+
+    .titleSection {
+      height: 60px;
+    }
+
+    .mainSectiom {
+      min-height: calc(100vh - 140px);
+
+      .archiveSection {
+        ul {
+          li {
+            .link {
+              padding: 0.6rem;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+
+      .scrollSection {
+        height: 65px;
+        padding: 1rem 2rem;
+
+        .scroll {
+          .scrollTop,
+          .scrollDown {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+
+      .outlineSection {
+        height: calc(100vh - 305px);
+
+        .blogSection {
+          min-height: calc(100vh - 335px);
+
+          .link {
+            width: auto;
+
+            .blog {
+              flex-direction: column;
+              padding: 0.8rem;
+
+              .articleBox {
+                width: 100%;
+                min-height: auto;
+                @include center;
+                padding: 0.8rem;
+                margin-bottom: 0.8rem;
+
+                .title {
+                  font-size: 0.9rem;
+                  margin-bottom: 0.8rem;
+                }
+
+                .publishedAt {
+                  font-size: 0.8rem;
+                }
+              }
+
+              .imageBox {
+                width: 300px;
+                height: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 390px) {
+  .body {
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          li {
+            width: calc(95% - 2rem);
+          }
+        }
+      }
+
+      .outlineSection {
+        .blogSection {
+          .link {
+            .blog {
+              .imageBox {
+                width: 255px;
+                height: 170px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .body {
+    .mainSectiom {
+      .archiveSection {
+        ul {
+          li {
+            width: calc(100% - 2rem);
+          }
+        }
+      }
+
+      .outlineSection {
+        .blogSection {
+          .link {
+            .blog {
+              .articleBox {
+                .title {
+                  font-size: 0.8rem;
+                }
+
+                .publishedAt {
+                  font-size: 0.8rem;
+                }
+              }
+
+              .imageBox {
+                width: 225px;
+                height: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
