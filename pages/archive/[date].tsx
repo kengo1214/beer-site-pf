@@ -34,8 +34,6 @@ export const getStaticProps = async (context: { params: { date: string } }) => {
   const year = parseInt(date.split("_")[0], 10);
   const month = parseInt(date.split("_")[1], 10);
 
-  // console.log(month);
-
   // microCMSのfiltersクエリは >= を表現できないので開始時刻は1ミリ秒引いておく
   const startOfMonthTmp = new Date(year, month - 1, 1);
   const startOfMonth = new Date(startOfMonthTmp.getTime() - 1);
@@ -58,20 +56,10 @@ export const getStaticProps = async (context: { params: { date: string } }) => {
 
   const monthlyIndex = groupBy(archiveData.contents);
 
-  // const titleEnglish = dayjs(month).format("MMMM"); //元
-
-  // const titleEnglish = dayjs(`${year}-${month}-01`).format("MMMM");//⭐️
-  // console.log(titleEnglish); //⭐️
-
-  // const titleEnglish = dayjs(`${month}`).format("MMMM");//⭐️
-  // console.log(titleEnglish); //⭐️
-  
-  const titleEnglish = dayjs(`${month}`).format("MMMM");//⭐️
-  console.log(titleEnglish); //⭐️
+  const titleEnglish = dayjs(`${month}`).format("MMMM");
 
   return {
     props: {
-      // title: `${year}年${month}月の記事一覧`,
       title: `${year}年${month}月の記事`,
       titleEnglish: ` ${titleEnglish} ${year}`,
       blog: data.contents,
@@ -102,8 +90,6 @@ export default function Archive({
           <div className={styles.blogSectionTitle}>
             <h4>{title}</h4>
             <h1>{titleEnglish}</h1>
-            {/* <h4>最新のブログ</h4>
-            <h1>Latest Blog</h1> */}
           </div>
 
           <div className={styles.archiveSectionTitle}>
