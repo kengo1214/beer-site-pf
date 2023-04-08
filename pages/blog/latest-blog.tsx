@@ -21,27 +21,27 @@ export async function getStaticProps() {
     queries: { limit: 10 },
   });
 
-  const archiveData = await clientBlog.get({
+  const archiveMonthData = await clientBlog.get({
     endpoint: "beer-blog",
     queries: { limit: 3000 },
   });
 
-  const archive = groupBy(archiveData.contents);
+  const monthlyIndex = groupBy(archiveMonthData.contents);
 
   return {
     props: {
       latestBlog: latestBlogData.contents,
-      archive: archive,
+      monthlyIndex: monthlyIndex,
     },
   };
 }
 
 type Props = {
   latestBlog: Blog[];
-  archive: { [key: string]: Blog[] };
+  monthlyIndex: { [key: string]: Blog[] };
 };
 
-export default function LatestBlog({ latestBlog, archive }: Props) {
+export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
   return (
     <>
       <div className={styles.body}>
@@ -67,11 +67,11 @@ export default function LatestBlog({ latestBlog, archive }: Props) {
             </div>
 
             <ul>
-              {Object.keys(archive).map((index) => (
+              {Object.keys(monthlyIndex).map((index) => (
                 <li key={index}>
                   <Link href={`/archive/${index}`} className={styles.link}>
                     {index.split("_")[0] + "年" + index.split("_")[1] + "月"}（
-                    {archive[index].length + "件"}）
+                    {monthlyIndex[index].length + "件"}）
                   </Link>
                 </li>
               ))}
