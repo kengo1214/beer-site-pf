@@ -16,24 +16,32 @@ import { BsFillArrowDownCircleFill } from "react-icons/bs";
 
 //SSG(getStaticProps)🔥🔥🔥
 export async function getStaticProps() {
-  const data = await clientBlog.get({ endpoint: "beer-blog" });
+  const latestBlogData = await clientBlog.get({
+    endpoint: "beer-blog",
+    queries: { limit: 10 },
+  });
 
-  const monthlyIndex = groupBy(data.contents);
+  const archiveData = await clientBlog.get({
+    endpoint: "beer-blog",
+    queries: { limit: 3000 },
+  });
+
+  const archive = groupBy(archiveData.contents);
 
   return {
     props: {
-      blog: data.contents,
-      monthlyIndex: monthlyIndex,
+      latestBlog: latestBlogData.contents,
+      archive: archive,
     },
   };
 }
 
 type Props = {
-  blog: Blog[];
-  monthlyIndex: { [key: string]: Blog[] };
+  latestBlog: Blog[];
+  archive: { [key: string]: Blog[] };
 };
 
-export default function LatestBlog({ blog, monthlyIndex }: Props) {
+export default function LatestBlog({ latestBlog, archive }: Props) {
   return (
     <>
       <div className={styles.body}>
@@ -59,11 +67,11 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
             </div>
 
             <ul>
-              {Object.keys(monthlyIndex).map((index) => (
+              {Object.keys(archive).map((index) => (
                 <li key={index}>
                   <Link href={`/archive/${index}`} className={styles.link}>
                     {index.split("_")[0] + "年" + index.split("_")[1] + "月"}（
-                    {monthlyIndex[index].length + "件"}）
+                    {archive[index].length + "件"}）
                   </Link>
                 </li>
               ))}
@@ -83,22 +91,24 @@ export default function LatestBlog({ blog, monthlyIndex }: Props) {
 
           <section className={styles.outlineSection}>
             <section className={styles.blogSection} id="top">
-              {blog.map((blog) => (
+              {latestBlog.map((latestBlog) => (
                 <Link
-                  href={`/blog/${blog.id}`}
+                  href={`/blog/${latestBlog.id}`}
                   className={styles.link}
-                  key={blog.id}
+                  key={latestBlog.id}
                 >
                   <div className={styles.blog}>
                     <div className={styles.articleBox}>
-                      <p className={styles.title}>{blog.title}</p>
-                      <p className={styles.publishedAt}>{blog.publishedAt}</p>
+                      <p className={styles.title}>{latestBlog.title}</p>
+                      <p className={styles.publishedAt}>
+                        {latestBlog.publishedAt}
+                      </p>
                     </div>
 
                     <div className={styles.imageBox}>
                       <div className={styles.image}>
                         <Image
-                          src={blog.image.url}
+                          src={latestBlog.image.url}
                           layout="fill"
                           objectFit="cover"
                           alt="image"
