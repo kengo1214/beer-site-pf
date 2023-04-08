@@ -129,7 +129,7 @@ export default function Archive({
           </section>
 
           <section className={styles.outlineSection}>
-            <section className={styles.blogSection}>
+            <section className={styles.blogSection} id="top">
               {blog.map((blog) => (
                 <Link
                   href={`/blog/${blog.id}`}
@@ -156,7 +156,7 @@ export default function Archive({
                 </Link>
               ))}
             </section>
-            <footer className={styles.footer}>
+            <footer className={styles.footer} id="down">
               <Footer />
             </footer>
           </section>

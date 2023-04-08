@@ -219,6 +219,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .body .mainSectiom .outlineSection .blogSection .link:nth-last-child(1) {
