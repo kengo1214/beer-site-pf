@@ -19,7 +19,7 @@ import dayjs from "dayjs";
 export const getStaticPaths = async () => {
   const data = await clientBlog.get({
     endpoint: "beer-blog",
-    queries: { fields: "publishedAt" },
+    queries: { fields: "publishedAt", limit: 3000 },
   });
   const monthlyIndex = groupBy(data.contents);
 
@@ -30,31 +30,30 @@ export const getStaticPaths = async () => {
 //🔥getStaticProps
 export const getStaticProps = async (context: { params: { date: string } }) => {
   const date = context.params.date;
-
   const year = parseInt(date.split("_")[0], 10);
   const month = parseInt(date.split("_")[1], 10);
 
   // microCMSのfiltersクエリは >= を表現できないので開始時刻は1ミリ秒引いておく
   const startOfMonthTmp = new Date(year, month - 1, 1);
   const startOfMonth = new Date(startOfMonthTmp.getTime() - 1);
-
   const endOfMonth = new Date(year, month, 0);
 
   // filtersクエリで該当月の記事のみを取得
   const filters = `publishedAt[greater_than]${startOfMonth.toISOString()}[and]publishedAt[less_than]${endOfMonth.toISOString()}`;
 
-  const data = await clientBlog.get({
+  const archiveBlogData = await clientBlog.get({
     endpoint: "beer-blog",
     queries: {
       filters: filters,
     },
   });
 
-  const archiveData = await clientBlog.get({
+  const archiveMonthData = await clientBlog.get({
     endpoint: "beer-blog",
+    queries: { limit: 3000 },
   });
 
-  const monthlyIndex = groupBy(archiveData.contents);
+  const monthlyIndex = groupBy(archiveMonthData.contents);
 
   const titleEnglish = dayjs(`${month}`).format("MMMM");
 
@@ -62,7 +61,7 @@ export const getStaticProps = async (context: { params: { date: string } }) => {
     props: {
       title: `${year}年${month}月の記事`,
       titleEnglish: ` ${titleEnglish} ${year}`,
-      blog: data.contents,
+      archiveBlog: archiveBlogData.contents,
       monthlyIndex: monthlyIndex,
     },
   };
@@ -71,14 +70,14 @@ export const getStaticProps = async (context: { params: { date: string } }) => {
 type Props = {
   title: string;
   titleEnglish: string;
-  blog: Blog[];
+  archiveBlog: Blog[];
   monthlyIndex: { [key: string]: Blog[] };
 };
 
 export default function Archive({
   title,
   titleEnglish,
-  blog,
+  archiveBlog,
   monthlyIndex,
 }: Props) {
   return (
@@ -130,22 +129,24 @@ export default function Archive({
 
           <section className={styles.outlineSection}>
             <section className={styles.blogSection} id="top">
-              {blog.map((blog) => (
+              {archiveBlog.map((archiveBlog) => (
                 <Link
-                  href={`/blog/${blog.id}`}
+                  href={`/blog/${archiveBlog.id}`}
                   className={styles.link}
-                  key={blog.id}
+                  key={archiveBlog.id}
                 >
                   <div className={styles.blog}>
                     <div className={styles.articleBox}>
-                      <p className={styles.title}>{blog.title}</p>
-                      <p className={styles.publishedAt}>{blog.publishedAt}</p>
+                      <p className={styles.title}>{archiveBlog.title}</p>
+                      <p className={styles.publishedAt}>
+                        {archiveBlog.publishedAt}
+                      </p>
                     </div>
 
                     <div className={styles.imageBox}>
                       <div className={styles.image}>
                         <Image
-                          src={blog.image.url}
+                          src={archiveBlog.image.url}
                           layout="fill"
                           objectFit="cover"
                           alt="image"
