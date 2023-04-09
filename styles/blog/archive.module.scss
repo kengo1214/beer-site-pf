@@ -252,6 +252,12 @@
             }
           }
         }
+
+        .buttonBox {
+          width: 100%;
+          padding-top: 3rem;
+          @include center;
+        }
       }
     }
   }
