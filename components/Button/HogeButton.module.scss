@@ -1,0 +1,31 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 5px;
+  @include center;
+
+  p {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    color: black;
+    background-color: white;
+    transition: 300ms;
+  }
+}
