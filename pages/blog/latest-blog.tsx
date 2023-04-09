@@ -2,7 +2,6 @@ import styles from "../../styles/blog/latest-blog.module.scss";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import Button from "../../components/Button/Button";
 
 import Link from "next/link";
 import Image from "next/legacy/image";
@@ -69,7 +68,7 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
             <ul>
               {Object.keys(monthlyIndex).map((index) => (
                 <li key={index}>
-                  <Link href={`/archive/${index}`} className={styles.link}>
+                  <Link href={`/archive-list/${index}`} className={styles.link}>
                     {index.split("_")[0] + "年" + index.split("_")[1] + "月"}（
                     {monthlyIndex[index].length + "件"}）
                   </Link>

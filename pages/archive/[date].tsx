@@ -1,10 +1,11 @@
-import styles from "../../styles/blog/archive.module.scss";
+import styles from "../../styles/blog/archive.module.scss"
 
 import Link from "next/link";
 import Image from "next/legacy/image";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import HogeButton from "../../components/Button/HogeButton";
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
@@ -23,7 +24,7 @@ export const getStaticPaths = async () => {
   });
   const monthlyIndex = groupBy(data.contents);
 
-  const paths = Object.keys(monthlyIndex).map((index) => `/archive/${index}`);
+  const paths = Object.keys(monthlyIndex).map((index) => `/archive-list/${index}`);
   return { paths, fallback: false };
 };
 
@@ -107,7 +108,7 @@ export default function Archive({
             <ul>
               {Object.keys(monthlyIndex).map((index) => (
                 <li key={index}>
-                  <Link href={`/archive/${index}`} className={styles.link}>
+                  <Link href={`/archive-list/${index}`} className={styles.link}>
                     {index.split("_")[0] + "年" + index.split("_")[1] + "月"}（
                     {monthlyIndex[index].length + "件"}）
                   </Link>
@@ -156,6 +157,12 @@ export default function Archive({
                   </div>
                 </Link>
               ))}
+
+              <div className={styles.buttonBox}>
+                <Link href="/blog/latest-blog">
+                  <HogeButton name="Latest Blog" />
+                </Link>
+              </div>
             </section>
             <footer className={styles.footer} id="down">
               <Footer />

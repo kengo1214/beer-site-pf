@@ -10,6 +10,7 @@ import Image from "next/legacy/image";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import BackButton from "../../components/Button/BackButton";
+import HogeButton from "../../components/Button/HogeButton";
 
 //🔥getStaticPaths
 export const getStaticPaths = async () => {
@@ -24,7 +25,10 @@ export const getStaticPaths = async () => {
 //🔥getStaticProps
 export const getStaticProps = async (context: { params: { id: string } }) => {
   const id = context.params.id;
-  const detailBlogData = await clientBlog.get({ endpoint: "beer-blog", contentId: id });
+  const detailBlogData = await clientBlog.get({
+    endpoint: "beer-blog",
+    contentId: id,
+  });
 
   const archiveMonthData = await clientBlog.get({
     endpoint: "beer-blog",
@@ -75,7 +79,7 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
             <ul>
               {Object.keys(monthlyIndex).map((index) => (
                 <li key={index}>
-                  <Link href={`/archive/${index}`} className={styles.link}>
+                  <Link href={`/archive-list/${index}`} className={styles.link}>
                     {index.split("_")[0] + "年" + index.split("_")[1] + "月"}（
                     {monthlyIndex[index].length + "件"}）
                   </Link>
@@ -110,10 +114,10 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
                 </div>
               </div>
 
-              <div className={styles.backButtonBox}>
-                <div onClick={() => router.back()}>
-                  <BackButton />
-                </div>
+              <div className={styles.buttonBox}>
+                <Link href="/blog/latest-blog">
+                  <HogeButton name="Latest Blog" />
+                </Link>
               </div>
             </section>
             <footer className={styles.footer}>
