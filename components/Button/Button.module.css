@@ -50,7 +50,6 @@
 
 @media screen and (max-width: 768px) {
   .blogButton {
-    padding: 0.7rem 0.9rem;
     padding: 0.5rem 0.7rem;
   }
   .blogButton p {
