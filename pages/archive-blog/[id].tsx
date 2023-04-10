@@ -1,6 +1,7 @@
 // import styles from "../../styles/blog/archive.module.scss";
 
-import styles from "./archive-blog.module.scss";
+// import styles from "./archive-blog.module.scss";
+import styles from "../../styles/archive/archive-blog.module.scss";
 
 import Link from "next/link";
 import Image from "next/legacy/image";

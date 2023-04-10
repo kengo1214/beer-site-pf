@@ -1,4 +1,5 @@
-import styles from "../../styles/blog/archive.module.scss";
+// import styles from "../../styles/blog/archive.module.scss";
+import styles from "../../styles/archive//archive-list.module.scss";
 
 import Link from "next/link";
 import Image from "next/legacy/image";
