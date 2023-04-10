@@ -212,7 +212,6 @@
   overflow: scroll;
 }
 .body .mainSectiom .outlineSection .blogSection {
-  border: 3px solid red;
   width: calc(100% - 330px);
   min-height: calc(100vh - 240px);
   padding: 2rem 0 3rem 2rem;
@@ -220,7 +219,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  justify-content: fle;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .body .mainSectiom .outlineSection .blogSection .link:nth-last-child(1) {
