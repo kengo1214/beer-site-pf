@@ -25,13 +25,20 @@ export const getStaticPaths = async () => {
   });
   const monthlyIndex = groupBy(data.contents);
 
-  const paths = Object.keys(monthlyIndex).map((index) => `/archive-list/${index}`);
+  const paths = Object.keys(monthlyIndex).map(
+    (index) => `/archive-list/${index}`
+  );
   return { paths, fallback: false };
 };
 
 //🔥getStaticProps
-export const getStaticProps = async (context: { params: { date: string } }) => {
-  const date = context.params.date;
+export const getStaticProps = async (context: {
+  params: { archiveList: string };
+}) => {
+  // export const getStaticProps = async (context: { params: { date: string } }) => {
+  const date = context.params.archiveList;
+  // const date = context.params.archivelist;
+  // const date = context.params.date;
   const year = parseInt(date.split("_")[0], 10);
   const month = parseInt(date.split("_")[1], 10);
 
