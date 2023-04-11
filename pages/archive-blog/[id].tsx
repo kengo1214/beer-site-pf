@@ -25,6 +25,7 @@ import { useRouter } from "next/router";
 export const getStaticPaths = async () => {
   const data = await clientBlog.get({
     endpoint: "beer-blog",
+    queries: { limit: 3000 },
   });
 
   const paths = data.contents.map(
