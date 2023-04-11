@@ -1,23 +1,17 @@
-// import styles from "../../styles/blog/archive.module.scss";
 import styles from "../../styles/archive//archive-list.module.scss";
-
-import Link from "next/link";
-import Image from "next/legacy/image";
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import HogeButton from "../../components/Button/HogeButton";
-
+import Link from "next/link";
+import Image from "next/legacy/image";
+import dayjs from "dayjs";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
-
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
 
-import dayjs from "dayjs";
-
-//🔥getStaticPaths
+//getStaticPaths
 export const getStaticPaths = async () => {
   const data = await clientBlog.get({
     endpoint: "beer-blog",
@@ -31,14 +25,11 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-//🔥getStaticProps
+//getStaticProps
 export const getStaticProps = async (context: {
   params: { archiveList: string };
 }) => {
-  // export const getStaticProps = async (context: { params: { date: string } }) => {
   const date = context.params.archiveList;
-  // const date = context.params.archivelist;
-  // const date = context.params.date;
   const year = parseInt(date.split("_")[0], 10);
   const month = parseInt(date.split("_")[1], 10);
 
@@ -63,7 +54,6 @@ export const getStaticProps = async (context: {
   });
 
   const monthlyIndex = groupBy(archiveMonthData.contents);
-
   const titleEnglish = dayjs(`${month}`).format("MMMM");
 
   return {

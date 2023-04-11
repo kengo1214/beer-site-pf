@@ -1,27 +1,15 @@
-// import styles from "../../styles/blog/archive.module.scss";
-
-// import styles from "./archive-blog.module.scss";
 import styles from "../../styles/archive/archive-blog.module.scss";
-
-import Link from "next/link";
-import Image from "next/legacy/image";
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import HogeButton from "../../components/Button/HogeButton";
-
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
-
+import Link from "next/link";
+import Image from "next/legacy/image";
+import { useRouter } from "next/router";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
 
-import dayjs from "dayjs";
-
-import { useRouter } from "next/router";
-
-//🔥getStaticPaths
+//getStaticPaths
 export const getStaticPaths = async () => {
   const data = await clientBlog.get({
     endpoint: "beer-blog",
@@ -35,7 +23,7 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-//🔥getStaticProps
+//getStaticProps
 export const getStaticProps = async (context: { params: { id: string } }) => {
   const id = context.params.id;
   const detailBlogData = await clientBlog.get({
@@ -64,9 +52,6 @@ type Props = {
 };
 
 export default function Archive({ detailBlog, monthlyIndex }: Props) {
-  // console.log(detailBlog);
-  // console.log(monthlyIndex);
-
   const router = useRouter();
 
   return (
