@@ -3,7 +3,7 @@
   height: calc(100vh - 100px);
   position: fixed;
   top: 100px;
-  background-image: url("/image/blog-link.jpg");
+  background-image: url("/image/archive.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -551,4 +551,4 @@
     height: 150px;
   }
 }
-/*# sourceMappingURL=archive.module.css.map */
+/*# sourceMappingURL=archive-list.module.css.map */
