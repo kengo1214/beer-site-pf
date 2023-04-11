@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import HogeButton from "../../components/Button/HogeButton";
 import Link from "next/link";
 import Image from "next/legacy/image";
+import dayjs from "dayjs";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
@@ -85,7 +86,11 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
               <div className={styles.blog}>
                 <div className={styles.articleBox}>
                   <p className={styles.title}>{detailBlog.title}</p>
-                  <p className={styles.publishedAt}>{detailBlog.publishedAt}</p>
+                  <p className={styles.publishedAt}>
+                    {dayjs(detailBlog.publishedAt).format(
+                      "YYYY年MM月DD日 HH:mm"
+                    )}
+                  </p>
                   <p
                     className={styles.detail}
                     dangerouslySetInnerHTML={{

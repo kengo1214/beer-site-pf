@@ -2,11 +2,11 @@ import styles from "../../styles/archive//archive-list.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import HogeButton from "../../components/Button/HogeButton";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import dayjs from "dayjs";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
@@ -138,7 +138,9 @@ export default function Archive({
                     <div className={styles.articleBox}>
                       <p className={styles.title}>{archiveBlog.title}</p>
                       <p className={styles.publishedAt}>
-                        {archiveBlog.publishedAt}
+                        {dayjs(archiveBlog.publishedAt).format(
+                          "YYYY年MM月DD日 HH:mm"
+                        )}
                       </p>
                     </div>
 

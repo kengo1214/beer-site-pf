@@ -5,9 +5,11 @@ import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/legacy/image";
+import dayjs from "dayjs"; 
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
+
 
 export async function getStaticProps() {
   const latestBlogData = await clientBlog.get({
@@ -95,7 +97,9 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
                     <div className={styles.articleBox}>
                       <p className={styles.title}>{latestBlog.title}</p>
                       <p className={styles.publishedAt}>
-                        {latestBlog.publishedAt}
+                                        
+                        {dayjs(latestBlog.publishedAt).format("YYYY年MM月DD日 HH:mm")}
+                        
                       </p>
                     </div>
 
