@@ -1,4 +1,4 @@
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 
@@ -14,10 +14,7 @@ type GroupedContents = {
 };
 
 const formatDate = (date: Date): string => {
-  const formattedDate: string = dayjs
-    .utc(date)
-    .tz("Asia/Tokyo")
-    .format("YYYY_MM");
+  const formattedDate: string = dayjs.utc(date).tz("Asia/Tokyo").format("YYYY_MM");
   return formattedDate;
 };
 
