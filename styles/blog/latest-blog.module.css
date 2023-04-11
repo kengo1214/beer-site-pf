@@ -26,7 +26,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 .body .titleSection::after {
   position: absolute;
@@ -46,7 +45,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
   color: white;
   width: calc(100% - 250px);
@@ -92,7 +90,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
   color: white;
   width: 250px;
@@ -166,7 +163,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 .body .mainSectiom .archiveSection ul li .link:hover {
   background-color: orange;
@@ -182,14 +178,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   align-items: flex-end;
 }
 .body .mainSectiom .scrollSection .scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
 }
 .body .mainSectiom .scrollSection .scroll .scrollTop,
@@ -218,7 +212,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   justify-content: flex-start;
   flex-direction: column;
 }
@@ -240,7 +233,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 .body .mainSectiom .outlineSection .blogSection .link .blog:hover {
   background-color: #dddddd;
@@ -253,7 +245,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -296,7 +287,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
   }
   .body .mainSectiom .archiveSection .archiveSectionTitleHidden {
     width: 100%;
@@ -306,7 +296,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     flex-direction: column;
     color: white;
     width: auto;
@@ -351,7 +340,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
@@ -374,14 +362,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     justify-content: flex-end;
   }
   .body .mainSectiom .scrollSection .scroll {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     flex-direction: row;
   }
   .body .mainSectiom .scrollSection .scroll .scrollTop,
@@ -454,7 +440,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
   }
   .body .mainSectiom .archiveSection ul li {
     width: calc(80% - 2rem);
@@ -503,7 +488,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     padding: 0.8rem;
     margin-bottom: 0.8rem;
   }

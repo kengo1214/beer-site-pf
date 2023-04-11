@@ -26,7 +26,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 .body .titleSection::after {
   position: absolute;
@@ -46,7 +45,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
   color: white;
   width: calc(100% - 250px);
@@ -92,7 +90,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
   color: white;
   width: 250px;
@@ -166,7 +163,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 .body .mainSectiom .archiveSection ul li .link:hover {
   background-color: orange;
@@ -184,7 +180,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -200,7 +195,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 .body .mainSectiom .outlineSection .blogSection .blog .articleBox {
   width: calc(100% - 270px);
@@ -211,7 +205,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -244,7 +237,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1024px) {
@@ -267,7 +259,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
   }
   .body .mainSectiom .archiveSection .archiveSectionTitleHidden {
     width: 100%;
@@ -277,7 +268,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     flex-direction: column;
     color: white;
     width: auto;
@@ -322,7 +312,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
@@ -387,7 +376,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     width: 405px;
     min-height: inherit;
     max-height: inherit;
@@ -411,7 +399,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
   }
   .body .mainSectiom .archiveSection ul li {
     width: calc(80% - 2rem);

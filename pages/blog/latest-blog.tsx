@@ -1,19 +1,14 @@
 import styles from "../../styles/blog/latest-blog.module.scss";
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/legacy/image";
-
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
 import type { Blog } from "../../src/types/blog";
 
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
-
-//SSG(getStaticProps)🔥🔥🔥
 export async function getStaticProps() {
   const latestBlogData = await clientBlog.get({
     endpoint: "beer-blog",

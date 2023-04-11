@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 
 @mixin after {
@@ -189,7 +188,7 @@
 
       .blogSection {
         width: calc(100% - 330px);
-        min-height: calc(100vh - 240px); //💊
+        min-height: calc(100vh - 240px);
         padding: 2rem 0 3rem 2rem;
 
         @include center;

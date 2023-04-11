@@ -1,18 +1,13 @@
 import styles from "../../styles/blog/more.module.scss";
-import { clientBlog } from "../../libs/client";
-import type { Blog } from "../../src/types/blog";
-import { groupBy } from "../../libs/util";
-
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/legacy/image";
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import BackButton from "../../components/Button/BackButton";
 import HogeButton from "../../components/Button/HogeButton";
+import Link from "next/link";
+import Image from "next/legacy/image";
+import { clientBlog } from "../../libs/client";
+import { groupBy } from "../../libs/util";
+import type { Blog } from "../../src/types/blog";
 
-//🔥getStaticPaths
 export const getStaticPaths = async () => {
   const data = await clientBlog.get({ endpoint: "beer-blog" });
 
@@ -22,7 +17,6 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-//🔥getStaticProps
 export const getStaticProps = async (context: { params: { id: string } }) => {
   const id = context.params.id;
   const detailBlogData = await clientBlog.get({
@@ -50,8 +44,6 @@ type Props = {
 };
 
 export default function HogeId({ detailBlog, monthlyIndex }: Props) {
-  const router = useRouter();
-
   return (
     <>
       <div className={styles.body}>
