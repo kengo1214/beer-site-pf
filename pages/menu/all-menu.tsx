@@ -139,7 +139,11 @@ export default function AllMenu({
           </div>
           <div className={styles.menuBox}>
             {barrelbeer.map((barrelbeer) => (
-              <div className={styles.menuItem} key={barrelbeer.id}>
+              <Link
+                href={`/menu/barrelbeer/${barrelbeer.id}`}
+                className={styles.menuItem}
+                key={barrelbeer.id}
+              >
                 <p className={styles.title}>{barrelbeer.title}</p>
 
                 <div className={styles.about}>
@@ -160,13 +164,7 @@ export default function AllMenu({
                     objectFit="contain"
                   />
                 </div>
-
-                <div className={styles.button}>
-                  <Link href={`/menu/barrelbeer/${barrelbeer.id}`}>
-                    <Button />
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -179,7 +177,11 @@ export default function AllMenu({
           </div>
           <div className={styles.menuBox}>
             {bottlebeer.map((bottlebeer) => (
-              <div className={styles.menuItem} key={bottlebeer.id}>
+              <Link
+                href={`/menu/bottlebeer/${bottlebeer.id}`}
+                className={styles.menuItem}
+                key={bottlebeer.id}
+              >
                 <p className={styles.title}>{bottlebeer.title}</p>
 
                 <div className={styles.about}>
@@ -200,13 +202,7 @@ export default function AllMenu({
                     objectFit="contain"
                   />
                 </div>
-
-                <div className={styles.button}>
-                  <Link href={`/menu/bottlebeer/${bottlebeer.id}`}>
-                    <Button />
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -219,7 +215,11 @@ export default function AllMenu({
           </div>
           <div className={styles.menuBox}>
             {cocktailhardliquor.map((cocktailhardliquor) => (
-              <div className={styles.menuItem} key={cocktailhardliquor.id}>
+              <Link
+                href={`/menu/cocktailhardliquor/${cocktailhardliquor.id}`}
+                className={styles.menuItem}
+                key={cocktailhardliquor.id}
+              >
                 <p className={styles.title}>{cocktailhardliquor.title}</p>
 
                 <div className={styles.about}>
@@ -240,15 +240,7 @@ export default function AllMenu({
                     objectFit="contain"
                   />
                 </div>
-
-                <div className={styles.button}>
-                  <Link
-                    href={`/menu/cocktailhardliquor/${cocktailhardliquor.id}`}
-                  >
-                    <Button />
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

@@ -41,6 +41,7 @@
   }
 
   .menuBox {
+    // border: 3px solid red;
     position: relative; //🔥
     z-index: 1;
     width: 100%;
@@ -48,6 +49,7 @@
     @include center;
 
     .menuItem {
+      // border: 3px solid blue;
       background-color: white;
       box-shadow: 5px 5px 10px gray;
       border-radius: 10px;
@@ -57,13 +59,17 @@
       flex-direction: column;
       padding: 1rem 0.8rem;
 
+      &:hover {
+        background-color: #dddddd;
+        transition: 300ms;
+      }
+
       .title {
         width: 100%;
         @include center;
         font-size: 1rem;
         font-weight: bold;
-        // padding: 0.5rem 0;
-        padding: 1rem 0; //🔥
+        padding: 1rem 0;
       }
 
       .about {
@@ -75,16 +81,14 @@
           width: 100%;
           @include center;
           font-size: 0.8rem;
-          // padding: 0.5rem 0;
-          padding: 1rem 0; //🔥
+          padding: 1rem 0;
         }
 
         .product {
           width: 100%;
           @include center;
           font-size: 0.8rem;
-          // padding: 0.5rem 0 1.5rem;
-          padding: 1rem 0; //🔥
+          padding: 1rem 0;
         }
       }
 
@@ -94,14 +98,11 @@
         position: relative;
       }
 
-      .button {
-        width: 100%;
-        @include center;
-        // padding: 1.5rem 0 1rem;
-        padding: 1rem 0; //🔥
-        padding: 1.5rem 0 1rem;
-        padding: 2rem 0 1rem;
-      }
+      // .button {
+      //   width: 100%;
+      //   @include center;
+      //   padding: 2rem 0 1rem;
+      // }
     }
   }
 }

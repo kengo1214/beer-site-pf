@@ -52,6 +52,7 @@
   align-items: center;
 }
 .body .barrelSection .menuBox .menuItem {
+  border: 3px solid blue;
   background-color: white;
   box-shadow: 5px 5px 10px gray;
   border-radius: 10px;
@@ -62,6 +63,10 @@
   align-items: center;
   flex-direction: column;
   padding: 1rem 0.8rem;
+}
+.body .barrelSection .menuBox .menuItem:hover {
+  background-color: #dddddd;
+  transition: 300ms;
 }
 .body .barrelSection .menuBox .menuItem .title {
   width: 100%;
@@ -99,15 +104,6 @@
   width: 100%;
   height: 200px;
   position: relative;
-}
-.body .barrelSection .menuBox .menuItem .button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  padding: 1.5rem 0 1rem;
-  padding: 2rem 0 1rem;
 }
 .body .barrelSection .menuBox .menuItem .image {
   height: 200px;
@@ -159,6 +155,7 @@
   align-items: center;
 }
 .body .bottleSection .menuBox .menuItem {
+  border: 3px solid blue;
   background-color: white;
   box-shadow: 5px 5px 10px gray;
   border-radius: 10px;
@@ -169,6 +166,10 @@
   align-items: center;
   flex-direction: column;
   padding: 1rem 0.8rem;
+}
+.body .bottleSection .menuBox .menuItem:hover {
+  background-color: #dddddd;
+  transition: 300ms;
 }
 .body .bottleSection .menuBox .menuItem .title {
   width: 100%;
@@ -206,15 +207,6 @@
   width: 100%;
   height: 200px;
   position: relative;
-}
-.body .bottleSection .menuBox .menuItem .button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  padding: 1.5rem 0 1rem;
-  padding: 2rem 0 1rem;
 }
 .body .bottleSection .menuBox .menuItem .title {
   font-size: 0.9rem;
@@ -269,6 +261,7 @@
   align-items: center;
 }
 .body .cocktailSection .menuBox .menuItem {
+  border: 3px solid blue;
   background-color: white;
   box-shadow: 5px 5px 10px gray;
   border-radius: 10px;
@@ -279,6 +272,10 @@
   align-items: center;
   flex-direction: column;
   padding: 1rem 0.8rem;
+}
+.body .cocktailSection .menuBox .menuItem:hover {
+  background-color: #dddddd;
+  transition: 300ms;
 }
 .body .cocktailSection .menuBox .menuItem .title {
   width: 100%;
@@ -316,15 +313,6 @@
   width: 100%;
   height: 200px;
   position: relative;
-}
-.body .cocktailSection .menuBox .menuItem .button {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  padding: 1.5rem 0 1rem;
-  padding: 2rem 0 1rem;
 }
 .body .cocktailSection .menuBox .menuItem .image {
   height: 200px;
