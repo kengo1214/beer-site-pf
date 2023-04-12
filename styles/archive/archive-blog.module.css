@@ -248,6 +248,7 @@
 }
 .body .mainSectiom .outlineSection .blogSection .buttonBox .button {
   margin-left: 1.5rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {

@@ -223,14 +223,13 @@
         }
 
         .buttonBox {
-          // border: 3px solid red;
           width: 100%;
           padding-top: 3rem;
           @include center;
 
           .button {
-            // border: 3px solid blue;
             margin-left: 1.5rem;
+            cursor: pointer;
           }
         }
       }
