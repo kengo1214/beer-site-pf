@@ -62,8 +62,6 @@
   }
 }
 
-//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
 .body {
   width: 100%;
   height: calc(100vh - 100px);
@@ -84,7 +82,6 @@
     height: 100px;
     position: relative;
     z-index: 10;
-
     @include center;
 
     &::after {
