@@ -7,7 +7,7 @@
 }
 .body .barrelSection {
   width: 100%;
-  padding: calc(100px + 3rem) 2.5rem 3rem;
+  padding: calc(100px + 2rem) 2rem 0rem;
   background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: 100%;
@@ -52,12 +52,11 @@
   align-items: center;
 }
 .body .barrelSection .menuBox .menuItem {
-  border: 3px solid blue;
   background-color: white;
   box-shadow: 5px 5px 10px gray;
   border-radius: 10px;
   width: calc(33% - 3rem);
-  margin: 0 1.5rem 2rem;
+  margin: 0 1.5rem 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,12 +104,9 @@
   height: 200px;
   position: relative;
 }
-.body .barrelSection .menuBox .menuItem .image {
-  height: 200px;
-}
 .body .bottleSection {
   width: 100%;
-  padding: calc(100px + 3rem) 2.5rem 3rem;
+  padding: calc(100px + 2rem) 2rem 0rem;
   background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: 100%;
@@ -155,12 +151,11 @@
   align-items: center;
 }
 .body .bottleSection .menuBox .menuItem {
-  border: 3px solid blue;
   background-color: white;
   box-shadow: 5px 5px 10px gray;
   border-radius: 10px;
   width: calc(33% - 3rem);
-  margin: 0 1.5rem 2rem;
+  margin: 0 1.5rem 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,15 +203,9 @@
   height: 200px;
   position: relative;
 }
-.body .bottleSection .menuBox .menuItem .title {
-  font-size: 0.9rem;
-}
-.body .bottleSection .menuBox .menuItem .image {
-  height: 200px;
-}
 .body .cocktailSection {
   width: 100%;
-  padding: calc(100px + 3rem) 2.5rem 3rem;
+  padding: calc(100px + 2rem) 2rem 0rem;
   background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: 100%;
@@ -261,12 +250,11 @@
   align-items: center;
 }
 .body .cocktailSection .menuBox .menuItem {
-  border: 3px solid blue;
   background-color: white;
   box-shadow: 5px 5px 10px gray;
   border-radius: 10px;
   width: calc(33% - 3rem);
-  margin: 0 1.5rem 2rem;
+  margin: 0 1.5rem 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,37 +302,21 @@
   height: 200px;
   position: relative;
 }
-.body .cocktailSection .menuBox .menuItem .image {
-  height: 200px;
-}
 
 @media screen and (max-width: 1200px) {
-  .body .barrelSection,
-.body .bottleSection,
-.body .cocktailSection {
-    padding: calc(100px + 3rem) 2.5rem 3rem;
-  }
   .body .barrelSection .menuBox .menuItem,
 .body .bottleSection .menuBox .menuItem,
 .body .cocktailSection .menuBox .menuItem {
     width: calc(33% - 2rem);
-    margin: 0 1rem 2rem;
+    margin: 0 1rem 3rem;
   }
   .body .barrelSection .menuBox .menuItem .title,
 .body .bottleSection .menuBox .menuItem .title,
 .body .cocktailSection .menuBox .menuItem .title {
     font-size: 0.85rem;
   }
-  .body .bottleSection .menuBox .menuItem .title {
-    font-size: 0.8rem;
-  }
 }
 @media screen and (max-width: 1024px) {
-  .body .barrelSection,
-.body .bottleSection,
-.body .cocktailSection {
-    padding: calc(100px + 3rem) 2rem 3rem;
-  }
   .body .barrelSection .menuBox .menuItem,
 .body .bottleSection .menuBox .menuItem,
 .body .cocktailSection .menuBox .menuItem {
@@ -355,41 +327,21 @@
 .body .cocktailSection .menuBox .menuItem .title {
     font-size: 1rem;
   }
-  .body .bottleSection .menuBox .menuItem .title {
-    font-size: 0.9rem;
-  }
 }
 @media screen and (max-width: 768px) {
   .body .barrelSection .menuBox .menuItem,
 .body .bottleSection .menuBox .menuItem,
 .body .cocktailSection .menuBox .menuItem {
     width: calc(50% - 1.6rem);
-    margin: 0 0.8rem 2rem;
+    margin: 0 0.8rem 3rem;
   }
   .body .barrelSection .menuBox .menuItem .title,
 .body .bottleSection .menuBox .menuItem .title,
 .body .cocktailSection .menuBox .menuItem .title {
     font-size: 0.8rem;
   }
-  .body .barrelSection .menuBox .menuItem .image,
-.body .bottleSection .menuBox .menuItem .image,
-.body .cocktailSection .menuBox .menuItem .image {
-    height: 200px;
-  }
-  .body .bottleSection .menuBox .menuItem .title {
-    font-size: 0.77rem;
-  }
-  .body .bottleSection .menuBox .menuItem .image,
-.body .cocktailSection .menuBox .menuItem .image {
-    height: 200px;
-  }
 }
 @media screen and (max-width: 650px) {
-  .body .barrelSection,
-.body .bottleSection,
-.body .cocktailSection {
-    padding: calc(100px + 3rem) 3rem 3rem;
-  }
   .body .barrelSection .sectionTitle,
 .body .bottleSection .sectionTitle,
 .body .cocktailSection .sectionTitle {
@@ -404,13 +356,12 @@
 .body .bottleSection .menuBox .menuItem,
 .body .cocktailSection .menuBox .menuItem {
     width: 100%;
-    margin: 0 0rem 2rem;
+    margin: 0rem 0rem 3rem;
   }
   .body .barrelSection .menuBox .menuItem .title,
 .body .bottleSection .menuBox .menuItem .title,
 .body .cocktailSection .menuBox .menuItem .title {
     font-size: 1.1rem;
-    padding: 1rem 0;
   }
   .body .barrelSection .menuBox .menuItem .about,
 .body .bottleSection .menuBox .menuItem .about,
@@ -442,44 +393,6 @@
 .body .cocktailSection .menuBox .menuItem .image {
     height: 240px;
   }
-  .body .barrelSection .menuBox .menuItem .button,
-.body .bottleSection .menuBox .menuItem .button,
-.body .cocktailSection .menuBox .menuItem .button {
-    padding: 2rem 0 1rem;
-  }
-  .body .bottleSection .menuBox .menuItem .image,
-.body .cocktailSection .menuBox .menuItem .image {
-    height: 240px;
-  }
-}
-@media screen and (max-width: 650px) {
-  .body .barrelSection .sectionTitle,
-.body .bottleSection .sectionTitle,
-.body .cocktailSection .sectionTitle {
-    width: 100%;
-  }
-  .body .barrelSection .menuBox,
-.body .bottleSection .menuBox,
-.body .cocktailSection .menuBox {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .body .barrelSection .menuBox .menuItem .title,
-.body .bottleSection .menuBox .menuItem .title,
-.body .cocktailSection .menuBox .menuItem .title {
-    font-size: 0.9rem;
-  }
-  .body .barrelSection .menuBox .menuItem .price,
-.body .bottleSection .menuBox .menuItem .price,
-.body .cocktailSection .menuBox .menuItem .price {
-    font-size: 0.8rem;
-  }
-  .body .barrelSection .menuBox .menuItem .product,
-.body .bottleSection .menuBox .menuItem .product,
-.body .cocktailSection .menuBox .menuItem .product {
-    font-size: 0.8rem;
-  }
 }
 @media screen and (max-width: 480px) {
   .body {
@@ -489,7 +402,7 @@
   .body .barrelSection,
 .body .bottleSection,
 .body .cocktailSection {
-    padding: calc(130px + 3rem) 2rem 3rem;
+    padding: calc(130px + 2rem) 2rem 0rem;
   }
   .body .barrelSection .sectionTitle,
 .body .bottleSection .sectionTitle,
@@ -514,7 +427,7 @@
   .body .barrelSection .menuBox .menuItem .title,
 .body .bottleSection .menuBox .menuItem .title,
 .body .cocktailSection .menuBox .menuItem .title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .body .barrelSection .menuBox .menuItem .about,
 .body .bottleSection .menuBox .menuItem .about,
@@ -526,15 +439,6 @@
 .body .cocktailSection .menuBox .menuItem .about .price {
     margin-right: 0;
     margin-bottom: 1rem;
-    font-size: 0.8rem;
-  }
-  .body .barrelSection .menuBox .menuItem .about .product,
-.body .bottleSection .menuBox .menuItem .about .product,
-.body .cocktailSection .menuBox .menuItem .about .product {
-    font-size: 0.8rem;
-  }
-  .body .bottleSection .menuBox .menuItem .title {
-    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 390px) {
@@ -578,10 +482,10 @@
   .body .barrelSection .menuBox .menuItem .title,
 .body .bottleSection .menuBox .menuItem .title,
 .body .cocktailSection .menuBox .menuItem .title {
-    font-size: 0.75rem;
-  }
-  .body .bottleSection .menuBox .menuItem .title {
     font-size: 0.7rem;
+  }
+  .body .cocktailSection .sectionTitle h1 {
+    font-size: 1.1rem;
   }
 }
 /*# sourceMappingURL=all-menu.module.css.map */
