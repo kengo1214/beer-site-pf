@@ -1,24 +1,35 @@
 .button {
   border: 1px solid white;
-  color: white;
-  border-radius: 10px;
-  padding: 0.7rem 0.9rem;
   border-radius: 5px;
+  padding: 0.4rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.button p {
-  font-size: 0.8rem;
-}
-.button .icon {
-  margin-right: 0.5rem;
-  width: 20px;
-  height: 20px;
 }
 .button:hover {
   color: black;
   background-color: white;
   transition: 300ms;
 }
-/*# sourceMappingURL=HogeButton.module.css.map */
+.button .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+.button .title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.button .title .jp {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+.button .title .en {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Button.module.css.map */
