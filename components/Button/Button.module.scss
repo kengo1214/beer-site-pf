@@ -7,13 +7,12 @@
 .button {
   border: 1px solid white;
   color: white;
+  background-color: unset;
   border-radius: 5px;
   padding: 0.4rem 1rem;
   @include center;
 
   .icon {
-    width: 20px;
-    height: 20px;
     margin-right: 1rem;
   }
 
