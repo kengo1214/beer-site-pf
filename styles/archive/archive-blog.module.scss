@@ -124,7 +124,7 @@
         list-style: none;
         width: 100%;
         height: calc(100% - 3rem);
-        padding: 2rem 2rem 0 0;
+        padding: 3rem 2rem 0 0;
         overflow: scroll;
 
         li {
@@ -151,16 +151,14 @@
     }
 
     .outlineSection {
-      // border: 3px solid red;
       width: 100%;
       height: calc(100vh - 200px);
       overflow: scroll;
 
       .blogSection {
-        // border: 3px solid blue;
         width: calc(100% - 250px);
         min-height: calc(100vh - 240px);
-        padding: 2rem 2rem 3rem 2rem;
+        padding: 3rem 2rem 3rem 2rem;
         @include center;
         justify-content: space-between;
         flex-direction: column;
@@ -170,7 +168,6 @@
         }
 
         .blog {
-          // border: 3px solid red;
           background-color: white;
           width: 100%;
           padding: 1rem;
@@ -179,14 +176,11 @@
           @include center;
 
           .articleBox {
-            // border: 3px solid blue;
             width: calc(100% - 270px);
             min-height: 180px;
             max-height: 260px;
             overflow: scroll;
-
             padding: 1rem;
-
             @include center;
             flex-direction: column;
             justify-content: flex-start;
@@ -210,7 +204,6 @@
           }
 
           .imageBox {
-            // border: 3px solid greenyellow;
             width: 270px;
             height: 180px;
 
@@ -286,12 +279,10 @@
       }
 
       .outlineSection {
-        // border: 3px solid red;
         height: calc(100vh - 330px);
         margin-top: 50px;
 
         .blogSection {
-          // border: 3px solid blue;
           width: 100%;
           min-height: calc(100vh - 370px);
           padding: 0rem 2rem 3rem;
@@ -340,20 +331,16 @@
         }
       }
       .outlineSection {
-        // border:3px solid red;
         height: calc(100vh - 330px);
 
         .blogSection {
-          // border: 3px solid blue;
           min-height: calc(100vh - 360px);
 
           .blog {
-            // border: 3px solid red;
             flex-direction: column;
             width: auto;
 
             .articleBox {
-              // border: 3px solid blue;
               @include center;
               width: 405px;
               min-height: inherit;
@@ -436,11 +423,9 @@
       }
 
       .outlineSection {
-        // border: 3px solid red;
         height: calc(100vh - 290px);
 
         .blogSection {
-          // border: 3px solid blue;
           min-height: calc(100vh - 320px);
 
           .blog {

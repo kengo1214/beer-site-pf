@@ -148,7 +148,7 @@
   list-style: none;
   width: 100%;
   height: calc(100% - 3rem);
-  padding: 2rem 2rem 0 0;
+  padding: 3rem 2rem 0 0;
   overflow: scroll;
 }
 .body .mainSectiom .archiveSection ul li {
@@ -180,7 +180,7 @@
 .body .mainSectiom .outlineSection .blogSection {
   width: calc(100% - 250px);
   min-height: calc(100vh - 240px);
-  padding: 2rem 2rem 3rem 2rem;
+  padding: 3rem 2rem 3rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
