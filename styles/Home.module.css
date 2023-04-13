@@ -360,52 +360,40 @@
 }
 .body .main .contactSection .contactMain .form .buttonBox .submitButton {
   color: white;
-  padding: 0.5rem 1.5rem;
-  font-weight: bold;
-  font-size: 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px black;
   cursor: pointer;
   background-color: red;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
+}
+.body .main .contactSection .contactMain .form .buttonBox .submitButton .jp {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+.body .main .contactSection .contactMain .form .buttonBox .submitButton .en {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 .body .main .contactSection .contactMain .form .buttonBox .submitButton:hover {
   opacity: 0.8;
 }
-@media screen and (max-width: 768px) {
-  .body .main .contactSection .contactMain .form .buttonBox .submitButton {
-    font-size: 0.9rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .body .main .contactSection .contactMain .form .buttonBox .submitButton {
-    font-size: 0.8rem;
-    padding: 0.3rem 1rem;
-  }
-}
 .body .main .contactSection .contactMain .form .buttonBox .resetButton {
   color: white;
-  padding: 0.5rem 1.5rem;
-  font-weight: bold;
-  font-size: 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px black;
   cursor: pointer;
   background-color: gray;
 }
+.body .main .contactSection .contactMain .form .buttonBox .resetButton .jp {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+.body .main .contactSection .contactMain .form .buttonBox .resetButton .en {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
 .body .main .contactSection .contactMain .form .buttonBox .resetButton:hover {
   opacity: 0.8;
-}
-@media screen and (max-width: 768px) {
-  .body .main .contactSection .contactMain .form .buttonBox .resetButton {
-    font-size: 0.9rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .body .main .contactSection .contactMain .form .buttonBox .resetButton {
-    font-size: 0.8rem;
-    padding: 0.3rem 1rem;
-  }
 }
 
 @media screen and (max-width: 1024px) {

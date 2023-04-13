@@ -226,7 +226,8 @@ export default function Home() {
                     id="modalOpen"
                     className={styles.submitButton}
                   >
-                    送信
+                    <p className={styles.jp}>送信</p>
+                    <p className={styles.en}>Submit</p>
                   </button>
 
                   <button
@@ -234,7 +235,8 @@ export default function Home() {
                     // value="リセット"
                     className={styles.resetButton}
                   >
-                    リセット
+                    <p className={styles.jp}>リセット</p>
+                    <p className={styles.en}>Reset</p>
                   </button>
                 </div>
               </form>
