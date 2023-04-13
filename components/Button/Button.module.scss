@@ -6,15 +6,10 @@
 
 .button {
   border: 1px solid white;
+  color: white;
   border-radius: 5px;
   padding: 0.4rem 1rem;
   @include center;
-
-  &:hover {
-    color: black;
-    background-color: white;
-    transition: 300ms;
-  }
 
   .icon {
     width: 20px;
@@ -36,5 +31,11 @@
       font-size: 0.8rem;
       font-weight: bold;
     }
+  }
+
+  &:hover {
+    color: black;
+    background-color: white;
+    transition: 300ms;
   }
 }

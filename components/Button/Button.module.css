@@ -6,11 +6,6 @@
   justify-content: center;
   align-items: center;
 }
-.button:hover {
-  color: black;
-  background-color: white;
-  transition: 300ms;
-}
 .button .icon {
   width: 20px;
   height: 20px;
@@ -31,5 +26,10 @@
 .button .title .en {
   font-size: 0.8rem;
   font-weight: bold;
+}
+.button:hover {
+  color: black;
+  background-color: white;
+  transition: 300ms;
 }
 /*# sourceMappingURL=Button.module.css.map */
