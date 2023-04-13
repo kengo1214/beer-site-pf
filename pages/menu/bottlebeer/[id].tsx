@@ -82,7 +82,7 @@ export default function MoreInformation({ bottlebeer }: Props) {
 
             <div className={styles.backButtonBox}>
               <div onClick={() => router.back()}>
-                <Button name="Back" />
+                <Button en="Back" jp="戻る" />
               </div>
             </div>
           </main>
