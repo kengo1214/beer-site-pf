@@ -7,7 +7,7 @@
 }
 .body .barrelSection {
   width: 100%;
-  padding: calc(100px + 2rem) 2rem 0rem;
+  padding: calc(100px + 3rem) 2rem 0rem;
   background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: 100%;
@@ -106,7 +106,7 @@
 }
 .body .bottleSection {
   width: 100%;
-  padding: calc(100px + 2rem) 2rem 0rem;
+  padding: calc(100px + 3rem) 2rem 0rem;
   background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: 100%;
@@ -205,7 +205,7 @@
 }
 .body .cocktailSection {
   width: 100%;
-  padding: calc(100px + 2rem) 2rem 0rem;
+  padding: calc(100px + 3rem) 2rem 0rem;
   background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
   background-size: 100%;
@@ -402,7 +402,7 @@
   .body .barrelSection,
 .body .bottleSection,
 .body .cocktailSection {
-    padding: calc(130px + 2rem) 2rem 0rem;
+    padding: calc(130px + 3rem) 2rem 0rem;
   }
   .body .barrelSection .sectionTitle,
 .body .bottleSection .sectionTitle,

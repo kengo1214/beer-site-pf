@@ -6,7 +6,7 @@
 
 @mixin parts {
   width: 100%;
-  padding: calc(100px + 2rem) 2rem 0rem;
+  padding: calc(100px + 3rem) 2rem 0rem;
   background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
 
@@ -238,7 +238,7 @@
     .barrelSection,
     .bottleSection,
     .cocktailSection {
-      padding: calc(130px + 2rem) 2rem 0rem;
+      padding: calc(130px + 3rem) 2rem 0rem;
 
       .sectionTitle {
         padding-bottom: 2rem;

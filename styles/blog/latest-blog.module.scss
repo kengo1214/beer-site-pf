@@ -123,7 +123,7 @@
         list-style: none;
         width: 100%;
         height: calc(100% - 3rem);
-        padding: 2rem 2rem 0 0;
+        padding: 3rem 2rem 0 0;
         overflow: scroll;
 
         li {
@@ -189,7 +189,7 @@
       .blogSection {
         width: calc(100% - 330px);
         min-height: calc(100vh - 240px);
-        padding: 2rem 0 3rem 2rem;
+        padding: 3rem 0 3rem 2rem;
 
         @include center;
         justify-content: flex-start;
