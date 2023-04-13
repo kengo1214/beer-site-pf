@@ -123,11 +123,11 @@ export default function Archive({ detailBlog, monthlyIndex }: Props) {
 
               <div className={styles.buttonBox}>
                 <Link href="/blog/latest-blog">
-                  <Button name="Latest Blog" />
+                  <Button en="Latest Blog" jp="最新のブログ" />
                 </Link>
 
                 <div onClick={() => router.back()} className={styles.button}>
-                  <Button name="Back" />
+                  <Button en="Back" jp="戻る" />
                 </div>
               </div>
             </section>

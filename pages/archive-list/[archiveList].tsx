@@ -160,7 +160,7 @@ export default function Archive({
 
               <div className={styles.buttonBox}>
                 <Link href="/blog/latest-blog">
-                  <Button name="Latest Blog" />
+                  <Button en="Latest Blog" jp="最新のブログ" />
                 </Link>
               </div>
             </section>
