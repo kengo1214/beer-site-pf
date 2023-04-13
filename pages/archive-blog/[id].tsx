@@ -1,7 +1,7 @@
 import styles from "../../styles/archive/archive-blog.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import HogeButton from "../../components/Button/HogeButton";
+import Button from "../../components/Button/Button";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import { useRouter } from "next/router";
@@ -96,7 +96,11 @@ export default function Archive({ detailBlog, monthlyIndex }: Props) {
               <div className={styles.blog}>
                 <div className={styles.articleBox}>
                   <p className={styles.title}>{detailBlog.title}</p>
-                  <p className={styles.publishedAt}>{dayjs(detailBlog.publishedAt).format("YYYY年MM月DD日 HH:mm")}</p>
+                  <p className={styles.publishedAt}>
+                    {dayjs(detailBlog.publishedAt).format(
+                      "YYYY年MM月DD日 HH:mm"
+                    )}
+                  </p>
                   <p
                     className={styles.detail}
                     dangerouslySetInnerHTML={{
@@ -119,11 +123,11 @@ export default function Archive({ detailBlog, monthlyIndex }: Props) {
 
               <div className={styles.buttonBox}>
                 <Link href="/blog/latest-blog">
-                  <HogeButton name="Latest Blog" />
+                  <Button name="Latest Blog" />
                 </Link>
 
                 <div onClick={() => router.back()} className={styles.button}>
-                  <HogeButton name="Back" />
+                  <Button name="Back" />
                 </div>
               </div>
             </section>

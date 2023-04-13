@@ -1,7 +1,7 @@
 import styles from "../../styles/archive//archive-list.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import HogeButton from "../../components/Button/HogeButton";
+import Button from "../../components/Button/Button";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
@@ -160,7 +160,7 @@ export default function Archive({
 
               <div className={styles.buttonBox}>
                 <Link href="/blog/latest-blog">
-                  <HogeButton name="Latest Blog" />
+                  <Button name="Latest Blog" />
                 </Link>
               </div>
             </section>
