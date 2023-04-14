@@ -46,6 +46,7 @@
     width: 100%;
     flex-wrap: wrap;
     @include center;
+    font-family: "Shippori Mincho B1", serif;
 
     .menuItem {
       background-color: white;

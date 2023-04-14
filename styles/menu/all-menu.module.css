@@ -50,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Shippori Mincho B1", serif;
 }
 .body .barrelSection .menuBox .menuItem {
   background-color: white;
@@ -149,6 +150,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Shippori Mincho B1", serif;
 }
 .body .bottleSection .menuBox .menuItem {
   background-color: white;
@@ -248,6 +250,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Shippori Mincho B1", serif;
 }
 .body .cocktailSection .menuBox .menuItem {
   background-color: white;

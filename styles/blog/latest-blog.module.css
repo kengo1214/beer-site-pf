@@ -142,6 +142,7 @@
   display: none;
 }
 .body .mainSectiom .archiveSection ul {
+  font-family: "Shippori Mincho B1", serif;
   list-style: none;
   width: 100%;
   height: calc(100% - 3rem);
@@ -225,6 +226,7 @@
   display: flex;
 }
 .body .mainSectiom .outlineSection .blogSection .link .blog {
+  font-family: "Shippori Mincho B1", serif;
   background-color: white;
   width: 100%;
   padding: 1rem;
