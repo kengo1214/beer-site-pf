@@ -368,6 +368,7 @@
   cursor: pointer;
   background-color: red;
   margin-right: 1.5rem;
+  font-family: "Shippori Mincho B1", serif;
 }
 .body .main .contactSection .contactMain .form .buttonBox .submitButton .jp {
   font-size: 0.5rem;
@@ -386,6 +387,7 @@
   border-radius: 5px;
   cursor: pointer;
   background-color: gray;
+  font-family: "Shippori Mincho B1", serif;
 }
 .body .main .contactSection .contactMain .form .buttonBox .resetButton .jp {
   font-size: 0.5rem;

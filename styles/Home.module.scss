@@ -340,11 +340,13 @@
               @include button;
               background-color: red;
               margin-right: 1.5rem;
+              font-family: "Shippori Mincho B1", serif;
             }
 
             .resetButton {
               @include button;
               background-color: gray;
+              font-family: "Shippori Mincho B1", serif;
             }
           }
         }
