@@ -17,6 +17,7 @@
 }
 .header .title h1 {
   font-size: 2rem;
+  cursor: pointer;
 }
 .header nav ul {
   list-style: none;
@@ -44,6 +45,7 @@
   font-weight: bold;
   border-radius: 10px;
   color: white;
+  cursor: pointer;
 }
 .header nav ul li .link:hover {
   background-color: orange;
