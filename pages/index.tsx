@@ -12,6 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>No Beer No Life Tokyo</title>
+      </Head>
       <div className={styles.body} id="/">
         <MainHeader />
         <main className={styles.main}>
@@ -24,7 +27,7 @@ export default function Home() {
               </div>
               <div className={styles.sentence}>
                 <p>
-                当店で当店では海外のビールを専門に取り扱い、ドイツ、フランス、メキシコ、イギリスなどの国のビールを中心に提供しています。当店はビール好きの方には必見のお店で、世界中から厳選した品揃えをお届けしています。私たちは、お客様に新しいビールの味わいを発見していただける場所となることを目指し、常に新しいビールの入荷やイベントなどを企画しています。是非一度、当店で世界のビールをお楽しみください。
+                  当店で当店では海外のビールを専門に取り扱い、ドイツ、フランス、メキシコ、イギリスなどの国のビールを中心に提供しています。当店はビール好きの方には必見のお店で、世界中から厳選した品揃えをお届けしています。私たちは、お客様に新しいビールの味わいを発見していただける場所となることを目指し、常に新しいビールの入荷やイベントなどを企画しています。是非一度、当店で世界のビールをお楽しみください。
                 </p>
               </div>
             </div>
@@ -35,7 +38,7 @@ export default function Home() {
               </div>
               <div className={styles.sentence}>
                 <p>
-                - 私たちはビールの専門家であり、お客様に最高のビール体験を提供することに誇りを持っています。世界中から厳選されたビールを取り揃え、お客様に新しいビールの味わいを発見していただける場所です。また、私たちは、お客様にビールの醸造方法や歴史、文化などの情報を提供し、より深いビールの世界をお楽しみいただけるようサポートしています。当店のスタッフ一同、お客様のご来店を心よりお待ちしております。
+                  私たちはビールの専門家であり、お客様に最高のビール体験を提供することに誇りを持っています。世界中から厳選されたビールを取り揃え、お客様に新しいビールの味わいを発見していただける場所です。また、私たちは、お客様にビールの醸造方法や歴史、文化などの情報を提供し、より深いビールの世界をお楽しみいただけるようサポートしています。当店のスタッフ一同、お客様のご来店を心よりお待ちしております。
                 </p>
               </div>
             </div>
@@ -58,7 +61,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className={styles.linkItem}>
-                <Link href="/blog">
+                <Link href="/blog/latest-blog">
                   <Image
                     src="/image/blog-link.jpg"
                     alt="Menu Image"
@@ -220,7 +223,6 @@ export default function Home() {
                 <div className={styles.buttonBox}>
                   <button
                     type="submit"
-                    // value="送信"
                     id="modalOpen"
                     className={styles.submitButton}
                   >
@@ -228,11 +230,7 @@ export default function Home() {
                     <p className={styles.en}>Submit</p>
                   </button>
 
-                  <button
-                    type="reset"
-                    // value="リセット"
-                    className={styles.resetButton}
-                  >
+                  <button type="reset" className={styles.resetButton}>
                     <p className={styles.jp}>リセット</p>
                     <p className={styles.en}>Reset</p>
                   </button>
