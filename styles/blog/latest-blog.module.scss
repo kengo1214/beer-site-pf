@@ -326,7 +326,10 @@
       }
 
       .blogSection {
-        min-height: calc(100vh - 395px);
+        // min-height: calc(100vh - 395px);
+        min-height: calc(100vh - 340px);
+        // border: 3px solid red;
+
         .link {
           .blog {
             padding: 0.6rem;
@@ -397,7 +400,7 @@
 
       .blogSection {
         // border: 3px solid greenyellow;
-        min-height: calc(100vh - 335px);
+        min-height: calc(100vh - 300px);
 
         .link {
           margin-bottom: 2rem;
@@ -438,8 +441,6 @@
       }
 
       .blogSection {
-        min-height: calc(100vh - 335px);
-
         .link {
           .blog {
             .articleBox {
@@ -479,8 +480,6 @@
       }
 
       .blogSection {
-        min-height: calc(100vh - 335px);
-
         .link {
           .blog {
             .articleBox {

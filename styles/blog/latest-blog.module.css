@@ -354,7 +354,7 @@
     width: calc(50% - 2rem);
   }
   .body .mainSectiom .blogSection {
-    min-height: calc(100vh - 395px);
+    min-height: calc(100vh - 340px);
   }
   .body .mainSectiom .blogSection .link .blog {
     padding: 0.6rem;
@@ -394,7 +394,6 @@
     height: 60px;
   }
   .body .mainSectiom {
-    border: 3px solid blue;
     min-height: calc(100vh - 140px);
   }
   .body .mainSectiom .archiveSection ul li .link {
@@ -402,7 +401,7 @@
     font-size: 0.8rem;
   }
   .body .mainSectiom .blogSection {
-    min-height: calc(100vh - 335px);
+    min-height: calc(100vh - 300px);
   }
   .body .mainSectiom .blogSection .link {
     margin-bottom: 2rem;
@@ -426,9 +425,6 @@
   .body .mainSectiom .archiveSection ul li {
     width: calc(95% - 2rem);
   }
-  .body .mainSectiom .blogSection {
-    min-height: calc(100vh - 335px);
-  }
   .body .mainSectiom .blogSection .link .blog .articleBox {
     width: calc(100% - 105px);
     min-height: 70px;
@@ -448,9 +444,6 @@
 @media screen and (max-width: 350px) {
   .body .mainSectiom .archiveSection ul li {
     width: calc(100% - 2rem);
-  }
-  .body .mainSectiom .blogSection {
-    min-height: calc(100vh - 335px);
   }
   .body .mainSectiom .blogSection .link .blog .articleBox {
     width: calc(100% - 90px);
