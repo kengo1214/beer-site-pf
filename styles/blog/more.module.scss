@@ -180,8 +180,6 @@
         @include center;
 
         .articleBox {
-          // width: calc(100% - 225px);
-          // min-height: 150px;
           width: calc(100% - 270px);
           min-height: 180px;
           padding: 1rem;
@@ -209,8 +207,6 @@
         }
 
         .imageBox {
-          // width: 225px;
-          // height: 150px;
           width: 270px;
           height: 180px;
 
@@ -247,7 +243,6 @@
     }
 
     .mainSectiom {
-      // border: 3px solid red;
       height: calc(100vh - 180px);
 
       .archiveSection {
@@ -284,7 +279,6 @@
       }
 
       .blogSection {
-        // border: 3px solid blue;
         width: 100%;
         min-height: calc(100vh - 350px);
         padding: 1.5rem 2rem 3rem;
@@ -333,6 +327,8 @@
       }
 
       .blogSection {
+        min-height: calc(100vh - 340px);
+
         .blog {
           flex-direction: column;
           width: auto;
@@ -395,6 +391,7 @@
       }
 
       .blogSection {
+        min-height: calc(100vh - 300px);
         .blog {
           .articleBox {
             width: 270px;

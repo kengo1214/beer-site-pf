@@ -359,6 +359,9 @@
   .body .mainSectiom .archiveSection ul li {
     width: calc(50% - 2rem);
   }
+  .body .mainSectiom .blogSection {
+    min-height: calc(100vh - 340px);
+  }
   .body .mainSectiom .blogSection .blog {
     flex-direction: column;
     width: auto;
@@ -402,6 +405,9 @@
   .body .mainSectiom .archiveSection ul li .link {
     padding: 0.6rem;
     font-size: 0.8rem;
+  }
+  .body .mainSectiom .blogSection {
+    min-height: calc(100vh - 300px);
   }
   .body .mainSectiom .blogSection .blog .articleBox {
     width: 270px;
