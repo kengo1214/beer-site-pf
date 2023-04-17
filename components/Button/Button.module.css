@@ -33,4 +33,16 @@
   background-color: white;
   transition: 300ms;
 }
+
+@media screen and (max-width: 480px) {
+  .button {
+    padding: 0.3rem 0.8rem;
+  }
+  .button .title .jp {
+    font-size: 0.4rem;
+  }
+  .button .title .en {
+    font-size: 0.7rem;
+  }
+}
 /*# sourceMappingURL=Button.module.css.map */
