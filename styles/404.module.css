@@ -37,6 +37,13 @@
   z-index: 10;
   margin-bottom: 3rem;
 }
+.body .main .sentenceBox h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.body .main .sentenceBox p {
+  font-size: 1rem;
+}
 .body .main .button {
   z-index: 10;
 }
@@ -49,7 +56,7 @@
     font-size: 1.2rem;
   }
   .body .main .sentenceBox p {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -60,20 +67,38 @@
   }
   .body .main {
     min-height: calc(100vh - 110px);
+    padding: 1.5rem;
+  }
+  .body .main .sentenceBox h1 {
+    font-size: 1.1rem;
+  }
+  .body .main .sentenceBox p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .body .main {
+    padding: 2rem;
+    padding: 1.5rem;
   }
   .body .main .sentenceBox h1 {
     font-size: 1rem;
   }
   .body .main .sentenceBox p {
-    font-size: 0.5rem;
-  }
-}
-@media screen and (max-width: 390px) {
-  .body .main .sentenceBox h1 {
     font-size: 0.8rem;
   }
+}
+@media screen and (max-width: 350px) {
+  .body .main {
+    padding: 2rem;
+    padding: 1.5rem;
+  }
+  .body .main .sentenceBox h1 {
+    font-size: 0.9rem;
+  }
   .body .main .sentenceBox p {
-    font-size: 0.3rem;
+    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 /*# sourceMappingURL=404.module.css.map */

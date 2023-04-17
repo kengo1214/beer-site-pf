@@ -41,6 +41,15 @@
       flex-direction: column;
       z-index: 10;
       margin-bottom: 3rem;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
 
     .button {
@@ -60,7 +69,7 @@
         }
 
         p {
-          font-size: 0.5rem;
+          font-size: 0.8rem;
         }
       }
     }
@@ -75,14 +84,15 @@
 
     .main {
       min-height: calc(100vh - 110px);
+      padding: 1.5rem;
 
       .sentenceBox {
         h1 {
-          font-size: 1rem;
+          font-size: 1.1rem;
         }
 
         p {
-          font-size: 0.5rem;
+          font-size: 0.8rem;
         }
       }
     }
@@ -92,13 +102,33 @@
 @media screen and (max-width: 390px) {
   .body {
     .main {
+      padding: 2rem;
+      padding: 1.5rem;
       .sentenceBox {
         h1 {
-          font-size: 0.8rem;
+          font-size: 1rem;
         }
 
         p {
-          font-size: 0.3rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .body {
+    .main {
+      padding: 2rem;
+      padding: 1.5rem;
+      .sentenceBox {
+        h1 {
+          font-size: 0.9rem;
+        }
+
+        p {
+          font-size: 0.7rem;
         }
       }
     }
