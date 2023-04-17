@@ -91,50 +91,46 @@ export default function Archive({ detailBlog, monthlyIndex }: Props) {
             </ul>
           </section>
 
-          <section className={styles.outlineSection}>
-            <section className={styles.blogSection}>
-              <div className={styles.blog}>
-                <div className={styles.articleBox}>
-                  <p className={styles.title}>{detailBlog.title}</p>
-                  <p className={styles.publishedAt}>
-                    {dayjs(detailBlog.publishedAt).format(
-                      "YYYY年MM月DD日 HH:mm"
-                    )}
-                  </p>
-                  <p
-                    className={styles.detail}
-                    dangerouslySetInnerHTML={{
-                      __html: `${detailBlog.body}`,
-                    }}
+          <section className={styles.blogSection} id="top">
+            <div className={styles.blog}>
+              <div className={styles.articleBox}>
+                <p className={styles.title}>{detailBlog.title}</p>
+                <p className={styles.publishedAt}>
+                  {dayjs(detailBlog.publishedAt).format("YYYY年MM月DD日 HH:mm")}
+                </p>
+                <p
+                  className={styles.detail}
+                  dangerouslySetInnerHTML={{
+                    __html: `${detailBlog.body}`,
+                  }}
+                />
+              </div>
+
+              <div className={styles.imageBox}>
+                <div className={styles.image}>
+                  <Image
+                    src={detailBlog.image.url}
+                    layout="fill"
+                    objectFit="cover"
+                    alt="image"
                   />
                 </div>
-
-                <div className={styles.imageBox}>
-                  <div className={styles.image}>
-                    <Image
-                      src={detailBlog.image.url}
-                      layout="fill"
-                      objectFit="cover"
-                      alt="image"
-                    />
-                  </div>
-                </div>
               </div>
+            </div>
 
-              <div className={styles.buttonBox}>
-                <Link href="/blog/latest-blog">
-                  <Button en="Latest Blog" jp="最新のブログ" />
-                </Link>
+            <div className={styles.buttonBox}>
+              <Link href="/blog/latest-blog">
+                <Button en="Latest Blog" jp="最新のブログ" />
+              </Link>
 
-                <div onClick={() => router.back()} className={styles.button}>
-                  <Button en="Back" jp="戻る" />
-                </div>
+              <div onClick={() => router.back()} className={styles.button}>
+                <Button en="Back" jp="戻る" />
               </div>
-            </section>
-            <footer className={styles.footer}>
-              <Footer />
-            </footer>
+            </div>
           </section>
+          <footer className={styles.footer} id="down">
+            <Footer />
+          </footer>
         </section>
       </div>
     </>
