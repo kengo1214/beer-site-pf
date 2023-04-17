@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
 }
 
 @mixin after {
@@ -62,15 +61,18 @@
   }
 }
 
+//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
 .body {
   width: 100%;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   position: fixed;
   top: 100px;
   background-image: url("/image/archive.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: scroll;
 
   &::after {
     @include after;
@@ -82,6 +84,7 @@
     height: 100px;
     position: relative;
     z-index: 10;
+
     @include center;
 
     &::after {
@@ -102,15 +105,18 @@
   }
 
   .mainSectiom {
+    // border: 5px solid red;
     width: 100%;
-    min-height: calc(100vh - 200px);
+    height: calc(100vh - 200px);
     position: relative;
     z-index: 10;
+    overflow: scroll;
 
     .archiveSection {
+      // border: 5px solid blue;
       width: 250px;
       height: calc(100vh - 240px);
-      position: absolute;
+      position: fixed;
       right: 0;
 
       .archiveSectionTitleHidden {
@@ -148,115 +154,80 @@
       }
     }
 
-    .scrollSection {
-      width: 80px;
-      height: calc(100vh - 240px);
-      position: absolute;
-      right: 250px;
-      padding-bottom: 3rem;
-      overflow: hidden;
-      @include center;
-      align-items: flex-end;
-
-      .scroll {
-        @include center;
-        flex-direction: column;
-
-        .scrollTop,
-        .scrollDown {
-          color: white;
-          width: 35px;
-          height: 35px;
-
-          &:hover {
-            color: orangered;
-            transition: 300ms;
-          }
-        }
-
-        .scrollTop {
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
-
-    .outlineSection {
-      width: 100%;
-      height: calc(100vh - 200px);
+    .blogSection {
+      // border: 5px solid greenyellow;
+      width: calc(100% - 250px);
+      min-height: calc(100vh - 240px);
+      padding: 3rem 2rem;
       overflow: scroll;
 
-      .blogSection {
-        width: calc(100% - 330px);
-        min-height: calc(100vh - 240px);
-        padding: 3rem 0 3rem 2rem;
+      @include center;
+      justify-content: flex-start;
+      // justify-content:space-between;
+      flex-direction: column;
 
-        @include center;
-        justify-content: flex-start;
-        flex-direction: column;
+      .link:nth-last-child(1) {
+        margin-bottom: 0;
+      }
 
-        .link:nth-last-child(1) {
-          margin-bottom: 0;
-        }
+      .link {
+        width: 100%;
+        margin-bottom: 3rem;
+        border-radius: 10px;
+        display: flex;
 
-        .link {
+        .blog {
+          font-family: "Shippori Mincho B1", serif;
+          background-color: white;
           width: 100%;
-          margin-bottom: 3rem;
+          padding: 1rem;
           border-radius: 10px;
-          display: flex;
+          box-shadow: 5px 5px 10px gray;
+          @include center;
 
-          .blog {
-            font-family: "Shippori Mincho B1", serif;
-            background-color: white;
-            width: 100%;
+          &:hover {
+            background-color: #dddddd;
+            transition: 300ms;
+          }
+
+          .articleBox {
+            width: calc(100% - 225px);
+            min-height: 150px;
             padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 5px 5px 10px gray;
+
             @include center;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
 
-            &:hover {
-              background-color: #dddddd;
-              transition: 300ms;
+            .title {
+              font-weight: bold;
+              font-size: 1.2rem;
+              margin-bottom: 1rem;
             }
 
-            .articleBox {
-              width: calc(100% - 225px);
-              min-height: 150px;
-              padding: 1rem;
-
-              @include center;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: flex-start;
-
-              .title {
-                font-weight: bold;
-                font-size: 1.2rem;
-                margin-bottom: 1rem;
-              }
-
-              .publishedAt {
-                font-size: 1rem;
-              }
+            .publishedAt {
+              font-size: 1rem;
             }
+          }
 
-            .imageBox {
-              width: 225px;
-              height: 150px;
+          .imageBox {
+            width: 225px;
+            height: 150px;
 
-              .image {
-                width: 100%;
-                height: 100%;
-                position: relative;
-              }
+            .image {
+              width: 100%;
+              height: 100%;
+              position: relative;
             }
           }
         }
+      }
 
-        .buttonBox {
-          width: 100%;
-          padding-top: 3rem;
-          @include center;
-        }
+      .buttonBox {
+        width: 100%;
+        padding-top: 3rem;
+        @include center;
       }
     }
   }
@@ -278,11 +249,15 @@
     }
 
     .mainSectiom {
+      // border: 3px solid red;
+      height: calc(100vh - 180px);
+
       .archiveSection {
         width: 100%;
-        height: 100px;
+        height: 130px;
         position: relative;
-        padding: 1.5rem 2rem 0;
+        padding: 1.5rem 2rem;
+
         right: 0;
         @include center;
 
@@ -310,63 +285,34 @@
         }
       }
 
-      .scrollSection {
+      .blogSection {
+        // border: 3px solid blue;
         width: 100%;
-        height: 85px;
-        position: relative;
-        right: 0;
-        padding: 1.5rem 2rem;
-        @include center;
-        justify-content: flex-end;
+        min-height: calc(100vh - 350px);
+        padding: 1.5rem 2rem 3rem;
 
-        .scroll {
-          @include center;
-          flex-direction: row;
+        .link {
+          .blog {
+            background-color: white;
+            width: 100%;
+            padding: 1rem;
 
-          .scrollTop,
-          .scrollDown {
-            width: 30px;
-            height: 30px;
-          }
+            .articleBox {
+              width: calc(100% - 195px);
+              min-height: 130px;
 
-          .scrollTop {
-            margin-bottom: 0;
-            margin-right: 0.5rem;
-          }
-        }
-      }
-
-      .outlineSection {
-        height: calc(100vh - 365px);
-
-        .blogSection {
-          width: 100%;
-          min-height: calc(100vh - 405px);
-          padding: 0 2rem 3rem;
-
-          .link {
-            .blog {
-              background-color: white;
-              width: 100%;
-              padding: 1rem;
-
-              .articleBox {
-                width: calc(100% - 195px);
-                min-height: 130px;
-
-                .title {
-                  font-size: 1.1rem;
-                }
-
-                .publishedAt {
-                  font-size: 0.9rem;
-                }
+              .title {
+                font-size: 1.1rem;
               }
 
-              .imageBox {
-                width: 195px;
-                height: 130px;
+              .publishedAt {
+                font-size: 0.9rem;
               }
+            }
+
+            .imageBox {
+              width: 195px;
+              height: 130px;
             }
           }
         }
@@ -374,6 +320,7 @@
     }
   }
 }
+
 @media screen and (max-width: 768px) {
   .body {
     .mainSectiom {
@@ -384,31 +331,33 @@
           }
         }
       }
-      .outlineSection {
-        .blogSection {
-          min-height: calc(100vh - 395px);
-          .link {
-            .blog {
+
+      .blogSection {
+        // min-height: calc(100vh - 395px);
+        min-height: calc(100vh - 340px);
+        // border: 3px solid red;
+
+        .link {
+          .blog {
+            padding: 0.6rem;
+
+            .articleBox {
+              width: calc(100% - 165px);
+              min-height: 110px;
               padding: 0.6rem;
 
-              .articleBox {
-                width: calc(100% - 165px);
-                min-height: 110px;
-                padding: 0.6rem;
-
-                .title {
-                  font-size: 0.9rem;
-                }
-
-                .publishedAt {
-                  font-size: 0.8rem;
-                }
+              .title {
+                font-size: 0.9rem;
               }
 
-              .imageBox {
-                width: 165px;
-                height: 110px;
+              .publishedAt {
+                font-size: 0.8rem;
               }
+            }
+
+            .imageBox {
+              width: 165px;
+              height: 110px;
             }
           }
         }
@@ -437,10 +386,12 @@
     top: 80px;
 
     .titleSection {
+      // border: 3px solid red;
       height: 60px;
     }
 
     .mainSectiom {
+      // border: 3px solid blue;
       min-height: calc(100vh - 140px);
 
       .archiveSection {
@@ -454,53 +405,29 @@
         }
       }
 
-      .scrollSection {
-        height: 65px;
-        padding: 1rem 2rem;
+      .blogSection {
+        // border: 3px solid greenyellow;
+        min-height: calc(100vh - 300px);
 
-        .scroll {
-          .scrollTop,
-          .scrollDown {
-            width: 25px;
-            height: 25px;
-          }
-        }
-      }
+        .link {
+          margin-bottom: 2rem;
+          .blog {
+            .articleBox {
+              width: calc(100% - 120px);
+              min-height: 80px;
 
-      .outlineSection {
-        height: calc(100vh - 305px);
-
-        .blogSection {
-          min-height: calc(100vh - 335px);
-
-          .link {
-            width: auto;
-
-            .blog {
-              flex-direction: column;
-              padding: 0.8rem;
-
-              .articleBox {
-                width: 100%;
-                min-height: auto;
-                @include center;
-                padding: 0.8rem;
-                margin-bottom: 0.8rem;
-
-                .title {
-                  font-size: 0.9rem;
-                  margin-bottom: 0.8rem;
-                }
-
-                .publishedAt {
-                  font-size: 0.8rem;
-                }
+              .title {
+                font-size: 0.8rem;
               }
 
-              .imageBox {
-                width: 300px;
-                height: 200px;
+              .publishedAt {
+                font-size: 0.7rem;
               }
+            }
+
+            .imageBox {
+              width: 120px;
+              height: 80px;
             }
           }
         }
@@ -508,6 +435,7 @@
     }
   }
 }
+
 @media screen and (max-width: 390px) {
   .body {
     .mainSectiom {
@@ -519,14 +447,26 @@
         }
       }
 
-      .outlineSection {
-        .blogSection {
-          .link {
-            .blog {
-              .imageBox {
-                width: 255px;
-                height: 170px;
+      .blogSection {
+        .link {
+          .blog {
+            .articleBox {
+              width: calc(100% - 105px);
+              min-height: 70px;
+
+              .title {
+                font-size: 0.7rem;
+                margin-bottom: 0.5rem;
               }
+
+              .publishedAt {
+                font-size: 0.6rem;
+              }
+            }
+
+            .imageBox {
+              width: 105px;
+              height: 70px;
             }
           }
         }
@@ -546,24 +486,25 @@
         }
       }
 
-      .outlineSection {
-        .blogSection {
-          .link {
-            .blog {
-              .articleBox {
-                .title {
-                  font-size: 0.8rem;
-                }
+      .blogSection {
+        .link {
+          .blog {
+            .articleBox {
+              width: calc(100% - 90px);
+              min-height: 60px;
 
-                .publishedAt {
-                  font-size: 0.8rem;
-                }
+              .title {
+                font-size: 0.6rem;
               }
 
-              .imageBox {
-                width: 225px;
-                height: 150px;
+              .publishedAt {
+                font-size: 0.5rem;
               }
+            }
+
+            .imageBox {
+              width: 90px;
+              height: 60px;
             }
           }
         }

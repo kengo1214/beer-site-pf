@@ -115,59 +115,46 @@ export default function Archive({
             </ul>
           </section>
 
-          <section className={styles.scrollSection}>
-            <div className={styles.scroll}>
-              <Link href="#top">
-                <BsFillArrowUpCircleFill className={styles.scrollTop} />
+          <section className={styles.blogSection} id="top">
+            {archiveBlog.map((archiveBlog) => (
+              <Link
+                href={`/archive-blog/${archiveBlog.id}`}
+                className={styles.link}
+                key={archiveBlog.id}
+              >
+                <div className={styles.blog}>
+                  <div className={styles.articleBox}>
+                    <p className={styles.title}>{archiveBlog.title}</p>
+                    <p className={styles.publishedAt}>
+                      {dayjs(archiveBlog.publishedAt).format(
+                        "YYYY年MM月DD日 HH:mm"
+                      )}
+                    </p>
+                  </div>
+
+                  <div className={styles.imageBox}>
+                    <div className={styles.image}>
+                      <Image
+                        src={archiveBlog.image.url}
+                        layout="fill"
+                        objectFit="cover"
+                        alt="image"
+                      />
+                    </div>
+                  </div>
+                </div>
               </Link>
-              <Link href="#down">
-                <BsFillArrowDownCircleFill className={styles.scrollDown} />
+            ))}
+
+            <div className={styles.buttonBox}>
+              <Link href="/blog/latest-blog">
+                <Button en="Latest Blog" jp="最新のブログ" />
               </Link>
             </div>
           </section>
-
-          <section className={styles.outlineSection}>
-            <section className={styles.blogSection} id="top">
-              {archiveBlog.map((archiveBlog) => (
-                <Link
-                  href={`/archive-blog/${archiveBlog.id}`}
-                  className={styles.link}
-                  key={archiveBlog.id}
-                >
-                  <div className={styles.blog}>
-                    <div className={styles.articleBox}>
-                      <p className={styles.title}>{archiveBlog.title}</p>
-                      <p className={styles.publishedAt}>
-                        {dayjs(archiveBlog.publishedAt).format(
-                          "YYYY年MM月DD日 HH:mm"
-                        )}
-                      </p>
-                    </div>
-
-                    <div className={styles.imageBox}>
-                      <div className={styles.image}>
-                        <Image
-                          src={archiveBlog.image.url}
-                          layout="fill"
-                          objectFit="cover"
-                          alt="image"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-
-              <div className={styles.buttonBox}>
-                <Link href="/blog/latest-blog">
-                  <Button en="Latest Blog" jp="最新のブログ" />
-                </Link>
-              </div>
-            </section>
-            <footer className={styles.footer} id="down">
-              <Footer />
-            </footer>
-          </section>
+          <footer className={styles.footer} id="down">
+            <Footer />
+          </footer>
         </section>
       </div>
     </>
