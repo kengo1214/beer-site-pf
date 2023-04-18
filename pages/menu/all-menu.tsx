@@ -6,7 +6,8 @@ import { Link as Scroll } from "react-scroll";
 import Head from "next/head";
 import Link from "next/link";
 import { clientMenu } from "../../libs/client";
-import Image from "next/legacy/image";
+// import Image from "next/legacy/image";
+import Image from 'next/image'
 import type { Menu } from "../../src/types/menu";
 
 //SSG(getStaticProps)🔥🔥🔥

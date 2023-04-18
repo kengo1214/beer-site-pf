@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Image from "next/legacy/image";
+// import Image from "next/legacy/image";
+import Image from 'next/image'
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import { Link as Scroll } from "react-scroll";

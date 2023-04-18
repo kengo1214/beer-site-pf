@@ -4,7 +4,8 @@ import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/legacy/image";
+// import Image from "next/legacy/image";
+import Image from 'next/image'
 import dayjs from "dayjs";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
