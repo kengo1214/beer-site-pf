@@ -2,6 +2,7 @@ import styles from "../../styles/archive/archive-blog.module.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import { useRouter } from "next/router";
@@ -57,6 +58,30 @@ export default function Archive({ detailBlog, monthlyIndex }: Props) {
 
   return (
     <>
+    <Head>
+        <title>Blog | No Beer No Life Tokyo</title>
+        <meta
+          name="description"
+          content="No Beer No Life Tokyoのブログページ。新メニュー、営業時間の変更、イベント情報など発信しています。"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/beer-favicon.png" />
+
+        {/* OGP（Open Graph Protocol） */}
+
+        <meta property="og:type" content="blog" />
+        <meta property="og:title" content="Blog | No Beer No Life Tokyo" />
+        <meta
+          property="og:description"
+          content="No Beer No Life Tokyoのブログページ。新メニュー、営業時間の変更、イベント情報など発信しています。"
+        />
+        <meta property="og:site_name" content="No Beer No Life Tokyo" />
+        <meta property="og:image" content="/image/blog-link.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+      </Head>
       <div className={styles.body}>
         <Header />
 

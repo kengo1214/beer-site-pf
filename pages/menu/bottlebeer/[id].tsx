@@ -2,6 +2,7 @@ import styles from "../../../styles/menu/[id].module.scss";
 import { clientMenu } from "../../../libs/client";
 import type { Menu } from "../../../src/types/menu";
 import Image from "next/legacy/image";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer/Footer";
@@ -43,6 +44,31 @@ export default function MoreInformation({ bottlebeer }: Props) {
 
   return (
     <>
+      <Head>
+        <title>Menu | No Beer No Life Tokyo</title>
+        <meta
+          name="description"
+          content="No Beer No Life Tokyoのメニューページ。世界中から厳選された樽ビール、瓶ビール、カクテル・ハードリカーを紹介します。"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/beer-favicon.png" />
+
+        {/* OGP（Open Graph Protocol） */}
+
+        <meta property="og:type" content="product" />
+        <meta property="og:title" content="Menu | No Beer No Life Tokyo" />
+        <meta
+          property="og:description"
+          content="No Beer No Life Tokyoのメニューページ。世界中から厳選された樽ビール、瓶ビール、カクテル・ハードリカーを紹介します。"
+        />
+        <meta property="og:site_name" content="No Beer No Life Tokyo" />
+        <meta property="og:image" content="/image/menu-link.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+      </Head>
+
       <div className={styles.body}>
         <Header />
         <section className={styles.bottleSection}>
