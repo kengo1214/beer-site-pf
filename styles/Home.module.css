@@ -36,8 +36,15 @@
   flex-direction: column;
   padding-bottom: 3rem;
 }
+.body .main .sentenceSection .sentenceBox .sentenceTitle p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.body .main .sentenceSection .sentenceBox .sentenceTitle h1 {
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 768px) {
-  .body .main .sentenceSection .sentenceBox .sentenceTitle h4 {
+  .body .main .sentenceSection .sentenceBox .sentenceTitle p {
     font-size: 0.9rem;
   }
   .body .main .sentenceSection .sentenceBox .sentenceTitle h1 {
@@ -45,7 +52,7 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .body .main .sentenceSection .sentenceBox .sentenceTitle h4 {
+  .body .main .sentenceSection .sentenceBox .sentenceTitle p {
     font-size: 0.8rem;
   }
   .body .main .sentenceSection .sentenceBox .sentenceTitle h1 {
@@ -153,8 +160,15 @@
   flex-direction: column;
   padding-bottom: 3rem;
 }
+.body .main .accessSection .accessMain .accessTitle p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.body .main .accessSection .accessMain .accessTitle h1 {
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 768px) {
-  .body .main .accessSection .accessMain .accessTitle h4 {
+  .body .main .accessSection .accessMain .accessTitle p {
     font-size: 0.9rem;
   }
   .body .main .accessSection .accessMain .accessTitle h1 {
@@ -162,7 +176,7 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .body .main .accessSection .accessMain .accessTitle h4 {
+  .body .main .accessSection .accessMain .accessTitle p {
     font-size: 0.8rem;
   }
   .body .main .accessSection .accessMain .accessTitle h1 {
@@ -287,8 +301,15 @@
   padding-bottom: 3rem;
   color: white;
 }
+.body .main .contactSection .contactMain .contactTitle p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.body .main .contactSection .contactMain .contactTitle h1 {
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 768px) {
-  .body .main .contactSection .contactMain .contactTitle h4 {
+  .body .main .contactSection .contactMain .contactTitle p {
     font-size: 0.9rem;
   }
   .body .main .contactSection .contactMain .contactTitle h1 {
@@ -296,7 +317,7 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .body .main .contactSection .contactMain .contactTitle h4 {
+  .body .main .contactSection .contactMain .contactTitle p {
     font-size: 0.8rem;
   }
   .body .main .contactSection .contactMain .contactTitle h1 {

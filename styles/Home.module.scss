@@ -22,8 +22,17 @@
   flex-direction: column;
   padding-bottom: 3rem;
 
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
   @media screen and (max-width: 768px) {
-    h4 {
+    p {
       font-size: 0.9rem;
     }
 
@@ -33,7 +42,7 @@
   }
 
   @media screen and (max-width: 480px) {
-    h4 {
+    p {
       font-size: 0.8rem;
     }
 

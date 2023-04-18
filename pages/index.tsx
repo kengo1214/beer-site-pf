@@ -1,6 +1,6 @@
 import Head from "next/head";
 // import Image from "next/legacy/image";
-import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import { Link as Scroll } from "react-scroll";
@@ -44,7 +44,7 @@ export default function Home() {
           <section className={styles.sentenceSection}>
             <div className={styles.sentenceBox}>
               <div className={styles.sentenceTitle}>
-                <h4>コンセプト</h4>
+                <p>コンセプト</p>
                 <h1>Concept</h1>
               </div>
               <div className={styles.sentence}>
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div className={styles.sentenceBox}>
               <div className={styles.sentenceTitle}>
-                <h4>メッセージ</h4>
+                <p>メッセージ</p>
                 <h1>Message</h1>
               </div>
               <div className={styles.sentence}>
@@ -77,7 +77,7 @@ export default function Home() {
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
-                    <h4>メニュー</h4>
+                    <p>メニュー</p>
                     <h1>Menu</h1>
                   </div>
                 </Link>
@@ -92,7 +92,7 @@ export default function Home() {
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
-                    <h4>ブログ</h4>
+                    <p>ブログ</p>
                     <h1>Blog</h1>
                   </div>
                 </Link>
@@ -109,7 +109,7 @@ export default function Home() {
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
-                    <h4>お問い合わせ</h4>
+                    <p>お問い合わせ</p>
                     <h1>Contact</h1>
                   </div>
                 </Scroll>
@@ -127,7 +127,7 @@ export default function Home() {
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
-                    <h4>お問い合わせ</h4>
+                    <p>お問い合わせ</p>
                     <h1>Contact</h1>
                   </div>
                 </Scroll>
@@ -139,7 +139,7 @@ export default function Home() {
           <section className={styles.accessSection}>
             <div className={styles.accessMain}>
               <div className={styles.accessTitle}>
-                <h4>アクセス</h4>
+                <p>アクセス</p>
                 <h1>Access</h1>
               </div>
               <div className={styles.accessBox}>
@@ -148,7 +148,8 @@ export default function Home() {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.2294450324493!2d139.7078890156115!3d35.64671823947073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4046e3f71d%3A0x85ab1d92ef294edf!2z5oG15q-U5a-_6aeF!5e0!3m2!1sja!2sjp!4v1664439285186!5m2!1sja!2sjp"
                     className={styles.mapSize}
                     style={{ border: 0 }}
-                    loading="lazy"
+                    // loading="lazy"
+                    title="Google Maps"
                   />
                 </div>
                 <div className={styles.sentenceBox}>
@@ -190,7 +191,7 @@ export default function Home() {
           <section className={styles.contactSection} id="contact">
             <div className={styles.contactMain}>
               <div className={styles.contactTitle}>
-                <h4>お問い合わせ</h4>
+                <p>お問い合わせ</p>
                 <h1>Contact</h1>
               </div>
 
