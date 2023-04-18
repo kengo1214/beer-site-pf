@@ -66,14 +66,16 @@
     opacity: 0.8;
   }
 
-  // @media screen and (max-width: 768px) {
-  //   font-size: 0.9rem;
-  // }
+  @media screen and (max-width: 480px) {
+    padding: 0.3rem 0.8rem;
 
-  // @media screen and (max-width: 480px) {
-  //   font-size: 0.8rem;
-  //   padding: 0.3rem 1rem;
-  // }
+    .jp {
+      font-size: 0.4rem;
+    }
+    .en {
+      font-size: 0.7rem;
+    }
+  }
 }
 
 //🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -341,12 +343,14 @@
               background-color: red;
               margin-right: 1.5rem;
               font-family: "Shippori Mincho B1", serif;
+              border: none;
             }
 
             .resetButton {
               @include button;
               background-color: gray;
               font-family: "Shippori Mincho B1", serif;
+              border: none;
             }
           }
         }

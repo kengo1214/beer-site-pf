@@ -369,6 +369,7 @@
   background-color: red;
   margin-right: 1.5rem;
   font-family: "Shippori Mincho B1", serif;
+  border: none;
 }
 .body .main .contactSection .contactMain .form .buttonBox .submitButton .jp {
   font-size: 0.5rem;
@@ -381,6 +382,17 @@
 .body .main .contactSection .contactMain .form .buttonBox .submitButton:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 480px) {
+  .body .main .contactSection .contactMain .form .buttonBox .submitButton {
+    padding: 0.3rem 0.8rem;
+  }
+  .body .main .contactSection .contactMain .form .buttonBox .submitButton .jp {
+    font-size: 0.4rem;
+  }
+  .body .main .contactSection .contactMain .form .buttonBox .submitButton .en {
+    font-size: 0.7rem;
+  }
+}
 .body .main .contactSection .contactMain .form .buttonBox .resetButton {
   color: white;
   padding: 0.4rem 1rem;
@@ -388,6 +400,7 @@
   cursor: pointer;
   background-color: gray;
   font-family: "Shippori Mincho B1", serif;
+  border: none;
 }
 .body .main .contactSection .contactMain .form .buttonBox .resetButton .jp {
   font-size: 0.5rem;
@@ -399,6 +412,17 @@
 }
 .body .main .contactSection .contactMain .form .buttonBox .resetButton:hover {
   opacity: 0.8;
+}
+@media screen and (max-width: 480px) {
+  .body .main .contactSection .contactMain .form .buttonBox .resetButton {
+    padding: 0.3rem 0.8rem;
+  }
+  .body .main .contactSection .contactMain .form .buttonBox .resetButton .jp {
+    font-size: 0.4rem;
+  }
+  .body .main .contactSection .contactMain .form .buttonBox .resetButton .en {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
