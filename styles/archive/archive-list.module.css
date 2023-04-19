@@ -3,7 +3,7 @@
   min-height: calc(100vh - 100px);
   position: fixed;
   top: 100px;
-  background-image: url("/image/archive.jpg");
+  background-image: url("/image/blog/archive.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

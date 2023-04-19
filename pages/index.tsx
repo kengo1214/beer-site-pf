@@ -70,7 +70,7 @@ export default function Home() {
               <div className={styles.linkItem}>
                 <Link href="/menu/all-menu">
                   <Image
-                    src="/image/menu-link.jpg"
+                    src="/image/link/menu-link.jpg"
                     alt="Menu Image"
                     width={3840} //🔥
                     height={5760} //🔥
@@ -85,7 +85,7 @@ export default function Home() {
               <div className={styles.linkItem}>
                 <Link href="/blog/latest-blog">
                   <Image
-                    src="/image/blog-link.jpg"
+                    src="/image/link/blog-link.jpg"
                     alt="Menu Image"
                     width={3750} //🔥
                     height={5625} //🔥
@@ -102,7 +102,7 @@ export default function Home() {
               <div className={styles.linkItem}>
                 <Scroll to="contact" smooth={true} duration={800} offset={-100}>
                   <Image
-                    src="/image/contact-link.jpg"
+                    src="/image/link/contact-link.jpg"
                     alt="Menu Image"
                     width={3036} //🔥
                     height={2162} //🔥
@@ -120,7 +120,7 @@ export default function Home() {
               <div className={styles.linkItem}>
                 <Scroll to="contact" smooth={true} duration={800} offset={-80}>
                   <Image
-                    src="/image/contact-link.jpg"
+                    src="/image/link/contact-link.jpg"
                     alt="Menu Image"
                     width={3036} //🔥
                     height={2162} //🔥

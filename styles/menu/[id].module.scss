@@ -114,17 +114,17 @@
 
   .barrelSection {
     @include section;
-    background-image: url("/image/all-menu/barrel.jpg");
+    background-image: url("/image/menu/barrel.jpg");
   }
 
   .bottleSection {
     @include section;
-    background-image: url("/image/all-menu/bottle.jpg");
+    background-image: url("/image/menu/bottle.jpg");
   }
 
   .cocktailSection {
     @include section;
-    background-image: url("/image/all-menu/cocktail.jpg");
+    background-image: url("/image/menu/cocktail.jpg");
   }
 }
 

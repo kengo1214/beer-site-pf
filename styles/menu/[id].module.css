@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("/image/all-menu/barrel.jpg");
+  background-image: url("/image/menu/barrel.jpg");
 }
 .body .barrelSection::after {
   content: "";
@@ -117,7 +117,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("/image/all-menu/bottle.jpg");
+  background-image: url("/image/menu/bottle.jpg");
 }
 .body .bottleSection::after {
   content: "";
@@ -214,7 +214,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("/image/all-menu/cocktail.jpg");
+  background-image: url("/image/menu/cocktail.jpg");
 }
 .body .cocktailSection::after {
   content: "";

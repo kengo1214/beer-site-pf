@@ -3,7 +3,7 @@
   min-height: calc(100vh - 100px);
   position: fixed;
   top: 100px;
-  background-image: url("/image/archive.jpg");
+  background-image: url("/image/blog/archive.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -229,6 +229,12 @@
   width: 100%;
   height: 100%;
   position: relative;
+}
+.body .mainSectiom .blogSection .blog .imageBox .image .imageSize {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .body .mainSectiom .blogSection .buttonBox {
   width: 100%;

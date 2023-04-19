@@ -7,7 +7,6 @@
 @mixin parts {
   width: 100%;
   padding: calc(100px + 3rem) 2rem 0rem;
-  background-image: url("/image/all-menu/barrel.jpg");
   position: relative;
 
   background-size: 100%;
@@ -115,17 +114,17 @@
 
   .barrelSection {
     @include parts;
-    background-image: url("/image/all-menu/barrel.jpg");
+    background-image: url("/image/menu/barrel.jpg");
   }
 
   .bottleSection {
     @include parts;
-    background-image: url("/image/all-menu/bottle.jpg");
+    background-image: url("/image/menu/bottle.jpg");
   }
 
   .cocktailSection {
     @include parts;
-    background-image: url("/image/all-menu/cocktail.jpg");
+    background-image: url("/image/menu/cocktail.jpg");
   }
 }
 
