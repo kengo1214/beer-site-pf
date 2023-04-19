@@ -72,8 +72,8 @@ export default function Home() {
                   <Image
                     src="/image/menu-link.jpg"
                     alt="Menu Image"
-                    width={3072} //🔥
-                    height={2048} //🔥
+                    width={3840} //🔥
+                    height={5760} //🔥
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
@@ -87,8 +87,8 @@ export default function Home() {
                   <Image
                     src="/image/blog-link.jpg"
                     alt="Menu Image"
-                    width={3072} //🔥
-                    height={2048} //🔥
+                    width={3750} //🔥
+                    height={5625} //🔥
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
@@ -104,8 +104,8 @@ export default function Home() {
                   <Image
                     src="/image/contact-link.jpg"
                     alt="Menu Image"
-                    width={3072} //🔥
-                    height={2048} //🔥
+                    width={3036} //🔥
+                    height={2162} //🔥
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
@@ -122,8 +122,8 @@ export default function Home() {
                   <Image
                     src="/image/contact-link.jpg"
                     alt="Menu Image"
-                    width={3072} //🔥
-                    height={2048} //🔥
+                    width={3036} //🔥
+                    height={2162} //🔥
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
