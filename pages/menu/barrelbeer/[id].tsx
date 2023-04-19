@@ -53,7 +53,7 @@ export default function MoreInformation({ barrelbeer }: Props) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <link rel="icon" href="/beer-favicon.png" />
+        <link rel="icon" href="/image/beer-favicon.png" />
 
         {/* OGP（Open Graph Protocol） */}
 
