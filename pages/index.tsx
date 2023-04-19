@@ -75,6 +75,9 @@ export default function Home() {
                     width={3840} //🔥
                     height={5760} //🔥
                     className={styles.image}
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
                   />
                   <div className={styles.linkTitle}>
                     <p>メニュー</p>
@@ -90,6 +93,9 @@ export default function Home() {
                     width={3750} //🔥
                     height={5625} //🔥
                     className={styles.image}
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1200px) 50vw,
+                    33vw"
                   />
                   <div className={styles.linkTitle}>
                     <p>ブログ</p>
