@@ -234,6 +234,12 @@
   height: 100%;
   position: relative;
 }
+.body .mainSectiom .blogSection .link .blog .imageBox .image .imageSize {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .body .mainSectiom .blogSection .buttonBox {
   width: 100%;
   padding-top: 3rem;

@@ -171,12 +171,13 @@
           .image {
             width: 100%;
             height: 100%;
-            position: absolute;
+            position: relative;
             z-index: 1;
             top: 0px;
             left: 0px;
             border-radius: 10px;
             opacity: 0.8;
+            object-fit: cover; //🔥
 
             &:hover {
               opacity: 0.5;

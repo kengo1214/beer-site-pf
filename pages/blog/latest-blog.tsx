@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Head from "next/head";
 import Link from "next/link";
 // import Image from "next/legacy/image";
-import Image from 'next/image'
+import Image from "next/image";
 import dayjs from "dayjs";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
@@ -118,9 +118,10 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
                     <div className={styles.image}>
                       <Image
                         src={latestBlog.image.url}
-                        layout="fill"
-                        objectFit="cover"
                         alt="image"
+                        width={2048}
+                        height={3072}
+                        className={styles.imageSize}
                       />
                     </div>
                   </div>

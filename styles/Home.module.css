@@ -117,12 +117,14 @@
 .body .main .linkSection .linkBox .linkItem .image {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   z-index: 1;
   top: 0px;
   left: 0px;
   border-radius: 10px;
   opacity: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .body .main .linkSection .linkBox .linkItem .image:hover {
   opacity: 0.5;

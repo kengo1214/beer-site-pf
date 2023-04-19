@@ -160,9 +160,10 @@ export default function Archive({
                     <div className={styles.image}>
                       <Image
                         src={archiveBlog.image.url}
-                        layout="fill"
-                        objectFit="cover"
                         alt="image"
+                        width={2048}
+                        height={3072}
+                        className={styles.imageSize}
                       />
                     </div>
                   </div>

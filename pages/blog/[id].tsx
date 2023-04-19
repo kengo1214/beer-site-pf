@@ -5,7 +5,7 @@ import Button from "../../components/Button/Button";
 import Head from "next/head";
 import Link from "next/link";
 // import Image from "next/legacy/image";
-import Image from 'next/image'
+import Image from "next/image";
 import dayjs from "dayjs";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
@@ -49,7 +49,7 @@ type Props = {
 export default function HogeId({ detailBlog, monthlyIndex }: Props) {
   return (
     <>
-    <Head>
+      <Head>
         <title>Blog | No Beer No Life Tokyo</title>
         <meta
           name="description"
@@ -126,9 +126,10 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
                 <div className={styles.image}>
                   <Image
                     src={detailBlog.image.url}
-                    layout="fill"
-                    objectFit="cover"
                     alt="image"
+                    width={2048}
+                    height={3072}
+                    className={styles.imageSize}
                   />
                 </div>
               </div>

@@ -2,7 +2,7 @@ import styles from "../../../styles/menu/[id].module.scss";
 import { clientMenu } from "../../../libs/client";
 import type { Menu } from "../../../src/types/menu";
 // import Image from "next/legacy/image";
-import Image from 'next/image'
+import Image from "next/image";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Header from "../../../components/Header/Header";
@@ -102,9 +102,10 @@ export default function MoreInformation({ cocktail }: Props) {
               <div className={styles.image}>
                 <Image
                   src={cocktail.image.url}
-                  layout="fill"
-                  objectFit="contain"
                   alt="image"
+                  width={468}
+                  height={900}
+                  className={styles.imageSize}
                 />
               </div>
             </div>

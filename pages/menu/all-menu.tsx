@@ -7,7 +7,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { clientMenu } from "../../libs/client";
 // import Image from "next/legacy/image";
-import Image from 'next/image'
+import Image from "next/image";
 import type { Menu } from "../../src/types/menu";
 
 //SSG(getStaticProps)🔥🔥🔥
@@ -186,8 +186,9 @@ export default function AllMenu({
                   <Image
                     src={barrelbeer.image.url}
                     alt="image"
-                    layout="fill"
-                    objectFit="contain"
+                    width={468}
+                    height={900}
+                    className={styles.imageSize}
                   />
                 </div>
               </Link>
@@ -224,8 +225,9 @@ export default function AllMenu({
                   <Image
                     src={bottlebeer.image.url}
                     alt="image"
-                    layout="fill"
-                    objectFit="contain"
+                    width={468}
+                    height={900}
+                    className={styles.imageSize}
                   />
                 </div>
               </Link>
@@ -262,8 +264,9 @@ export default function AllMenu({
                   <Image
                     src={cocktailhardliquor.image.url}
                     alt="image"
-                    layout="fill"
-                    objectFit="contain"
+                    width={468}
+                    height={900}
+                    className={styles.imageSize}
                   />
                 </div>
               </Link>

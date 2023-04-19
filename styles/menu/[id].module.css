@@ -89,6 +89,12 @@
   position: relative;
   height: 280px;
 }
+.body .barrelSection .main .itemBox .image .imageSize {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .body .barrelSection .main .backButtonBox {
   color: white;
   width: 100%;
@@ -180,6 +186,12 @@
   position: relative;
   height: 280px;
 }
+.body .bottleSection .main .itemBox .image .imageSize {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .body .bottleSection .main .backButtonBox {
   color: white;
   width: 100%;
@@ -270,6 +282,12 @@
   grid-area: image;
   position: relative;
   height: 280px;
+}
+.body .cocktailSection .main .itemBox .image .imageSize {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .body .cocktailSection .main .backButtonBox {
   color: white;
