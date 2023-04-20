@@ -15,7 +15,7 @@ export default function MainHeader() {
     <header className={styles.header}>
       <div className={styles.title}>
         <Scroll
-          to="/"
+          to="top"
           smooth={true}
           duration={800}
           className={styles.link}
@@ -29,7 +29,7 @@ export default function MainHeader() {
         <ul>
           <li>
             <Scroll
-              to="/"
+              to="top"
               smooth={true}
               duration={800}
               className={styles.link}
@@ -80,7 +80,7 @@ export default function MainHeader() {
         <ul>
           <li onClick={handleNav}>
             <Scroll
-              to="/"
+              to="top"
               smooth={true}
               duration={800}
               offset={-100}
@@ -92,7 +92,7 @@ export default function MainHeader() {
 
           <li onClick={handleNav}>
             <Scroll
-              to="/"
+              to="top"
               smooth={true}
               duration={800}
               offset={-80}

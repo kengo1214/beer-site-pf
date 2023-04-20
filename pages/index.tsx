@@ -37,7 +37,7 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
-      <div className={styles.body} id="/">
+      <div className={styles.body} id="top">
         <MainHeader />
         <main className={styles.main}>
           <section className={styles.mainImageSection}></section>
