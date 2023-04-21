@@ -12,7 +12,7 @@ import type { Blog } from "../../src/types/blog";
 export async function getStaticProps() {
   const latestBlogData = await clientBlog.get({
     endpoint: "beer-blog",
-    queries: { limit: 10 },
+    queries: { limit: 5 },
   });
 
   const archiveMonthData = await clientBlog.get({
