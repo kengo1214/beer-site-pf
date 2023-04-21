@@ -58,7 +58,7 @@ export default function AllMenu({
           content="No Beer No Life Tokyoのメニューページ。世界中から厳選された樽ビール、瓶ビール、カクテル・ハードリカーを紹介します。"
         />
         <meta property="og:site_name" content="No Beer No Life Tokyo" />
-        <meta property="og:image" content="/image/menu-link.jpg" />
+        <meta property="og:image" content="/image/link/menu-link.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />

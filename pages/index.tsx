@@ -31,7 +31,7 @@ export default function Home() {
           content="恵比寿に店舗を構え、世界中から厳選されたビールを提供する「No Beer No Life Tokyo」の公式ホームページ。コンセプト、メニュー、ブログ、イベント情報などを紹介。No Beer No Life Tokyoでは、お客様に最高のビール体験を提供いたします。お客様のご来店を心よりお待ちしております。"
         />
         <meta property="og:site_name" content="No Beer No Life Tokyo" />
-        <meta property="og:image" content="/image/mainImage.jpg" />
+        <meta property="og:image" content="/image/home/mainImage.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />

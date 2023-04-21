@@ -67,7 +67,7 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
           content="No Beer No Life Tokyoのブログページ。新メニュー、営業時間の変更、イベント情報など発信しています。"
         />
         <meta property="og:site_name" content="No Beer No Life Tokyo" />
-        <meta property="og:image" content="/image/blog-link.jpg" />
+        <meta property="og:image" content="/image/link/blog-link.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
