@@ -1,11 +1,10 @@
 import styles from "../../styles/blog/more.module.scss";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
-import Head from "next/head";
-import Link from "next/link";
-// import Image from "next/legacy/image";
-import Image from "next/image";
 import dayjs from "dayjs";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
@@ -73,8 +72,14 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
+
+      {/* body */}
+
       <div className={styles.body}>
+        {/* ヘッダー */}
         <Header />
+
+        {/* タイトルセクション */}
 
         <section className={styles.titleSection}>
           <div className={styles.blogSectionTitle}>
@@ -89,6 +94,7 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
         </section>
 
         <section className={styles.mainSectiom}>
+          {/* アーカイブ */}
           <section className={styles.archiveSection}>
             <div className={styles.archiveSectionTitleHidden}>
               <h4>アーカイブ</h4>
@@ -107,6 +113,7 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
             </ul>
           </section>
 
+          {/* ブログ */}
           <section className={styles.blogSection} id="top">
             <div className={styles.blog}>
               <div className={styles.articleBox}>
@@ -135,12 +142,17 @@ export default function HogeId({ detailBlog, monthlyIndex }: Props) {
               </div>
             </div>
 
+            {/* ボタン（「最新のブログ（Latest Blog）」へ遷移する） */}
+
             <div className={styles.buttonBox}>
               <Link href="/blog/latest-blog">
                 <Button en="Latest Blog" jp="最新のブログ" />
               </Link>
             </div>
           </section>
+
+          {/* フッター */}
+
           <footer className={styles.footer} id="down">
             <Footer />
           </footer>

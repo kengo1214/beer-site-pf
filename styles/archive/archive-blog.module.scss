@@ -61,8 +61,6 @@
   }
 }
 
-//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
 .body {
   width: 100%;
   min-height: calc(100vh - 100px);
@@ -105,7 +103,6 @@
   }
 
   .mainSectiom {
-    // border: 5px solid red;
     width: 100%;
     height: calc(100vh - 200px);
     position: relative;
@@ -113,7 +110,6 @@
     overflow: scroll;
 
     .archiveSection {
-      // border: 5px solid blue;
       width: 250px;
       height: calc(100vh - 240px);
       position: fixed;
@@ -155,7 +151,6 @@
     }
 
     .blogSection {
-      // border: 5px solid red;
       width: calc(100% - 250px);
       min-height: calc(100vh - 240px);
       padding: 3rem 2rem;
@@ -180,8 +175,6 @@
         @include center;
 
         .articleBox {
-          // width: calc(100% - 225px);
-          // min-height: 150px;
           width: calc(100% - 270px);
           min-height: 180px;
           padding: 1rem;
@@ -209,8 +202,6 @@
         }
 
         .imageBox {
-          // width: 225px;
-          // height: 150px;
           width: 270px;
           height: 180px;
 
@@ -258,7 +249,6 @@
     }
 
     .mainSectiom {
-      // border: 3px solid red;
       height: calc(100vh - 180px);
 
       .archiveSection {
@@ -295,7 +285,6 @@
       }
 
       .blogSection {
-        // border: 3px solid blue;
         width: 100%;
         min-height: calc(100vh - 350px);
         padding: 1.5rem 2rem 3rem;

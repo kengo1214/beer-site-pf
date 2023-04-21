@@ -1,31 +1,31 @@
 import styles from "../../styles/menu/all-menu.module.scss";
 import stylesNav from "../../styles/menu/all-menu-nav.module.scss";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import { Link as Scroll } from "react-scroll";
 import Head from "next/head";
 import Link from "next/link";
-import { clientMenu } from "../../libs/client";
-// import Image from "next/legacy/image";
 import Image from "next/image";
+import { Link as Scroll } from "react-scroll";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import { clientMenu } from "../../libs/client";
 import type { Menu } from "../../src/types/menu";
 
-//SSG(getStaticProps)🔥🔥🔥
+// getStaticProps
 export async function getStaticProps() {
-  const data01 = await clientMenu.get({ endpoint: "barrel-beer" });
-  const data02 = await clientMenu.get({ endpoint: "bottle-beer" });
-  const data03 = await clientMenu.get({ endpoint: "cocktail-and-hard-liquor" });
+  const barrelData = await clientMenu.get({ endpoint: "barrel-beer" });
+  const bottleData = await clientMenu.get({ endpoint: "bottle-beer" });
+  const cocktailData = await clientMenu.get({
+    endpoint: "cocktail-and-hard-liquor",
+  });
 
   return {
     props: {
-      barrelbeer: data01.contents,
-      bottlebeer: data02.contents,
-      cocktailhardliquor: data03.contents,
+      barrelbeer: barrelData.contents,
+      bottlebeer: bottleData.contents,
+      cocktailhardliquor: cocktailData.contents,
     },
   };
 }
 
-//🔥🔥🔥
 type Props = {
   barrelbeer: Menu[];
   bottlebeer: Menu[];
@@ -64,8 +64,15 @@ export default function AllMenu({
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
 
+      {/* body */}
+
       <div className={styles.body}>
+        {/* ヘッダー */}
+
         <Header />
+
+        {/* スクロールナビゲーション */}
+
         <nav className={stylesNav.nav}>
           <div className={stylesNav.insideLine}>
             <div className={stylesNav.pageTitle}>
@@ -76,12 +83,10 @@ export default function AllMenu({
             <ul>
               <li>
                 <Scroll
-                  to="a"
-                  // to="barrel"
+                  to="barrel"
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  // offset={-230}
                   className={stylesNav.list}
                 >
                   <h4>樽ビール</h4>
@@ -89,12 +94,10 @@ export default function AllMenu({
                 </Scroll>
 
                 <Scroll
-                  to="a"
-                  // to="barrel"
+                  to="barrel"
                   smooth={true}
                   duration={800}
                   offset={-80}
-                  // offset={-230}
                   className={stylesNav.mobileList}
                 >
                   <h4>樽ビール</h4>
@@ -103,24 +106,20 @@ export default function AllMenu({
               </li>
               <li>
                 <Scroll
-                  to="b"
-                  // to="barrel"
+                  to="bottle"
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  // offset={-230}
                   className={stylesNav.list}
                 >
                   <h4>ボトルビール</h4>
                   <h1>Bottle Beer</h1>
                 </Scroll>
                 <Scroll
-                  to="b"
-                  // to="barrel"
+                  to="bottle"
                   smooth={true}
                   duration={800}
                   offset={-80}
-                  // offset={-230}
                   className={stylesNav.mobileList}
                 >
                   <h4>ボトルビール</h4>
@@ -129,24 +128,20 @@ export default function AllMenu({
               </li>
               <li>
                 <Scroll
-                  to="c"
-                  // to="barrel"
+                  to="cocktail"
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  // offset={-230}
                   className={stylesNav.list}
                 >
                   <h4>カクテル</h4>
                   <h1>Cocktail</h1>
                 </Scroll>
                 <Scroll
-                  to="c"
-                  // to="barrel"
+                  to="cocktail"
                   smooth={true}
                   duration={800}
                   offset={-80}
-                  // offset={-230}
                   className={stylesNav.mobileList}
                 >
                   <h4>カクテル</h4>
@@ -157,8 +152,9 @@ export default function AllMenu({
           </div>
         </nav>
 
-        {/* 🔥🔥🔥 */}
-        <section className={styles.barrelSection} id="a">
+        {/* 樽ビール（Barrel Beer）*/}
+
+        <section className={styles.barrelSection} id="barrel">
           <div className={styles.sectionTitle}>
             <h4>樽ビール</h4>
             <h1>Barrel Beer</h1>
@@ -196,8 +192,9 @@ export default function AllMenu({
           </div>
         </section>
 
-        {/* 🔥🔥🔥 */}
-        <section className={styles.bottleSection} id="b">
+        {/* ボトルビール（Bottle Beer）*/}
+
+        <section className={styles.bottleSection} id="bottle">
           <div className={styles.sectionTitle}>
             <h4>ボトルビール</h4>
             <h1>Bottle Beer</h1>
@@ -235,8 +232,9 @@ export default function AllMenu({
           </div>
         </section>
 
-        {/* 🔥🔥🔥 */}
-        <section className={styles.cocktailSection} id="c">
+        {/* カクテル・ハードリカー（Cocktail and Hardliquor）*/}
+
+        <section className={styles.cocktailSection} id="cocktail">
           <div className={styles.sectionTitle}>
             <h4>カクテル</h4>
             <h1>Cocktail and Hardliquor</h1>
@@ -273,6 +271,8 @@ export default function AllMenu({
             ))}
           </div>
         </section>
+
+        {/* フッター */}
         <Footer />
       </div>
     </>

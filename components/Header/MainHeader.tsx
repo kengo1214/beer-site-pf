@@ -1,8 +1,8 @@
+import styles from "./MainHeader.module.scss";
 import Link from "next/link";
 import { useState } from "react";
 import { Link as Scroll } from "react-scroll";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import styles from "./MainHeader.module.scss";
 
 export default function MainHeader() {
   const [nav, setNav] = useState(false);
@@ -65,17 +65,17 @@ export default function MainHeader() {
         </ul>
       </nav>
 
-      {/* Hamburger Menu */}
+      {/* ハンバーガーメニュー */}
       <div className={styles.hamburgerButton} onClick={handleNav}>
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
 
+      {/* ハンバーガーメニュー （モバイルサイズ用）*/}
       <div className={styles.hamburgerButtonMobile} onClick={handleNav}>
         {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
       </div>
-      {/* Hamburger Menu */}
 
-      {/* Menu */}
+      {/* Home・Menu・Blog・Contact */}
       <div className={nav ? styles.menuOpen : styles.menuClose}>
         <ul>
           <li onClick={handleNav}>
@@ -139,8 +139,6 @@ export default function MainHeader() {
           </li>
         </ul>
       </div>
-
-      {/* Menu */}
     </header>
   );
 }

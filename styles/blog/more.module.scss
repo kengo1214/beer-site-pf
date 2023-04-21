@@ -61,8 +61,6 @@
   }
 }
 
-//🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
 .body {
   width: 100%;
   min-height: calc(100vh - 100px);
@@ -105,7 +103,6 @@
   }
 
   .mainSectiom {
-    // border: 5px solid red;
     width: 100%;
     height: calc(100vh - 200px);
     position: relative;
@@ -113,7 +110,6 @@
     overflow: scroll;
 
     .archiveSection {
-      // border: 5px solid blue;
       width: 250px;
       height: calc(100vh - 240px);
       position: fixed;
@@ -155,7 +151,6 @@
     }
 
     .blogSection {
-      // border: 5px solid red;
       width: calc(100% - 250px);
       min-height: calc(100vh - 240px);
       padding: 3rem 2rem;

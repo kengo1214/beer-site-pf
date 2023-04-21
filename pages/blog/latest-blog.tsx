@@ -1,10 +1,9 @@
 import styles from "../../styles/blog/latest-blog.module.scss";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import Head from "next/head";
 import Link from "next/link";
-// import Image from "next/legacy/image";
 import Image from "next/image";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import dayjs from "dayjs";
 import { clientBlog } from "../../libs/client";
 import { groupBy } from "../../libs/util";
@@ -63,9 +62,14 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
+
+      {/* body */}
+
       <div className={styles.body}>
+        {/* ヘッダー */}
         <Header />
 
+        {/* タイトルセクション */}
         <section className={styles.titleSection}>
           <div className={styles.blogSectionTitle}>
             <h4>最新のブログ</h4>
@@ -79,6 +83,7 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
         </section>
 
         <section className={styles.mainSectiom}>
+          {/* アーカイブ　 */}
           <section className={styles.archiveSection}>
             <div className={styles.archiveSectionTitleHidden}>
               <h4>アーカイブ</h4>
@@ -97,6 +102,7 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
             </ul>
           </section>
 
+          {/* ブログ */}
           <section className={styles.blogSection} id="top">
             {latestBlog.map((latestBlog) => (
               <Link
@@ -129,6 +135,9 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
               </Link>
             ))}
           </section>
+
+          {/* フッター */}
+
           <footer className={styles.footer} id="down">
             <Footer />
           </footer>

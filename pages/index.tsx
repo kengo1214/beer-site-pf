@@ -1,10 +1,9 @@
+import styles from "@/styles/Home.module.scss";
+import { Inter } from "next/font/google";
 import Head from "next/head";
-// import Image from "next/legacy/image";
 import Image from "next/image";
 import Link from "next/link";
-import { Inter } from "next/font/google";
 import { Link as Scroll } from "react-scroll";
-import styles from "@/styles/Home.module.scss";
 import MainHeader from "../components/Header/MainHeader";
 import Footer from "../components/Footer/Footer";
 
@@ -37,11 +36,20 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
+
+      {/* body  */}
+
       <div className={styles.body} id="top">
+        {/* ヘッダー */}
         <MainHeader />
+
         <main className={styles.main}>
+          {/* メイン画像 */}
           <section className={styles.mainImageSection}></section>
+
+          {/* コンセプト・メッセージ */}
           <section className={styles.sentenceSection}>
+            {/* コンセプト */}
             <div className={styles.sentenceBox}>
               <div className={styles.sentenceTitle}>
                 <p>コンセプト</p>
@@ -49,10 +57,12 @@ export default function Home() {
               </div>
               <div className={styles.sentence}>
                 <p>
-                当店では海外のビールを専門に取り扱い、ドイツ、フランス、メキシコ、イギリスなどの国のビールを中心に提供しています。私たちは、お客様に新しいビールの味わいを発見していただける場所となることを目指し、常に新しいビールの入荷やイベントなどを企画しています。是非一度、当店で世界のビールをお楽しみください。
+                  当店では海外のビールを専門に取り扱い、ドイツ、フランス、メキシコ、イギリスなどの国のビールを中心に提供しています。私たちは、お客様に新しいビールの味わいを発見していただける場所となることを目指し、常に新しいビールの入荷やイベントなどを企画しています。是非一度、当店で世界のビールをお楽しみください。
                 </p>
               </div>
             </div>
+
+            {/* メッセージ */}
             <div className={styles.sentenceBox}>
               <div className={styles.sentenceTitle}>
                 <p>メッセージ</p>
@@ -60,11 +70,14 @@ export default function Home() {
               </div>
               <div className={styles.sentence}>
                 <p>
-                - 私たちはビールの専門家であり、お客様に最高のビール体験を提供することに誇りを持っています。世界中から厳選されたビールを取り揃え、お客様に新しいビールの味わいを発見していただける場所です。また、私たちは、お客様にビールの醸造方法や歴史、文化など様々な情報を提供し、より深いビールの世界をお楽しみいただけるようサポートいたします。当店のスタッフ一同、お客様のご来店を心よりお待ちしております。
+                  -
+                  私たちはビールの専門家であり、お客様に最高のビール体験を提供することに誇りを持っています。世界中から厳選されたビールを取り揃え、お客様に新しいビールの味わいを発見していただける場所です。また、私たちは、お客様にビールの醸造方法や歴史、文化など様々な情報を提供し、より深いビールの世界をお楽しみいただけるようサポートいたします。当店のスタッフ一同、お客様のご来店を心よりお待ちしております。
                 </p>
               </div>
             </div>
           </section>
+
+          {/* リンクセクション */}
           <section className={styles.linkSection}>
             <div className={styles.linkBox}>
               <div className={styles.linkItem}>
@@ -72,8 +85,8 @@ export default function Home() {
                   <Image
                     src="/image/link/menu-link.jpg"
                     alt="Menu Image"
-                    width={3840} //🔥
-                    height={5760} //🔥
+                    width={3840}
+                    height={5760}
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
@@ -87,8 +100,8 @@ export default function Home() {
                   <Image
                     src="/image/link/blog-link.jpg"
                     alt="Menu Image"
-                    width={3750} //🔥
-                    height={5625} //🔥
+                    width={3750}
+                    height={5625}
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
@@ -98,14 +111,13 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* 💊💊💊💊💊💊💊 */}
               <div className={styles.linkItem}>
                 <Scroll to="contact" smooth={true} duration={800} offset={-100}>
                   <Image
                     src="/image/link/contact-link.jpg"
                     alt="Menu Image"
-                    width={3036} //🔥
-                    height={2162} //🔥
+                    width={3036}
+                    height={2162}
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
@@ -114,16 +126,14 @@ export default function Home() {
                   </div>
                 </Scroll>
               </div>
-              {/* 💊💊💊💊💊💊💊 */}
 
-              {/* 🔰🔰🔰🔰🔰🔰🔰 */}
               <div className={styles.linkItem}>
                 <Scroll to="contact" smooth={true} duration={800} offset={-80}>
                   <Image
                     src="/image/link/contact-link.jpg"
                     alt="Menu Image"
-                    width={3036} //🔥
-                    height={2162} //🔥
+                    width={3036}
+                    height={2162}
                     className={styles.image}
                   />
                   <div className={styles.linkTitle}>
@@ -132,10 +142,10 @@ export default function Home() {
                   </div>
                 </Scroll>
               </div>
-              {/* 🔰🔰🔰🔰🔰🔰🔰 */}
             </div>
           </section>
 
+          {/* アクセス */}
           <section className={styles.accessSection}>
             <div className={styles.accessMain}>
               <div className={styles.accessTitle}>
@@ -148,7 +158,6 @@ export default function Home() {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.2294450324493!2d139.7078890156115!3d35.64671823947073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4046e3f71d%3A0x85ab1d92ef294edf!2z5oG15q-U5a-_6aeF!5e0!3m2!1sja!2sjp!4v1664439285186!5m2!1sja!2sjp"
                     className={styles.mapSize}
                     style={{ border: 0 }}
-                    // loading="lazy"
                     title="Google Maps"
                   />
                 </div>
@@ -188,6 +197,7 @@ export default function Home() {
             </div>
           </section>
 
+          {/* お問い合わせ */}
           <section className={styles.contactSection} id="contact">
             <div className={styles.contactMain}>
               <div className={styles.contactTitle}>
@@ -239,7 +249,6 @@ export default function Home() {
                     className={`${styles.input} ${styles.textarea}`}
                     placeholder="ご質問はこちら"
                     required
-                    // maxLength="300"
                   />
                 </div>
 
@@ -261,6 +270,8 @@ export default function Home() {
               </form>
             </div>
           </section>
+
+          {/* フッター */}
           <Footer />
         </main>
       </div>

@@ -1,15 +1,14 @@
 import styles from "../../../styles/menu/[id].module.scss";
-import { clientMenu } from "../../../libs/client";
-import type { Menu } from "../../../src/types/menu";
-// import Image from "next/legacy/image";
 import Image from "next/image";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer/Footer";
 import Button from "../../../components/Button/Button";
+import { clientMenu } from "../../../libs/client";
+import type { Menu } from "../../../src/types/menu";
 
-//getStaticPaths（パスの指定）🔥🔥🔥
+//getStaticPaths
 export async function getStaticPaths() {
   const data = await clientMenu.get({ endpoint: "barrel-beer" });
 
@@ -23,7 +22,7 @@ export async function getStaticPaths() {
   };
 }
 
-//getStaticProps（情報取得）🔥🔥🔥
+//getStaticProps
 export async function getStaticProps(context: { params: { id: string } }) {
   const id = context.params.id;
   const data = await clientMenu.get({ endpoint: "barrel-beer", contentId: id });
@@ -35,7 +34,6 @@ export async function getStaticProps(context: { params: { id: string } }) {
   };
 }
 
-//🔥🔥🔥
 type Props = {
   barrelbeer: Menu;
 };
@@ -70,14 +68,19 @@ export default function MoreInformation({ barrelbeer }: Props) {
         <meta property="og:image:type" content="image/jpeg" />
       </Head>
 
+      {/* body */}
+
       <div className={styles.body}>
         <Header />
         <section className={styles.barrelSection}>
           <main className={styles.main}>
+            {/* ページタイトル*/}
             <div className={styles.sectionTitle}>
               <h4>樽ビール</h4>
               <h1>Barrel Beer</h1>
             </div>
+
+            {/* 商品詳細 */}
             <div className={styles.itemBox}>
               <h1 className={styles.title}>{barrelbeer.title}</h1>
 
@@ -108,6 +111,7 @@ export default function MoreInformation({ barrelbeer }: Props) {
               </div>
             </div>
 
+            {/* 戻るボタン */}
             <div className={styles.backButtonBox}>
               <div onClick={() => router.back()}>
                 <Button en="Back" jp="戻る" />
