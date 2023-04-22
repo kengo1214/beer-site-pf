@@ -434,7 +434,7 @@
   .body .barrelSection .main .itemBox .detail,
 .body .bottleSection .main .itemBox .detail,
 .body .cocktailSection .main .itemBox .detail {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .body .barrelSection .main .back,
 .body .bottleSection .main .back,
@@ -461,7 +461,7 @@
   .body .barrelSection .main .itemBox .detail,
 .body .bottleSection .main .itemBox .detail,
 .body .cocktailSection .main .itemBox .detail {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 @media screen and (max-width: 350px) {
