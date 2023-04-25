@@ -54,7 +54,10 @@ export default function MoreInformation({ barrelbeer }: Props) {
         <link rel="icon" href="/image/beer-favicon.png" />
 
         {/* OGP（Open Graph Protocol） */}
-
+        <meta
+          property="og:url"
+          content="https://nobeernolifetokyo.com/menu/barrelbeer/${id}"
+        />
         <meta property="og:type" content="product" />
         <meta property="og:title" content="Menu | No Beer No Life Tokyo" />
         <meta

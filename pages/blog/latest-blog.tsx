@@ -49,7 +49,10 @@ export default function LatestBlog({ latestBlog, monthlyIndex }: Props) {
         <link rel="icon" href="/image/beer-favicon.png" />
 
         {/* OGP（Open Graph Protocol） */}
-
+        <meta
+          property="og:url"
+          content="https://nobeernolifetokyo.com/blog/latest-blog"
+        />
         <meta property="og:type" content="blog" />
         <meta property="og:title" content="Blog | No Beer No Life Tokyo" />
         <meta

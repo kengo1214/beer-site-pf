@@ -5,10 +5,22 @@ import Footer from "../components/Footer/Footer";
 import Button from "../components/Button/Button";
 
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Custom404() {
   return (
     <>
+      <Head>
+        <title>ページが見つかりません | No Beer No Life Tokyo</title>
+        <meta
+          name="description"
+          content="お探しのページが見つかりませんでした。大変申し訳ございません。"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/image/beer-favicon.png" />
+      </Head>
+
       <div className={styles.body}>
         <Header />
         <main className={styles.main}>

@@ -50,7 +50,10 @@ export default function AllMenu({
         <link rel="icon" href="/image/beer-favicon.png" />
 
         {/* OGP（Open Graph Protocol） */}
-
+        <meta
+          property="og:url"
+          content="https://nobeernolifetokyo.com/menu/all-menu"
+        />
         <meta property="og:type" content="product" />
         <meta property="og:title" content="Menu | No Beer No Life Tokyo" />
         <meta

@@ -57,7 +57,10 @@ export default function MoreInformation({ cocktail }: Props) {
         <link rel="icon" href="/image/beer-favicon.png" />
 
         {/* OGP（Open Graph Protocol） */}
-
+        <meta
+          property="og:url"
+          content="https://nobeernolifetokyo.com/menu/barrelbeer/${id}"
+        />
         <meta property="og:type" content="product" />
         <meta property="og:title" content="Menu | No Beer No Life Tokyo" />
         <meta
@@ -77,7 +80,6 @@ export default function MoreInformation({ cocktail }: Props) {
         <Header />
         <section className={styles.cocktailSection}>
           <main className={styles.main}>
-
             {/* ページタイトル*/}
             <div className={styles.sectionTitle}>
               <h4>カクテル</h4>
