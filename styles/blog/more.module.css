@@ -244,6 +244,11 @@
   align-items: center;
 }
 
+@media screen and (min-width: 1600px) {
+  .body .mainSectiom .blogSection .blog {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .body .titleSection {
     height: 80px;
