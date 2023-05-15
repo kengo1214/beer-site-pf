@@ -6,10 +6,45 @@ import Link from "next/link";
 import { Link as Scroll } from "react-scroll";
 import MainHeader from "../components/Header/MainHeader";
 import Footer from "../components/Footer/Footer";
+import React, { useRef } from "react";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); //送信した時にページがリロードされたくないのでこの指定
+
+    console.log("送信中・・・");
+    console.log(nameRef.current?.value); //値が入ってくる時だけ読み込みたいので「？」を指定＆nullを回避するため。
+
+    let data = {
+      name: nameRef.current?.value,
+      email: emailRef.current?.value,
+      message: messageRef.current?.value,
+    };
+
+    //APIの取得(fetch)する処理
+    await fetch("/api/contact", {
+      method: "POST",
+      // 何を許容するのか指定できる。今回だとJOSN形式、テキスト型、コンテンツタイプを指定。
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data), //オブジェクトのままで渡すとダメ。JSONは軽量なデータな為JSON化している。
+    }).then((res) => {
+      if (res.status === 200) console.log("送信に成功しました");
+      router.push("/contact-done"); // リダイレクト先のURLに変更してください
+    });
+  };
+
   return (
     <>
       <Head>
@@ -206,22 +241,12 @@ export default function Home() {
               </div>
 
               <form
-                action="https://api.staticforms.xyz/submit"
+                onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
+                  handleSubmit(e)
+                }
                 method="post"
                 className={styles.form}
               >
-                <input
-                  type="hidden"
-                  name="accessKey"
-                  value="7adf81ec-942f-4a70-b8d5-e01074e1b7d4"
-                />
-                {/* リダイレクトする先の指定。現在は旧本番環境に飛ぶように設定してある */}
-                <input
-                  type="hidden"
-                  name="redirectTo"
-                  value="/pages/contact-done"
-                  // value="https://beer-site-pied.vercel.app/contact-done"
-                />
                 <div className={styles.contactItem}>
                   <label className={styles.label}>お名前</label>
                   <input
@@ -230,6 +255,7 @@ export default function Home() {
                     name="name"
                     placeholder="お名前"
                     required
+                    ref={nameRef} //🔥
                   />
                 </div>
                 <div className={styles.contactItem}>
@@ -240,6 +266,7 @@ export default function Home() {
                     name="email"
                     placeholder="メールアドレス"
                     required
+                    ref={emailRef} //🔥
                   />
                 </div>
                 <div className={styles.contactItem}>
@@ -249,6 +276,7 @@ export default function Home() {
                     className={`${styles.input} ${styles.textarea}`}
                     placeholder="ご質問はこちら"
                     required
+                    ref={messageRef} //🔥
                   />
                 </div>
 
