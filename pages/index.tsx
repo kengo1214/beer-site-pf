@@ -6,23 +6,21 @@ import Link from "next/link";
 import { Link as Scroll } from "react-scroll";
 import MainHeader from "../components/Header/MainHeader";
 import Footer from "../components/Footer/Footer";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  const router = useRouter();
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); //送信した時にページがリロードされたくないのでこの指定
-
-    console.log("送信中・・・");
-    console.log(nameRef.current?.value); //値が入ってくる時だけ読み込みたいので「？」を指定＆nullを回避するため。
+    e.preventDefault();
+    // console.log(nameRef.current?.value);
 
     let data = {
       name: nameRef.current?.value,
@@ -30,12 +28,11 @@ export default function Home() {
       message: messageRef.current?.value,
     };
 
-    //APIの取得(fetch)する処理
-    await fetch("/api/contact", {
+    await fetch("api/contact", {
       method: "POST",
       // 何を許容するのか指定できる。今回だとJOSN形式、テキスト型、コンテンツタイプを指定。
       headers: {
-        Accept: "application/json, text/plain, */*",
+        Accept: "application/json, text/plain",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data), //オブジェクトのままで渡すとダメ。JSONは軽量なデータな為JSON化している。
@@ -241,11 +238,11 @@ export default function Home() {
               </div>
 
               <form
+                method="post"
+                className={styles.form}
                 onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
                   handleSubmit(e)
                 }
-                method="post"
-                className={styles.form}
               >
                 <div className={styles.contactItem}>
                   <label className={styles.label}>お名前</label>

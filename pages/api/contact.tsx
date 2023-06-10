@@ -12,20 +12,20 @@ export default function sendGmail(req: NextApiRequest, res: NextApiResponse) {
     },
   });
 
-  //管理人が受け取るメール
+  //管理人が受けとるメールの設定
   const toHostMailData = {
     from: req.body.email,
-    to: "kken91914@gmail.com",
-    subject: `【お問い合わせ】${req.body.name}様より`,
-    text: `${req.body.message} Send from ${req.body.email}`,
+    to: "11929194kengo@gmail.com",
+    subject: `【お問合せ】 ${req.body.name}様より`,
+    text: `${req.body.message} send from ${req.body.email}`,
     html: `
     <p>【名前】</p>
     <p>${req.body.name}</p>
-    <p>【メッセージ】</p>
+    <p>【メッセージ内容】</p>
     <p>${req.body.message}</p>
     <p>【メールアドレス】</p>
     <p>${req.body.email}</p>
-  `,
+    `,
   };
 
   transporter.sendMail(toHostMailData, function (err, info) {
