@@ -1,38 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## ポートフォリオの概要・作成経緯
 
-## Getting Started
+学生時代にビールフェスに出店しているビアバーでアルバイトをしていました。ある日、アルバイト先のホームページがどんなものなのか気になり調べてみたところ、かなり簡素であまり魅力的には見えませんでした。ビールフェス会場内では人気店だったが故にショック、勿体無い気持ちになりました。「こうした方が見栄えが良くなるんじゃないか」「サイトを通じで来てくれるお客さんも増えるんじゃないか」と感じたのがきっかけでリメイク版を作成しました。
 
-First, run the development server:
+[ポートフォリオサイト](https://nobeernolifetokyo.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![PF](/public/image/readme/home.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 使用技術
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+HTML
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+CSS-Sass(1.58.3)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+JavaScript
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+TypeScript(4.9.5)
 
-## Learn More
+React(18.2.0)
 
-To learn more about Next.js, take a look at the following resources:
+Next.js(13.2.3)
+#
+microCMS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Day.js(1.11.7)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Nodemailer(6.9.2)
 
-## Deploy on Vercel
+Vercel(deploy,hosting)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 機能概要
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Home・Menu・Blog・Contactの4部構成になっています。表示されているMenu・BlogはmicroCMSのAPIを叩いて取得しています。新規作成、削除、修正もmicroCMSで一括管理しています。また、Next.jsの特徴であるStatic Generation（静的生成）を活かして画像表示の遅延を防ぎ、ページ離脱に繋がらないように意識しました。
+
+Home画面
+###
+![GIF](/public/image/readme/home.gif)
+
+Menu画面
+###
+![GIF](/public/image/readme/menu.gif)
+
+Blog画面
+###
+![GIF](/public/image/readme/blog.gif)
