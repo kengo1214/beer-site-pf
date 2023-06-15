@@ -6,40 +6,38 @@ import Link from "next/link";
 import { Link as Scroll } from "react-scroll";
 import MainHeader from "../components/Header/MainHeader";
 import Footer from "../components/Footer/Footer";
-import { useRef } from "react";
+import { useRef, FormEvent } from "react";
 import { useRouter } from "next/router";
+import emailjs from "@emailjs/browser";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const router = useRouter();
+  const form = useRef<HTMLFormElement | null>(null);
 
-  const nameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // console.log(nameRef.current?.value);
 
-    let data = {
-      name: nameRef.current?.value,
-      email: emailRef.current?.value,
-      message: messageRef.current?.value,
-    };
-
-    await fetch("api/contact", {
-      method: "POST",
-      // 何を許容するのか指定できる。今回だとJOSN形式、テキスト型、コンテンツタイプを指定。
-      headers: {
-        Accept: "application/json, text/plain",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data), //オブジェクトのままで渡すとダメ。JSONは軽量なデータな為JSON化している。
-    }).then((res) => {
-      if (res.status === 200) console.log("送信に成功しました");
-      router.push("/contact-done"); // リダイレクト先のURLに変更してください
-    });
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_5ttfhan",
+          "template_czborkj",
+          form.current,
+          "hpvW0zEhHMupBhwZi"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("message sent");
+            router.push("/contact-done"); // リダイレクト先のURLに変更してください
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   return (
@@ -240,19 +238,17 @@ export default function Home() {
               <form
                 method="post"
                 className={styles.form}
-                onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
-                  handleSubmit(e)
-                }
+                ref={form}
+                onSubmit={sendEmail}
               >
                 <div className={styles.contactItem}>
                   <label className={styles.label}>お名前</label>
                   <input
                     className={styles.input}
                     type="text"
-                    name="name"
                     placeholder="お名前"
                     required
-                    ref={nameRef} //🔥
+                    name="user_name"
                   />
                 </div>
                 <div className={styles.contactItem}>
@@ -260,20 +256,18 @@ export default function Home() {
                   <input
                     className={styles.input}
                     type="email"
-                    name="email"
                     placeholder="メールアドレス"
                     required
-                    ref={emailRef} //🔥
+                    name="user_email"
                   />
                 </div>
                 <div className={styles.contactItem}>
                   <label className={styles.label}>ご質問</label>
                   <textarea
-                    name="message"
                     className={`${styles.input} ${styles.textarea}`}
                     placeholder="ご質問はこちら"
                     required
-                    ref={messageRef} //🔥
+                    name="message"
                   />
                 </div>
 
