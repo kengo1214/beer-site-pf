@@ -16,27 +16,24 @@ export default function Home() {
   const router = useRouter();
   const form = useRef<HTMLFormElement | null>(null);
 
+  const serverId = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
+  const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY as string;
+
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (form.current) {
-      emailjs
-        .sendForm(
-          "service_5ttfhan",
-          "template_czborkj",
-          form.current,
-          "hpvW0zEhHMupBhwZi"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            console.log("message sent");
-            router.push("/contact-done"); // リダイレクト先のURLに変更してください
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      emailjs.sendForm(serverId, templateId, form.current, publicKey).then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          router.push("/contact-done");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     }
   };
 
