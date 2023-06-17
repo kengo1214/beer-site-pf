@@ -24,7 +24,7 @@ microCMS
 
 Day.js(1.11.7)
 
-Nodemailer(6.9.2)
+EmailJS（3.11.0）
 
 Vercel(deploy,hosting)
 
@@ -43,3 +43,7 @@ Menu画面
 Blog画面
 ###
 ![GIF](/public/image/readme/blog.gif)
+
+Contact画面
+###
+![GIF](/public/image/readme/contact.gif)
